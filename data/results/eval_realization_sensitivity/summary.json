@@ -1,0 +1,1029 @@
+{
+  "analysis_id": "R2-M1_eval_realization_sensitivity",
+  "generated_at": "2026-10-28T08:28:32.894549+00:00",
+  "protocol_name": "ippo_prior_confirmation_v1",
+  "protocol_frozen_path": "results/ippo_prior_confirmation_v1/protocol_frozen.json",
+  "protocol_frozen_sha256": "1dcc2b32159eed5b688fe2d010666992faef894dbe75420de8e49f8626174fa3",
+  "confirmation_summary_sha256": "dda3832ee2dc44bd5587e1184323d4f410aa43e3341f9dc956e2bcbdabed52b4",
+  "read_only_sources": {
+    "task_directories": 60,
+    "naming_pattern": "{H1|H2|H3}_{IPPO|IPPO-P}_seed{47..56}",
+    "metric_field": "evaluation_metrics.json['demand_service_times'] (5 entries, one per evaluation seed)"
+  },
+  "episode_to_eval_seed_mapping": {
+    "claim": "demand_service_times[e] corresponds to evaluation seed 1042+e (e = 0..4)",
+    "evidence_structural": "protocol_state.json of all 60 tasks records evaluation_seeds == [1042,1043,1044,1045,1046]; paper_protocol.py::_evaluate loops 'for seed_idx, evaluation_seed in enumerate(evaluation_seeds, 1)' and appends exactly one metrics entry per iteration (lines 419, 493-534).",
+    "evidence_artifact": "Per-task logs _logs/{task}.log record 'eval seed <S> (i/5) ... starting' and 'eval seed <S> done: reward=<R>' lines; the logged per-episode rewards match evaluation_metrics.json['evaluation_reward'] position-by-position in 60/60 tasks (all tasks).",
+    "log_checks_per_task": {
+      "H1_IPPO_seed47": {
+        "log_present": true,
+        "start_seed_sequence_matches": true,
+        "n_done_lines": 5,
+        "rewards_match_in_order": true
+      },
+      "H1_IPPO_seed48": {
+        "log_present": true,
+        "start_seed_sequence_matches": true,
+        "n_done_lines": 5,
+        "rewards_match_in_order": true
+      },
+      "H1_IPPO_seed49": {
+        "log_present": true,
+        "start_seed_sequence_matches": true,
+        "n_done_lines": 5,
+        "rewards_match_in_order": true
+      },
+      "H1_IPPO_seed50": {
+        "log_present": true,
+        "start_seed_sequence_matches": true,
+        "n_done_lines": 5,
+        "rewards_match_in_order": true
+      },
+      "H1_IPPO_seed51": {
+        "log_present": true,
+        "start_seed_sequence_matches": true,
+        "n_done_lines": 5,
+        "rewards_match_in_order": true
+      },
+      "H1_IPPO_seed52": {
+        "log_present": true,
+        "start_seed_sequence_matches": true,
+        "n_done_lines": 5,
+        "rewards_match_in_order": true
+      },
+      "H1_IPPO_seed53": {
+        "log_present": true,
+        "start_seed_sequence_matches": true,
+        "n_done_lines": 5,
+        "rewards_match_in_order": true
+      },
+      "H1_IPPO_seed54": {
+        "log_present": true,
+        "start_seed_sequence_matches": true,
+        "n_done_lines": 5,
+        "rewards_match_in_order": true
+      },
+      "H1_IPPO_seed55": {
+        "log_present": true,
+        "start_seed_sequence_matches": true,
+        "n_done_lines": 5,
+        "rewards_match_in_order": true
+      },
+      "H1_IPPO_seed56": {
+        "log_present": true,
+        "start_seed_sequence_matches": true,
+        "n_done_lines": 5,
+        "rewards_match_in_order": true
+      },
+      "H1_IPPO-P_seed47": {
+        "log_present": true,
+        "start_seed_sequence_matches": true,
+        "n_done_lines": 5,
+        "rewards_match_in_order": true
+      },
+      "H1_IPPO-P_seed48": {
+        "log_present": true,
+        "start_seed_sequence_matches": true,
+        "n_done_lines": 5,
+        "rewards_match_in_order": true
+      },
+      "H1_IPPO-P_seed49": {
+        "log_present": true,
+        "start_seed_sequence_matches": true,
+        "n_done_lines": 5,
+        "rewards_match_in_order": true
+      },
+      "H1_IPPO-P_seed50": {
+        "log_present": true,
+        "start_seed_sequence_matches": true,
+        "n_done_lines": 5,
+        "rewards_match_in_order": true
+      },
+      "H1_IPPO-P_seed51": {
+        "log_present": true,
+        "start_seed_sequence_matches": true,
+        "n_done_lines": 5,
+        "rewards_match_in_order": true
+      },
+      "H1_IPPO-P_seed52": {
+        "log_present": true,
+        "start_seed_sequence_matches": true,
+        "n_done_lines": 5,
+        "rewards_match_in_order": true
+      },
+      "H1_IPPO-P_seed53": {
+        "log_present": true,
+        "start_seed_sequence_matches": true,
+        "n_done_lines": 5,
+        "rewards_match_in_order": true
+      },
+      "H1_IPPO-P_seed54": {
+        "log_present": true,
+        "start_seed_sequence_matches": true,
+        "n_done_lines": 5,
+        "rewards_match_in_order": true
+      },
+      "H1_IPPO-P_seed55": {
+        "log_present": true,
+        "start_seed_sequence_matches": true,
+        "n_done_lines": 5,
+        "rewards_match_in_order": true
+      },
+      "H1_IPPO-P_seed56": {
+        "log_present": true,
+        "start_seed_sequence_matches": true,
+        "n_done_lines": 5,
+        "rewards_match_in_order": true
+      },
+      "H2_IPPO_seed47": {
+        "log_present": true,
+        "start_seed_sequence_matches": true,
+        "n_done_lines": 5,
+        "rewards_match_in_order": true
+      },
+      "H2_IPPO_seed48": {
+        "log_present": true,
+        "start_seed_sequence_matches": true,
+        "n_done_lines": 5,
+        "rewards_match_in_order": true
+      },
+      "H2_IPPO_seed49": {
+        "log_present": true,
+        "start_seed_sequence_matches": true,
+        "n_done_lines": 5,
+        "rewards_match_in_order": true
+      },
+      "H2_IPPO_seed50": {
+        "log_present": true,
+        "start_seed_sequence_matches": true,
+        "n_done_lines": 5,
+        "rewards_match_in_order": true
+      },
+      "H2_IPPO_seed51": {
+        "log_present": true,
+        "start_seed_sequence_matches": true,
+        "n_done_lines": 5,
+        "rewards_match_in_order": true
+      },
+      "H2_IPPO_seed52": {
+        "log_present": true,
+        "start_seed_sequence_matches": true,
+        "n_done_lines": 5,
+        "rewards_match_in_order": true
+      },
+      "H2_IPPO_seed53": {
+        "log_present": true,
+        "start_seed_sequence_matches": true,
+        "n_done_lines": 5,
+        "rewards_match_in_order": true
+      },
+      "H2_IPPO_seed54": {
+        "log_present": true,
+        "start_seed_sequence_matches": true,
+        "n_done_lines": 5,
+        "rewards_match_in_order": true
+      },
+      "H2_IPPO_seed55": {
+        "log_present": true,
+        "start_seed_sequence_matches": true,
+        "n_done_lines": 5,
+        "rewards_match_in_order": true
+      },
+      "H2_IPPO_seed56": {
+        "log_present": true,
+        "start_seed_sequence_matches": true,
+        "n_done_lines": 5,
+        "rewards_match_in_order": true
+      },
+      "H2_IPPO-P_seed47": {
+        "log_present": true,
+        "start_seed_sequence_matches": true,
+        "n_done_lines": 5,
+        "rewards_match_in_order": true
+      },
+      "H2_IPPO-P_seed48": {
+        "log_present": true,
+        "start_seed_sequence_matches": true,
+        "n_done_lines": 5,
+        "rewards_match_in_order": true
+      },
+      "H2_IPPO-P_seed49": {
+        "log_present": true,
+        "start_seed_sequence_matches": true,
+        "n_done_lines": 5,
+        "rewards_match_in_order": true
+      },
+      "H2_IPPO-P_seed50": {
+        "log_present": true,
+        "start_seed_sequence_matches": true,
+        "n_done_lines": 5,
+        "rewards_match_in_order": true
+      },
+      "H2_IPPO-P_seed51": {
+        "log_present": true,
+        "start_seed_sequence_matches": true,
+        "n_done_lines": 5,
+        "rewards_match_in_order": true
+      },
+      "H2_IPPO-P_seed52": {
+        "log_present": true,
+        "start_seed_sequence_matches": true,
+        "n_done_lines": 5,
+        "rewards_match_in_order": true
+      },
+      "H2_IPPO-P_seed53": {
+        "log_present": true,
+        "start_seed_sequence_matches": true,
+        "n_done_lines": 5,
+        "rewards_match_in_order": true
+      },
+      "H2_IPPO-P_seed54": {
+        "log_present": true,
+        "start_seed_sequence_matches": true,
+        "n_done_lines": 5,
+        "rewards_match_in_order": true
+      },
+      "H2_IPPO-P_seed55": {
+        "log_present": true,
+        "start_seed_sequence_matches": true,
+        "n_done_lines": 5,
+        "rewards_match_in_order": true
+      },
+      "H2_IPPO-P_seed56": {
+        "log_present": true,
+        "start_seed_sequence_matches": true,
+        "n_done_lines": 5,
+        "rewards_match_in_order": true
+      },
+      "H3_IPPO_seed47": {
+        "log_present": true,
+        "start_seed_sequence_matches": true,
+        "n_done_lines": 5,
+        "rewards_match_in_order": true
+      },
+      "H3_IPPO_seed48": {
+        "log_present": true,
+        "start_seed_sequence_matches": true,
+        "n_done_lines": 5,
+        "rewards_match_in_order": true
+      },
+      "H3_IPPO_seed49": {
+        "log_present": true,
+        "start_seed_sequence_matches": true,
+        "n_done_lines": 5,
+        "rewards_match_in_order": true
+      },
+      "H3_IPPO_seed50": {
+        "log_present": true,
+        "start_seed_sequence_matches": true,
+        "n_done_lines": 5,
+        "rewards_match_in_order": true
+      },
+      "H3_IPPO_seed51": {
+        "log_present": true,
+        "start_seed_sequence_matches": true,
+        "n_done_lines": 5,
+        "rewards_match_in_order": true
+      },
+      "H3_IPPO_seed52": {
+        "log_present": true,
+        "start_seed_sequence_matches": true,
+        "n_done_lines": 5,
+        "rewards_match_in_order": true
+      },
+      "H3_IPPO_seed53": {
+        "log_present": true,
+        "start_seed_sequence_matches": true,
+        "n_done_lines": 5,
+        "rewards_match_in_order": true
+      },
+      "H3_IPPO_seed54": {
+        "log_present": true,
+        "start_seed_sequence_matches": true,
+        "n_done_lines": 5,
+        "rewards_match_in_order": true
+      },
+      "H3_IPPO_seed55": {
+        "log_present": true,
+        "start_seed_sequence_matches": true,
+        "n_done_lines": 5,
+        "rewards_match_in_order": true
+      },
+      "H3_IPPO_seed56": {
+        "log_present": true,
+        "start_seed_sequence_matches": true,
+        "n_done_lines": 5,
+        "rewards_match_in_order": true
+      },
+      "H3_IPPO-P_seed47": {
+        "log_present": true,
+        "start_seed_sequence_matches": true,
+        "n_done_lines": 5,
+        "rewards_match_in_order": true
+      },
+      "H3_IPPO-P_seed48": {
+        "log_present": true,
+        "start_seed_sequence_matches": true,
+        "n_done_lines": 5,
+        "rewards_match_in_order": true
+      },
+      "H3_IPPO-P_seed49": {
+        "log_present": true,
+        "start_seed_sequence_matches": true,
+        "n_done_lines": 5,
+        "rewards_match_in_order": true
+      },
+      "H3_IPPO-P_seed50": {
+        "log_present": true,
+        "start_seed_sequence_matches": true,
+        "n_done_lines": 5,
+        "rewards_match_in_order": true
+      },
+      "H3_IPPO-P_seed51": {
+        "log_present": true,
+        "start_seed_sequence_matches": true,
+        "n_done_lines": 5,
+        "rewards_match_in_order": true
+      },
+      "H3_IPPO-P_seed52": {
+        "log_present": true,
+        "start_seed_sequence_matches": true,
+        "n_done_lines": 5,
+        "rewards_match_in_order": true
+      },
+      "H3_IPPO-P_seed53": {
+        "log_present": true,
+        "start_seed_sequence_matches": true,
+        "n_done_lines": 5,
+        "rewards_match_in_order": true
+      },
+      "H3_IPPO-P_seed54": {
+        "log_present": true,
+        "start_seed_sequence_matches": true,
+        "n_done_lines": 5,
+        "rewards_match_in_order": true
+      },
+      "H3_IPPO-P_seed55": {
+        "log_present": true,
+        "start_seed_sequence_matches": true,
+        "n_done_lines": 5,
+        "rewards_match_in_order": true
+      },
+      "H3_IPPO-P_seed56": {
+        "log_present": true,
+        "start_seed_sequence_matches": true,
+        "n_done_lines": 5,
+        "rewards_match_in_order": true
+      }
+    },
+    "n_tasks_log_verified": 60,
+    "caveat": "sha256(paper_protocol.py) at analysis time (a97e3ee1e17b3d66aeb7ab20a870a7a02b9969a91db0734f2faca1ccba2321d6) differs from the hash recorded in the frozen protocol_state.json source_hashes (f3fd62e7f5c1670e180619c920bbb61820de7faeab4d644d25e1f2b5bbc89c8a); the source was edited after the frozen run and no VCS history is available, so the code-level argument is corroboration only. The artifact-level log reward check (60/60 tasks) is the decisive mapping evidence."
+  },
+  "validity_gates": "status==completed, evaluation_seeds==[1042..1046], 5 finite positive U values, teleport_counts all zero, demand_conservation_ok all true (same gates as tools/aggregate_ippo_prior_confirmation.py)",
+  "consistency_checks": {
+    "definition": "For every task, the arithmetic mean of the 5 single-episode demand_service_times must reproduce the frozen pipeline episode-mean U; verified downstream by recomputing the frozen seed log ratios from these U means and comparing with confirmation_summary.json.",
+    "primary_seed_log_ratios_max_abs_diff": 0.0,
+    "primary_mean_abs_diff": 0.0,
+    "per_scenario": {
+      "H1": {
+        "recomputed_mean_log_ratio": 0.004075101028455565,
+        "stored_mean_log_ratio": 0.004075101028455565,
+        "max_abs_diff_seed_log_ratios": 0.0
+      },
+      "H2": {
+        "recomputed_mean_log_ratio": 0.01028302946394688,
+        "stored_mean_log_ratio": 0.01028302946394688,
+        "max_abs_diff_seed_log_ratios": 0.0
+      },
+      "H3": {
+        "recomputed_mean_log_ratio": 0.03744432847599569,
+        "stored_mean_log_ratio": 0.03744432847599569,
+        "max_abs_diff_seed_log_ratios": 0.0
+      }
+    },
+    "recomputed_primary_mean_log_ratio": 0.01726748632279938,
+    "stored_primary_mean_log_ratio": 0.01726748632279938
+  },
+  "statistic_definition": "r_{s,e} = (1/3) * sum_k log(u_IPPO_{s,k,e} / u_IPPO-P_{s,k,e}); sign test across s=47..56 within each realization e; exact two-sided Binomial(10, 1/2) p = min(1, 2*tail) with lower tail for w<=5, upper tail for w>=5",
+  "per_eval_seed": [
+    {
+      "e_index": 0,
+      "eval_seed": 1042,
+      "wins_positive": 10,
+      "n_seeds": 10,
+      "exact_two_sided_sign_p": 0.001953125,
+      "mean_log_ratio": 0.016637523659665705,
+      "sd_log_ratio_ddof1": 0.008538479194454177,
+      "min_log_ratio": 0.005500789960499237,
+      "max_log_ratio": 0.031506832748689685,
+      "r_per_training_seed": {
+        "47": 0.031506832748689685,
+        "48": 0.014242568283316015,
+        "49": 0.008169174866992408,
+        "50": 0.028170574641575324,
+        "51": 0.017298840750377284,
+        "52": 0.011369253964030617,
+        "53": 0.005500789960499237,
+        "54": 0.014297961073289322,
+        "55": 0.02355166884560522,
+        "56": 0.012267571462281928
+      }
+    },
+    {
+      "e_index": 1,
+      "eval_seed": 1043,
+      "wins_positive": 10,
+      "n_seeds": 10,
+      "exact_two_sided_sign_p": 0.001953125,
+      "mean_log_ratio": 0.01953929737651905,
+      "sd_log_ratio_ddof1": 0.006983156633115142,
+      "min_log_ratio": 0.008093860299674691,
+      "max_log_ratio": 0.03189325438422908,
+      "r_per_training_seed": {
+        "47": 0.025273883717882462,
+        "48": 0.021766369633065094,
+        "49": 0.014683635643563479,
+        "50": 0.03189325438422908,
+        "51": 0.018019386250730702,
+        "52": 0.01406082717317749,
+        "53": 0.014323651686130978,
+        "54": 0.024229185400000408,
+        "55": 0.023048919576736136,
+        "56": 0.008093860299674691
+      }
+    },
+    {
+      "e_index": 2,
+      "eval_seed": 1044,
+      "wins_positive": 10,
+      "n_seeds": 10,
+      "exact_two_sided_sign_p": 0.001953125,
+      "mean_log_ratio": 0.016288704675615353,
+      "sd_log_ratio_ddof1": 0.01163518101633596,
+      "min_log_ratio": 0.0005812958015862906,
+      "max_log_ratio": 0.03728947849032995,
+      "r_per_training_seed": {
+        "47": 0.03728947849032995,
+        "48": 0.010841062497305298,
+        "49": 0.01946233182341332,
+        "50": 0.0319454439290088,
+        "51": 0.006695265641892268,
+        "52": 0.0005812958015862906,
+        "53": 0.008266990192155191,
+        "54": 0.021209212090974205,
+        "55": 0.0181599448396553,
+        "56": 0.008436021449832914
+      }
+    },
+    {
+      "e_index": 3,
+      "eval_seed": 1045,
+      "wins_positive": 10,
+      "n_seeds": 10,
+      "exact_two_sided_sign_p": 0.001953125,
+      "mean_log_ratio": 0.014824678320384374,
+      "sd_log_ratio_ddof1": 0.009199855099232896,
+      "min_log_ratio": 0.0003179392740895785,
+      "max_log_ratio": 0.026166082818536,
+      "r_per_training_seed": {
+        "47": 0.026166082818536,
+        "48": 0.011775898668851094,
+        "49": 0.011818457942249542,
+        "50": 0.025217887419211743,
+        "51": 0.0003179392740895785,
+        "52": 0.002979571127985893,
+        "53": 0.021685486298115824,
+        "54": 0.02264597299555401,
+        "55": 0.01727633550524464,
+        "56": 0.008363151154005408
+      }
+    },
+    {
+      "e_index": 4,
+      "eval_seed": 1046,
+      "wins_positive": 9,
+      "n_seeds": 10,
+      "exact_two_sided_sign_p": 0.021484375,
+      "mean_log_ratio": 0.018879169278913706,
+      "sd_log_ratio_ddof1": 0.01155667283987146,
+      "min_log_ratio": -0.003983860767652377,
+      "max_log_ratio": 0.04121714172128182,
+      "r_per_training_seed": {
+        "47": 0.04121714172128182,
+        "48": 0.011881083234329556,
+        "49": 0.014433233120159962,
+        "50": 0.020590274509994164,
+        "51": 0.019755065511746894,
+        "52": -0.003983860767652377,
+        "53": 0.025103046930204098,
+        "54": 0.02429781466988379,
+        "55": 0.02206283267550101,
+        "56": 0.013435061183688155
+      }
+    }
+  ],
+  "per_scenario_by_eval_seed": {
+    "H1": [
+      {
+        "e_index": 0,
+        "eval_seed": 1042,
+        "wins_positive": 3,
+        "n_seeds": 10,
+        "exact_two_sided_sign_p": 0.34375,
+        "mean_log_ratio": -0.0014076764055572263,
+        "sd_log_ratio_ddof1": 0.011258415214476215
+      },
+      {
+        "e_index": 1,
+        "eval_seed": 1043,
+        "wins_positive": 7,
+        "n_seeds": 10,
+        "exact_two_sided_sign_p": 0.34375,
+        "mean_log_ratio": 0.005500353827240382,
+        "sd_log_ratio_ddof1": 0.009960577013225174
+      },
+      {
+        "e_index": 2,
+        "eval_seed": 1044,
+        "wins_positive": 7,
+        "n_seeds": 10,
+        "exact_two_sided_sign_p": 0.34375,
+        "mean_log_ratio": 0.006336006899675438,
+        "sd_log_ratio_ddof1": 0.014329050938384807
+      },
+      {
+        "e_index": 3,
+        "eval_seed": 1045,
+        "wins_positive": 5,
+        "n_seeds": 10,
+        "exact_two_sided_sign_p": 1.0,
+        "mean_log_ratio": 0.0008126458968241036,
+        "sd_log_ratio_ddof1": 0.00702059001543937
+      },
+      {
+        "e_index": 4,
+        "eval_seed": 1046,
+        "wins_positive": 8,
+        "n_seeds": 10,
+        "exact_two_sided_sign_p": 0.109375,
+        "mean_log_ratio": 0.009091188967763819,
+        "sd_log_ratio_ddof1": 0.013208470382569512
+      }
+    ],
+    "H2": [
+      {
+        "e_index": 0,
+        "eval_seed": 1042,
+        "wins_positive": 10,
+        "n_seeds": 10,
+        "exact_two_sided_sign_p": 0.001953125,
+        "mean_log_ratio": 0.014307978772860549,
+        "sd_log_ratio_ddof1": 0.009911732515776827
+      },
+      {
+        "e_index": 1,
+        "eval_seed": 1043,
+        "wins_positive": 10,
+        "n_seeds": 10,
+        "exact_two_sided_sign_p": 0.001953125,
+        "mean_log_ratio": 0.014836410801491414,
+        "sd_log_ratio_ddof1": 0.009989028458346037
+      },
+      {
+        "e_index": 2,
+        "eval_seed": 1044,
+        "wins_positive": 7,
+        "n_seeds": 10,
+        "exact_two_sided_sign_p": 0.34375,
+        "mean_log_ratio": 0.008182956539102273,
+        "sd_log_ratio_ddof1": 0.014490889685986854
+      },
+      {
+        "e_index": 3,
+        "eval_seed": 1045,
+        "wins_positive": 5,
+        "n_seeds": 10,
+        "exact_two_sided_sign_p": 1.0,
+        "mean_log_ratio": 0.005280992475764415,
+        "sd_log_ratio_ddof1": 0.012184444415220971
+      },
+      {
+        "e_index": 4,
+        "eval_seed": 1046,
+        "wins_positive": 8,
+        "n_seeds": 10,
+        "exact_two_sided_sign_p": 0.109375,
+        "mean_log_ratio": 0.00866773479975197,
+        "sd_log_ratio_ddof1": 0.009865589456079066
+      }
+    ],
+    "H3": [
+      {
+        "e_index": 0,
+        "eval_seed": 1042,
+        "wins_positive": 10,
+        "n_seeds": 10,
+        "exact_two_sided_sign_p": 0.001953125,
+        "mean_log_ratio": 0.03701226861169379,
+        "sd_log_ratio_ddof1": 0.019030224175063833
+      },
+      {
+        "e_index": 1,
+        "eval_seed": 1043,
+        "wins_positive": 10,
+        "n_seeds": 10,
+        "exact_two_sided_sign_p": 0.001953125,
+        "mean_log_ratio": 0.03828112750082536,
+        "sd_log_ratio_ddof1": 0.02252046525610604
+      },
+      {
+        "e_index": 2,
+        "eval_seed": 1044,
+        "wins_positive": 10,
+        "n_seeds": 10,
+        "exact_two_sided_sign_p": 0.001953125,
+        "mean_log_ratio": 0.03434715058806835,
+        "sd_log_ratio_ddof1": 0.022654471620577057
+      },
+      {
+        "e_index": 3,
+        "eval_seed": 1045,
+        "wins_positive": 9,
+        "n_seeds": 10,
+        "exact_two_sided_sign_p": 0.021484375,
+        "mean_log_ratio": 0.038380396588564604,
+        "sd_log_ratio_ddof1": 0.022631183602486997
+      },
+      {
+        "e_index": 4,
+        "eval_seed": 1046,
+        "wins_positive": 10,
+        "n_seeds": 10,
+        "exact_two_sided_sign_p": 0.001953125,
+        "mean_log_ratio": 0.03887858406922533,
+        "sd_log_ratio_ddof1": 0.02132891290109716
+      }
+    ]
+  },
+  "jensen_gap_note": "This re-analysis averages single-episode log ratios; the stored primary statistic takes log of 5-episode means. By Jensen inequality log(mean) >= mean(log), so equality with the stored value is NOT expected; only the difference is reported.",
+  "jensen_gap": {
+    "reanalysis_statistic_mean_over_5_realizations": 0.01723387466221964,
+    "stored_primary_mean_log_ratio": 0.01726748632279938,
+    "difference_stored_minus_reanalysis": 3.361166057973958e-05,
+    "per_scenario_difference_stored_minus_reanalysis": {
+      "H1": 8.597191266262322e-06,
+      "H2": 2.7814786152756746e-05,
+      "H3": 6.442300432020487e-05
+    }
+  },
+  "single_episode_log_ratios_for_recomputation": {
+    "H1": {
+      "47": {
+        "e0_e1_e2_e3_e4": [
+          0.013610380679699606,
+          -0.0042951672329015,
+          0.01662322157368505,
+          0.0005056655593919083,
+          0.022328269692969163
+        ]
+      },
+      "48": {
+        "e0_e1_e2_e3_e4": [
+          -0.011942512593964083,
+          0.009174073032288095,
+          0.00901920353730329,
+          0.011393947989366262,
+          0.0010893516959516773
+        ]
+      },
+      "49": {
+        "e0_e1_e2_e3_e4": [
+          -0.012428404646316794,
+          0.012745439195277921,
+          0.014568267760093826,
+          -0.0026096938546427747,
+          0.015204795460062584
+        ]
+      },
+      "50": {
+        "e0_e1_e2_e3_e4": [
+          0.012175317643788994,
+          -0.006316986455172196,
+          0.02569211722745105,
+          0.01172745109150896,
+          0.021065811320721717
+        ]
+      },
+      "51": {
+        "e0_e1_e2_e3_e4": [
+          -0.00036763693959661266,
+          0.011019200448294353,
+          0.008165000828106818,
+          0.002472196549072326,
+          0.013021857466253088
+        ]
+      },
+      "52": {
+        "e0_e1_e2_e3_e4": [
+          -0.0069974364302663435,
+          -0.008549128607657743,
+          -0.016829765756881745,
+          -0.007837896523492,
+          -0.02092176793922321
+        ]
+      },
+      "53": {
+        "e0_e1_e2_e3_e4": [
+          -0.007969823739245357,
+          0.023116506567360046,
+          0.021771097308419876,
+          -0.001974357946137001,
+          0.015704436999832903
+        ]
+      },
+      "54": {
+        "e0_e1_e2_e3_e4": [
+          -0.007201558945603154,
+          0.010955871424152032,
+          -0.011452594309175926,
+          -0.009142736318186661,
+          0.01698393970057318
+        ]
+      },
+      "55": {
+        "e0_e1_e2_e3_e4": [
+          0.01657461764886683,
+          0.006404572299307136,
+          -0.0073656978577893075,
+          -0.0008778040484261584,
+          0.008644350212515525
+        ]
+      },
+      "56": {
+        "e0_e1_e2_e3_e4": [
+          -0.009529706732935348,
+          0.0007491576014556686,
+          0.0031692186855414453,
+          0.004469686469786171,
+          -0.002209154932018446
+        ]
+      }
+    },
+    "H2": {
+      "47": {
+        "e0_e1_e2_e3_e4": [
+          0.0030896175005025923,
+          0.004464258326955086,
+          0.015533158276622818,
+          0.00707347114135086,
+          0.014048835649938135
+        ]
+      },
+      "48": {
+        "e0_e1_e2_e3_e4": [
+          0.020121180239291343,
+          0.016962233546960144,
+          0.0009298195879769588,
+          -0.00019476220446096274,
+          0.001355742242674223
+        ]
+      },
+      "49": {
+        "e0_e1_e2_e3_e4": [
+          0.005397167329093257,
+          0.004580003512755799,
+          0.021418328904911365,
+          0.013306033495861867,
+          0.004193726458675804
+        ]
+      },
+      "50": {
+        "e0_e1_e2_e3_e4": [
+          0.024155240992625057,
+          0.03418623683757014,
+          0.009156225659529673,
+          0.015157523226924608,
+          0.01653802149011299
+        ]
+      },
+      "51": {
+        "e0_e1_e2_e3_e4": [
+          0.020170637124610816,
+          0.009258529970413744,
+          -0.007849136106407369,
+          -0.00048175737640889947,
+          0.014952523415967296
+        ]
+      },
+      "52": {
+        "e0_e1_e2_e3_e4": [
+          0.0009200871222448408,
+          0.017973086971486696,
+          0.0006350967112464507,
+          -0.0011692922817805483,
+          -0.0030499224173622295
+        ]
+      },
+      "53": {
+        "e0_e1_e2_e3_e4": [
+          0.01750475742097707,
+          0.013764681887272687,
+          -0.0003063645970343559,
+          -0.0020841471910595898,
+          0.0016674739300044797
+        ]
+      },
+      "54": {
+        "e0_e1_e2_e3_e4": [
+          0.028433573255820976,
+          0.028519399281354607,
+          0.03589561318647051,
+          0.028938003594047926,
+          0.025376120082317398
+        ]
+      },
+      "55": {
+        "e0_e1_e2_e3_e4": [
+          0.004206976699583788,
+          0.006472766178941069,
+          0.017413461618540255,
+          0.008067557342505818,
+          0.015547688327862108
+        ]
+      },
+      "56": {
+        "e0_e1_e2_e3_e4": [
+          0.019080550043855758,
+          0.012182911501204163,
+          -0.010996637850833567,
+          -0.015802704989336933,
+          -0.003952861182670501
+        ]
+      }
+    },
+    "H3": {
+      "47": {
+        "e0_e1_e2_e3_e4": [
+          0.07782050006586685,
+          0.07565256005959381,
+          0.07971205562068197,
+          0.07091911175486523,
+          0.08727431982093815
+        ]
+      },
+      "48": {
+        "e0_e1_e2_e3_e4": [
+          0.03454903720462079,
+          0.039162802319947045,
+          0.02257416436663564,
+          0.024128510221647984,
+          0.03319815576436277
+        ]
+      },
+      "49": {
+        "e0_e1_e2_e3_e4": [
+          0.031538761918200764,
+          0.026725464222656717,
+          0.02240039880523476,
+          0.024759034185529532,
+          0.0239011774417415
+        ]
+      },
+      "50": {
+        "e0_e1_e2_e3_e4": [
+          0.048181165288311914,
+          0.0678105127702893,
+          0.060987988900045656,
+          0.04876868793920165,
+          0.024166990719147782
+        ]
+      },
+      "51": {
+        "e0_e1_e2_e3_e4": [
+          0.03209352206611765,
+          0.033780428333484006,
+          0.019769932203977356,
+          -0.001036621350394691,
+          0.0312908156530203
+        ]
+      },
+      "52": {
+        "e0_e1_e2_e3_e4": [
+          0.04018511120011335,
+          0.03275852315570351,
+          0.017938556450394164,
+          0.01794590218923023,
+          0.012020108053628306
+        ]
+      },
+      "53": {
+        "e0_e1_e2_e3_e4": [
+          0.006967436199765999,
+          0.0060897666037602076,
+          0.003336237865080053,
+          0.06911496403154406,
+          0.05793722986077491
+        ]
+      },
+      "54": {
+        "e0_e1_e2_e3_e4": [
+          0.021661868909650144,
+          0.033212285494494585,
+          0.03918461739562802,
+          0.04814265171080077,
+          0.030533384226760798
+        ]
+      },
+      "55": {
+        "e0_e1_e2_e3_e4": [
+          0.04987341218836504,
+          0.05626942025196021,
+          0.04443207075821495,
+          0.04463925322165427,
+          0.041996459486125404
+        ]
+      },
+      "56": {
+        "e0_e1_e2_e3_e4": [
+          0.027251871075925374,
+          0.011349511796364242,
+          0.03313548351479086,
+          0.036422471981566985,
+          0.04646719966575341
+        ]
+      }
+    }
+  },
+  "r_matrix_rows_training_seeds": {
+    "47": [
+      0.031506832748689685,
+      0.025273883717882462,
+      0.03728947849032995,
+      0.026166082818536,
+      0.04121714172128182
+    ],
+    "48": [
+      0.014242568283316015,
+      0.021766369633065094,
+      0.010841062497305298,
+      0.011775898668851094,
+      0.011881083234329556
+    ],
+    "49": [
+      0.008169174866992408,
+      0.014683635643563479,
+      0.01946233182341332,
+      0.011818457942249542,
+      0.014433233120159962
+    ],
+    "50": [
+      0.028170574641575324,
+      0.03189325438422908,
+      0.0319454439290088,
+      0.025217887419211743,
+      0.020590274509994164
+    ],
+    "51": [
+      0.017298840750377284,
+      0.018019386250730702,
+      0.006695265641892268,
+      0.0003179392740895785,
+      0.019755065511746894
+    ],
+    "52": [
+      0.011369253964030617,
+      0.01406082717317749,
+      0.0005812958015862906,
+      0.002979571127985893,
+      -0.003983860767652377
+    ],
+    "53": [
+      0.005500789960499237,
+      0.014323651686130978,
+      0.008266990192155191,
+      0.021685486298115824,
+      0.025103046930204098
+    ],
+    "54": [
+      0.014297961073289322,
+      0.024229185400000408,
+      0.021209212090974205,
+      0.02264597299555401,
+      0.02429781466988379
+    ],
+    "55": [
+      0.02355166884560522,
+      0.023048919576736136,
+      0.0181599448396553,
+      0.01727633550524464,
+      0.02206283267550101
+    ],
+    "56": [
+      0.012267571462281928,
+      0.008093860299674691,
+      0.008436021449832914,
+      0.008363151154005408,
+      0.013435061183688155
+    ]
+  }
+}

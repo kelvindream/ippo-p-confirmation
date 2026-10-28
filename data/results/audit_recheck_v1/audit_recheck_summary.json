@@ -1,0 +1,98 @@
+{
+  "audit_id": "AUD-01",
+  "date": "2026-10-28",
+  "verdict": "refuted",
+  "verdict_meaning": "Suspected file-copy incident is refuted: the stored seed-46 evaluation output is genuine. Two independently trained policies with bit-different weights produce bit-identical deterministic evaluation output because their argmax policies coincide on all five H2 evaluation trajectories.",
+  "suspect_files": {
+    "stored_seed45": {
+      "path": "results/formal_four_grid_v1/H2_IPPO_seed45/evaluation_metrics.json",
+      "sha256": "c4d2aae7fa87382125f2597b508370ebec204e7c55e5984860fedd732f3b774b"
+    },
+    "stored_seed46": {
+      "path": "results/formal_four_grid_v1/H2_IPPO_seed46/evaluation_metrics.json",
+      "sha256": "c4d2aae7fa87382125f2597b508370ebec204e7c55e5984860fedd732f3b774b"
+    }
+  },
+  "duplicate_scope": "60-task full scan of results/formal_four_grid_v1: the only duplicated U-vector pair is H2_IPPO_seed45/seed46. All other 58 task U-vectors are unique.",
+  "checkpoints": {
+    "seed45_sha256": "6d471bdac720119b4b191f4d488b6f24a1b898d16f1b551a8b12b76f653b238d",
+    "seed46_sha256": "3bf4fe7a7471734d2f21821caa5298b425d53bed0003812d9228d632f9e15835",
+    "tensor_comparison": "All 48 actor/critic tensors differ between the two checkpoints (max abs diff ~0.645); independent training confirmed by differing training reward curves (max |d reward| = 0.127) and distinct protocol_state timestamps (45: 06:47:40-08:04:41; 46: 07:57:10-09:25:55)."
+  },
+  "rerun_vectors": {
+    "stored_seed45": [117.50329736211032, 116.76618705035972, 114.95848321342926, 114.48800959232614, 115.41801558752998],
+    "rerun_seed45": [117.50329736211032, 116.76618705035972, 114.95848321342926, 114.48800959232614, 115.41801558752998],
+    "stored_seed46": [117.50329736211032, 116.76618705035972, 114.95848321342926, 114.48800959232614, 115.41801558752998],
+    "rerun_seed46": [117.50329736211032, 116.76618705035972, 114.95848321342926, 114.48800959232614, 115.41801558752998],
+    "max_abs_diff_rerun45_vs_stored45": 0.0,
+    "max_abs_diff_rerun46_vs_stored46": 0.0,
+    "max_abs_diff_rerun46_vs_stored45": 0.0
+  },
+  "action_trace_evidence": {
+    "method": "tools/audit_recheck_trace_actions.py records the full deterministic action sequence of one evaluation episode from a stored checkpoint.",
+    "episode_1042": {
+      "seed45_actions_sha256": "4652f8269f3b6156fc78f2e2a1bc70f39508fe0acff7db9be34ad975499160ea",
+      "seed46_actions_sha256": "4652f8269f3b6156fc78f2e2a1bc70f39508fe0acff7db9be34ad975499160ea",
+      "identical_action_sequences": true,
+      "num_decision_steps": 1000,
+      "control_seed42_actions_sha256": "4652f8269f3b6156fc78f2e2a1bc70f39508fe0acff7db9be34ad975499160ea",
+      "control_seed43_actions_sha256": "246b6abf4d1b888a1992452eab9c8c0edb732fbd5ec2236412cf70038f3649b9",
+      "control_note": "seed42 coincides with seed45 on this trajectory (consistent with stored U: episode-1 values of 42/44/45/46 are identical), while seed43 differs - demonstrating the trace method discriminates between policies."
+    },
+    "mechanism": "The five independently trained IPPO policies converged to deterministic argmax policies that coincide on the real H2 evaluation-trajectory state distribution (1000 decision slots per episode). Their weight differences only change argmax on states unreachable under these trajectories (on random Gaussian inputs the argmax disagreement rate is 18-32%). Hence identical U vectors arise genuinely, not by file overwrite.",
+    "prefix_pattern": "Episode-1 U identical across seeds 42/44/45/46 (117.50329736211032); episodes 1-2 identical across 44/45/46; all 5 episodes identical only for 45/46. Identical prefixes with later divergence are the signature of behavioral equivalence on overlapping trajectory segments, not of file copying."
+  },
+  "determinism_check": "Rerun of seed45 (and seed46) from stored checkpoints reproduces the stored 5-episode U vectors bit-for-bit (max abs diff 0.0 <= 1e-9), confirming the evaluation pipeline is deterministic and the stored seed-45 vector is authentic.",
+  "code_provenance_note": "Current paper_protocol.py sha256 (a97e3ee1...) differs from the pilot-time recorded hash (f3fd62e7...); all other core files (environment/, agents/, test_algorithms.py, net/route XML) match the recorded source_hashes exactly. The bit-exact reruns empirically confirm the current evaluation path is equivalent for this task.",
+  "recomputed_quantities": {
+    "note": "Recomputed under the copy-incident hypothesis (seed-46 H2 IPPO U replaced by the re-run vector). Since re-run == stored, all quantities are unchanged; this doubles as an independent verification of the aggregation pipeline.",
+    "pilot_contrast_IPPO-P_vs_IPPO": {
+      "mean_log_ratio": 0.02243586050066354,
+      "improvement_pct": 2.21860483206181,
+      "seed_wins": 5,
+      "n_seeds": 5,
+      "p_value": 0.0625,
+      "manuscript_value": "+2.219%, 5/5, p=0.0625",
+      "status": "unchanged, manuscript value correct"
+    },
+    "pooled_15_seed_descriptive": {
+      "mean_log_ratio": 0.018990277715420768,
+      "improvement_pct": 1.8811098405838944,
+      "seed_wins": 15,
+      "n_seeds": 15,
+      "manuscript_value": "+1.881%",
+      "status": "unchanged, manuscript value correct"
+    },
+    "sensitivity_drop_pilot_seeds_45_46": {
+      "improvement_pct": 1.7732540512980122,
+      "seed_wins": 13,
+      "n_seeds": 13,
+      "audit_reference_value": "+1.773%",
+      "status": "independently reproduced from raw task data"
+    },
+    "unaffected_seed_log_ratio_agreement": {
+      "seeds": [42, 43, 44, 45],
+      "max_abs_diff_vs_stored": 0.0
+    }
+  },
+  "corrected_values": {
+    "pilot_contrast_pct": 2.21860483206181,
+    "pilot_seed_wins": 5,
+    "pilot_p_value": 0.0625,
+    "pooled_15_seed_pct": 1.8811098405838944
+  },
+  "artifacts": {
+    "rerun_eval_script": "tools/audit_recheck_rerun_eval.py",
+    "trace_script": "tools/audit_recheck_trace_actions.py",
+    "recompute_script": "tools/audit_recheck_recompute.py",
+    "rerun45": "results/audit_recheck_v1/H2_IPPO_seed45_rerun/evaluation_metrics.json",
+    "rerun46": "results/audit_recheck_v1/H2_IPPO_seed46_rerun/evaluation_metrics.json",
+    "traces": [
+      "results/audit_recheck_v1/trace_H2_IPPO_seed45_ep1042.json",
+      "results/audit_recheck_v1/trace_H2_IPPO_seed46_ep1042.json",
+      "results/audit_recheck_v1/trace_H2_IPPO_seed42_ep1042.json",
+      "results/audit_recheck_v1/trace_H2_IPPO_seed43_ep1042.json"
+    ],
+    "recompute_outputs": "results/audit_recheck_v1/recompute_outputs.json"
+  }
+}

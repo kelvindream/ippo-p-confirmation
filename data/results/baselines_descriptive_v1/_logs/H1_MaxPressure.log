@@ -1,0 +1,18 @@
+[2026-10-28 02:57:41] Using device: cuda
+[2026-10-28 02:57:41] GPU name: NVIDIA RTX A6000
+[2026-10-28T02:57:41] Max-Pressure-Descriptive eval seed 1042 (1/5) on nets/grid-3x3/3x3.net.xml starting...
+ Retrying in 1 seconds
+[2026-10-28T02:59:40] Max-Pressure-Descriptive eval seed 1042 done: reward=0.18369 speed=7.024 queue=2.445 waiting=8.971
+[2026-10-28T02:59:40] Max-Pressure-Descriptive eval seed 1043 (2/5) on nets/grid-3x3/3x3.net.xml starting...
+ Retrying in 1 seconds
+[2026-10-28T03:01:38] Max-Pressure-Descriptive eval seed 1043 done: reward=0.18073 speed=6.850 queue=2.547 waiting=9.418
+[2026-10-28T03:01:38] Max-Pressure-Descriptive eval seed 1044 (3/5) on nets/grid-3x3/3x3.net.xml starting...
+ Retrying in 1 seconds
+[2026-10-28T03:03:36] Max-Pressure-Descriptive eval seed 1044 done: reward=0.20638 speed=7.153 queue=2.329 waiting=8.609
+[2026-10-28T03:03:36] Max-Pressure-Descriptive eval seed 1045 (4/5) on nets/grid-3x3/3x3.net.xml starting...
+ Retrying in 1 seconds
+[2026-10-28T03:05:36] Max-Pressure-Descriptive eval seed 1045 done: reward=0.19876 speed=7.184 queue=2.337 waiting=8.428
+[2026-10-28T03:05:36] Max-Pressure-Descriptive eval seed 1046 (5/5) on nets/grid-3x3/3x3.net.xml starting...
+ Retrying in 1 seconds
+[2026-10-28T03:07:35] Max-Pressure-Descriptive eval seed 1046 done: reward=0.19730 speed=7.207 queue=2.321 waiting=8.574
+Protocol task completed: Max-Pressure-Descriptive, seed=47

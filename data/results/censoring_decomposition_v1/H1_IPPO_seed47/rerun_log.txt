@@ -1,0 +1,27 @@
+[2026-10-28 16:50:40] Using device: cuda
+[2026-10-28 16:50:40] GPU name: NVIDIA RTX A6000
+[CENSOR] rerun eval: task=H1_IPPO_seed47 method=IPPO seeds=[1042, 1043, 1044, 1045, 1046] checkpoint=/home/zrt/ai/GC-MAPPO/results/ippo_prior_confirmation_v1/H1_IPPO_seed47/checkpoint.pt
+ Retrying in 1 seconds
+[2026-10-28T16:50:42] IPPO eval seed 1042 (1/5) on nets/grid-3x3/3x3.net.xml starting...
+ Retrying in 1 seconds
+[2026-10-28T16:52:26] IPPO eval seed 1042 done: reward=0.26053 speed=7.648 queue=1.980 waiting=6.530
+ Retrying in 1 seconds
+[2026-10-28T16:52:27] IPPO eval seed 1043 (2/5) on nets/grid-3x3/3x3.net.xml starting...
+ Retrying in 1 seconds
+[2026-10-28T16:54:10] IPPO eval seed 1043 done: reward=0.26569 speed=7.662 queue=2.008 waiting=6.626
+ Retrying in 1 seconds
+[2026-10-28T16:54:11] IPPO eval seed 1044 (3/5) on nets/grid-3x3/3x3.net.xml starting...
+ Retrying in 1 seconds
+[2026-10-28T16:55:55] IPPO eval seed 1044 done: reward=0.25418 speed=7.670 queue=1.975 waiting=6.087
+ Retrying in 1 seconds
+[2026-10-28T16:55:56] IPPO eval seed 1045 (4/5) on nets/grid-3x3/3x3.net.xml starting...
+ Retrying in 1 seconds
+[2026-10-28T16:57:39] IPPO eval seed 1045 done: reward=0.28142 speed=7.851 queue=1.854 waiting=5.816
+ Retrying in 1 seconds
+[2026-10-28T16:57:40] IPPO eval seed 1046 (5/5) on nets/grid-3x3/3x3.net.xml starting...
+ Retrying in 1 seconds
+[2026-10-28T16:59:24] IPPO eval seed 1046 done: reward=0.24183 speed=7.565 queue=2.051 waiting=6.534
+[CENSOR] rerun U: [136.04856115107913, 136.30935251798562, 136.4324540367706, 133.6121103117506, 137.29436450839327]
+[CENSOR] stored U: [136.04856115107913, 136.30935251798562, 136.4324540367706, 133.6121103117506, 137.29436450839327]
+[CENSOR] max |rerun-stored| = 0.000e+00 (8.7 min) -> reproduced
+[CENSOR] outputs written under /home/zrt/ai/GC-MAPPO/results/censoring_decomposition_v1

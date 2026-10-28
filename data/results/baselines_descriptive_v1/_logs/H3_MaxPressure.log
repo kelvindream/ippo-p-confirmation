@@ -1,0 +1,18 @@
+[2026-10-28 03:07:37] Using device: cuda
+[2026-10-28 03:07:37] GPU name: NVIDIA RTX A6000
+[2026-10-28T03:07:37] Max-Pressure-Descriptive eval seed 1042 (1/5) on nets/2x2-grid/2x2_oversaturated.net.xml starting...
+ Retrying in 1 seconds
+[2026-10-28T03:09:07] Max-Pressure-Descriptive eval seed 1042 done: reward=-0.05377 speed=5.976 queue=8.073 waiting=11.800
+[2026-10-28T03:09:07] Max-Pressure-Descriptive eval seed 1043 (2/5) on nets/2x2-grid/2x2_oversaturated.net.xml starting...
+ Retrying in 1 seconds
+[2026-10-28T03:10:38] Max-Pressure-Descriptive eval seed 1043 done: reward=-0.07227 speed=5.922 queue=8.250 waiting=12.085
+[2026-10-28T03:10:38] Max-Pressure-Descriptive eval seed 1044 (3/5) on nets/2x2-grid/2x2_oversaturated.net.xml starting...
+ Retrying in 1 seconds
+[2026-10-28T03:12:09] Max-Pressure-Descriptive eval seed 1044 done: reward=-0.04457 speed=6.016 queue=7.958 waiting=11.380
+[2026-10-28T03:12:09] Max-Pressure-Descriptive eval seed 1045 (4/5) on nets/2x2-grid/2x2_oversaturated.net.xml starting...
+ Retrying in 1 seconds
+[2026-10-28T03:13:38] Max-Pressure-Descriptive eval seed 1045 done: reward=-0.05544 speed=6.009 queue=8.021 waiting=11.725
+[2026-10-28T03:13:39] Max-Pressure-Descriptive eval seed 1046 (5/5) on nets/2x2-grid/2x2_oversaturated.net.xml starting...
+ Retrying in 1 seconds
+[2026-10-28T03:15:08] Max-Pressure-Descriptive eval seed 1046 done: reward=-0.06011 speed=5.984 queue=8.107 waiting=11.928
+Protocol task completed: Max-Pressure-Descriptive, seed=47

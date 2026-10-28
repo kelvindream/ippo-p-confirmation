@@ -1,0 +1,25 @@
+{
+  "document": "pre_unblinding_decision_tree",
+  "locked_at": "2026-10-26T10:05:00+08:00",
+  "locked_before_unblinding": true,
+  "user_decision": "agree_all_recommendations",
+  "unblinding_order": "lock_this_tree_first_then_run_preregistered_aggregator",
+  "branches": {
+    "confirmed": {
+      "condition": "positive point estimate AND exact two-sided sign-flip p < 0.05 on new seeds 47-56",
+      "action": "mainline A: IPPO-P as proposed method, proceed to paper writing track"
+    },
+    "positive_not_significant": {
+      "condition": "positive point estimate AND exact p >= 0.05",
+      "action": "one-time extension: 5 new training seeds (57-61), both methods, all three scenarios, same frozen protocol; rerun primary test on extension seeds only; if still not significant, downgrade to consistency evidence honestly in paper, no further extension"
+    },
+    "negative_or_flipped": {
+      "condition": "point estimate <= 0 on new seeds",
+      "action": "stop IPPO-P mainline, return to candidate evaluation, no paper from this contrast"
+    }
+  },
+  "gc_four_grid_data_role": "ablation_and_mechanism_discussion_material_only, clearly labeled pilot evidence, carries no confirmatory claim",
+  "scale_up_plan": "if confirmed: one scale-up scenario (3x3 higher demand), 2 methods x 5 seeds x 1 scenario = 10 tasks, same frozen protocol copied without re-registration",
+  "reporting_rule": "main text reports only the 10-seed confirmatory primary test; 15-seed pooled analysis appendix-only, explicitly labeled that 5 pilot seeds informed method selection",
+  "interim_looks": "none occurred: all 60 tasks completed before any aggregate was computed"
+}

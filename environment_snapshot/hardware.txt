@@ -1,0 +1,17 @@
+Linux dreagonmon-hpws 6.12.108-1-MANJARO #1 SMP PREEMPT_DYNAMIC Sat, 05 Sep 2026 01:29:32 +0000 x86_64 GNU/Linux
+
+CPU(s):                                  104
+Model name:                              Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz
+Thread(s) per core:                      2
+Socket(s):                               2
+CPU(s) scaling MHz:                      26%
+NUMA node(s):                            2
+
+                总计        已用        空闲        共享   缓冲/缓存        可用
+内存：         125Gi        57Gi        36Gi       1.5Gi        34Gi        67Gi
+
+name, memory.total [MiB], driver_version
+NVIDIA RTX A6000, 49140 MiB, 610.57.04
+
+NAME="Manjaro Linux"
+PRETTY_NAME="Manjaro Linux"

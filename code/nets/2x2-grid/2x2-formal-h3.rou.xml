@@ -1,0 +1,28 @@
+<routes>
+    <!-- Formal H3 demand: 12 routes x 250 vehsPerHour = 3000 vehs/hour total. -->
+    <route id="route_south2north_west" edges="bottomA0_A0 A0_A1 A1_topA1"/>
+    <route id="route_south2north_east" edges="bottomB0_B0 B0_B1 B1_topB1"/>
+    <route id="route_north2south_west" edges="topA1_A1 A1_A0 A0_bottomA0"/>
+    <route id="route_north2south_east" edges="topB1_B1 B1_B0 B0_bottomB0"/>
+    <route id="route_west2east_south" edges="leftA0_A0 A0_B0 B0_rightB0"/>
+    <route id="route_west2east_north" edges="leftA1_A1 A1_B1 B1_rightB1"/>
+    <route id="route_east2west_south" edges="rightB0_B0 B0_A0 A0_leftA0"/>
+    <route id="route_east2west_north" edges="rightB1_B1 B1_A1 A1_leftA1"/>
+    <route id="route_southA0_2_west" edges="bottomA0_A0 A0_leftA0"/>
+    <route id="route_southA0_2_east" edges="bottomA0_A0 A0_B0 B0_rightB0"/>
+    <route id="route_northA1_2_west" edges="topA1_A1 A1_leftA1"/>
+    <route id="route_northA1_2_east" edges="topA1_A1 A1_B1 B1_rightB1"/>
+
+    <flow id="flow_south2north_west" route="route_south2north_west" begin="0" end="10000" vehsPerHour="250" departSpeed="max" departPos="base" departLane="best"/>
+    <flow id="flow_south2north_east" route="route_south2north_east" begin="0" end="10000" vehsPerHour="250" departSpeed="max" departPos="base" departLane="best"/>
+    <flow id="flow_north2south_west" route="route_north2south_west" begin="0" end="10000" vehsPerHour="250" departSpeed="max" departPos="base" departLane="best"/>
+    <flow id="flow_north2south_east" route="route_north2south_east" begin="0" end="10000" vehsPerHour="250" departSpeed="max" departPos="base" departLane="best"/>
+    <flow id="flow_west2east_south" route="route_west2east_south" begin="0" end="10000" vehsPerHour="250" departSpeed="max" departPos="base" departLane="best"/>
+    <flow id="flow_west2east_north" route="route_west2east_north" begin="0" end="10000" vehsPerHour="250" departSpeed="max" departPos="base" departLane="best"/>
+    <flow id="flow_east2west_south" route="route_east2west_south" begin="0" end="10000" vehsPerHour="250" departSpeed="max" departPos="base" departLane="best"/>
+    <flow id="flow_east2west_north" route="route_east2west_north" begin="0" end="10000" vehsPerHour="250" departSpeed="max" departPos="base" departLane="best"/>
+    <flow id="flow_southA0_2_west" route="route_southA0_2_west" begin="0" end="10000" vehsPerHour="250" departSpeed="max" departPos="base" departLane="best"/>
+    <flow id="flow_southA0_2_east" route="route_southA0_2_east" begin="0" end="10000" vehsPerHour="250" departSpeed="max" departPos="base" departLane="best"/>
+    <flow id="flow_northA1_2_west" route="route_northA1_2_west" begin="0" end="10000" vehsPerHour="250" departSpeed="max" departPos="base" departLane="best"/>
+    <flow id="flow_northA1_2_east" route="route_northA1_2_east" begin="0" end="10000" vehsPerHour="250" departSpeed="max" departPos="base" departLane="best"/>
+</routes>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<edges>
+    <!-- A0 路口（4 方向连接，每边 2 车道） -->
+    <edge from="bottomA0" id="bottomA0_A0" to="A0" numLanes="2"/>
+    <edge from="A0" id="A0_bottomA0" to="bottomA0" numLanes="2"/>
+    <edge from="leftA0" id="leftA0_A0" to="A0" numLanes="2"/>
+    <edge from="A0" id="A0_leftA0" to="leftA0" numLanes="2"/>
+    <edge from="A0" id="A0_A1" to="A1" numLanes="2"/>
+    <edge from="A1" id="A1_A0" to="A0" numLanes="2"/>
+    <edge from="A0" id="A0_B0" to="B0" numLanes="2"/>
+    <edge from="B0" id="B0_A0" to="A0" numLanes="2"/>
+
+    <!-- A1 路口（补充 A1 独有连接） -->
+    <edge from="topA1" id="topA1_A1" to="A1" numLanes="2"/>
+    <edge from="A1" id="A1_topA1" to="topA1" numLanes="2"/>
+    <edge from="leftA1" id="leftA1_A1" to="A1" numLanes="2"/>
+    <edge from="A1" id="A1_leftA1" to="leftA1" numLanes="2"/>
+    <edge from="A1" id="A1_B1" to="B1" numLanes="2"/>
+    <edge from="B1" id="B1_A1" to="A1" numLanes="2"/>
+
+    <!-- B0 路口（补充 B0 独有连接） -->
+    <edge from="bottomB0" id="bottomB0_B0" to="B0" numLanes="2"/>
+    <edge from="B0" id="B0_bottomB0" to="bottomB0" numLanes="2"/>
+    <edge from="rightB0" id="rightB0_B0" to="B0" numLanes="2"/>
+    <edge from="B0" id="B0_rightB0" to="rightB0" numLanes="2"/>
+    <edge from="B0" id="B0_B1" to="B1" numLanes="2"/>
+    <edge from="B1" id="B1_B0" to="B0" numLanes="2"/>
+
+    <!-- B1 路口（补充 B1 独有连接） -->
+    <edge from="topB1" id="topB1_B1" to="B1" numLanes="2"/>
+    <edge from="B1" id="B1_topB1" to="topB1" numLanes="2"/>
+    <edge from="rightB1" id="rightB1_B1" to="B1" numLanes="2"/>
+    <edge from="B1" id="B1_rightB1" to="rightB1" numLanes="2"/>
+</edges>

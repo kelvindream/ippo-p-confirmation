@@ -1,0 +1,5 @@
+Eclipse SUMO sumo v1_25_0+0882-2df88fb3789
+ Build features: Linux-6.12.63-1-MANJARO x86_64 GNU 15.2.1 Release FMI Proj GUI Intl SWIG tcmalloc GDAL FFmpeg OSG GL2PS
+ Copyright (C) 2001-2025 German Aerospace Center (DLR) and others; https://sumo.dlr.de
+
+Eclipse SUMO sumo v1_25_0+0882-2df88fb3789 is part of SUMO.

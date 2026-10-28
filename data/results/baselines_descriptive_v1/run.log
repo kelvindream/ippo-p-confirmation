@@ -1,0 +1,33 @@
+=== Harness binding check (agents/baselines_descriptive.py) ===
+[2026-10-28 02:57:39] Using device: cuda
+[2026-10-28 02:57:39] GPU name: NVIDIA RTX A6000
+{
+  "harness_Max-Pressure_uses_same_per_signal_rule": true,
+  "harness_Fixed-Time_class_from_agents": true,
+  "descriptive_methods_registered": true,
+  "select_actions_dispatches_Max-Pressure-Descriptive": true,
+  "select_actions_dispatches_Fixed-Time-Program": true
+}
+[NET] nets/grid-3x3/3x3.net.xml: tls=9 cycle_s=[140.0] green_durations_s=[(33.0,)] yellow_durations_s=[(2.0,)]
+[NET] nets/2x2-grid/2x2_oversaturated.net.xml: tls=4 cycle_s=[140.0] green_durations_s=[(33.0,)] yellow_durations_s=[(2.0,)]
+=== Descriptive baselines: 6 tasks = 30 evaluation episodes, parallel=3 ===
+=== Started: 2026-10-28T02:57:39+08:00 ===
+[START] H1_FixedTime method=Fixed-Time-Program net=nets/grid-3x3/3x3.net.xml route=nets/grid-3x3/3x3-medium.rou.xml
+[START] H1_MaxPressure method=Max-Pressure-Descriptive net=nets/grid-3x3/3x3.net.xml route=nets/grid-3x3/3x3-medium.rou.xml
+[START] H2_FixedTime method=Fixed-Time-Program net=nets/2x2-grid/2x2_oversaturated.net.xml route=nets/2x2-grid/2x2-formal-h2.rou.xml
+[DONE] H2_FixedTime
+[START] H2_MaxPressure method=Max-Pressure-Descriptive net=nets/2x2-grid/2x2_oversaturated.net.xml route=nets/2x2-grid/2x2-formal-h2.rou.xml
+[DONE] H1_FixedTime
+[START] H3_FixedTime method=Fixed-Time-Program net=nets/2x2-grid/2x2_oversaturated.net.xml route=nets/2x2-grid/2x2-formal-h3.rou.xml
+[DONE] H1_MaxPressure
+[START] H3_MaxPressure method=Max-Pressure-Descriptive net=nets/2x2-grid/2x2_oversaturated.net.xml route=nets/2x2-grid/2x2-formal-h3.rou.xml
+[DONE] H2_MaxPressure
+[DONE] H3_MaxPressure
+[DONE] H3_FixedTime
+=== Finished: 2026-10-28T03:18:05+08:00 ===
+[SUMMARY] H1_FixedTime: U_mean=224.87s U_per_seed=[219.1, 224.4, 233.4, 225.8, 221.7] teleports=[0, 0, 0, 0, 0] conservation_ok=True completion_rates=[0.98, 0.9806, 0.9792, 0.9796, 0.9784]
+[SUMMARY] H1_MaxPressure: U_mean=144.63s U_per_seed=[145.6, 148.0, 142.9, 143.5, 143.1] teleports=[0, 0, 0, 0, 0] conservation_ok=True completion_rates=[0.9872, 0.9874, 0.9876, 0.9868, 0.9866]
+[SUMMARY] H2_FixedTime: U_mean=223.79s U_per_seed=[188.3, 244.1, 198.8, 254.2, 233.6] teleports=[0, 0, 0, 0, 0] conservation_ok=True completion_rates=[0.9825, 0.9727, 0.9765, 0.9703, 0.975]
+[SUMMARY] H2_MaxPressure: U_mean=121.38s U_per_seed=[121.5, 122.1, 120.9, 118.7, 123.7] teleports=[0, 0, 0, 0, 0] conservation_ok=True completion_rates=[0.9889, 0.9882, 0.9891, 0.9885, 0.988]
+[SUMMARY] H3_FixedTime: U_mean=799.62s U_per_seed=[818.7, 800.3, 798.0, 789.4, 791.6] teleports=[0, 0, 0, 0, 0] conservation_ok=True completion_rates=[0.969, 0.9692, 0.9679, 0.97, 0.9695]
+[SUMMARY] H3_MaxPressure: U_mean=122.21s U_per_seed=[122.1, 123.3, 121.7, 121.9, 122.2] teleports=[0, 0, 0, 0, 0] conservation_ok=True completion_rates=[0.9898, 0.9871, 0.9879, 0.9893, 0.9891]

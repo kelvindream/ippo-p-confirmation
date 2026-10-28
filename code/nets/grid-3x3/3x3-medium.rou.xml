@@ -1,0 +1,61 @@
+<routes>
+    <!--
+        3x3-grid medium demand: 18 routes x 100 vehsPerHour = 1800 vehs/hour total
+        路径设计:12 条直穿(南北/东西双向,各 6 条)+ 6 条转向
+        每路口平均 ~200 vehs/h,与 2x2(300/路口)同属中等需求量级。
+    -->
+
+    <!-- ==================== 直穿 routes（12条） ==================== -->
+
+    <!-- 南→北 直穿（3条,每列1条） -->
+    <route id="route_south2north_A" edges="bottomA0_A0 A0_A1 A1_A2 A2_topA2"/>
+    <route id="route_south2north_B" edges="bottomB0_B0 B0_B1 B1_B2 B2_topB2"/>
+    <route id="route_south2north_C" edges="bottomC0_C0 C0_C1 C1_C2 C2_topC2"/>
+    <!-- 北→南 直穿（3条） -->
+    <route id="route_north2south_A" edges="topA2_A2 A2_A1 A1_A0 A0_bottomA0"/>
+    <route id="route_north2south_B" edges="topB2_B2 B2_B1 B1_B0 B0_bottomB0"/>
+    <route id="route_north2south_C" edges="topC2_C2 C2_C1 C1_C0 C0_bottomC0"/>
+    <!-- 西→东 直穿（3条,每行1条） -->
+    <route id="route_west2east_0" edges="leftA0_A0 A0_B0 B0_C0 C0_rightC0"/>
+    <route id="route_west2east_1" edges="leftA1_A1 A1_B1 B1_C1 C1_rightC1"/>
+    <route id="route_west2east_2" edges="leftA2_A2 A2_B2 B2_C2 C2_rightC2"/>
+    <!-- 东→西 直穿（3条） -->
+    <route id="route_east2west_0" edges="rightC0_C0 C0_B0 B0_A0 A0_leftA0"/>
+    <route id="route_east2west_1" edges="rightC1_C1 C1_B1 B1_A1 A1_leftA1"/>
+    <route id="route_east2west_2" edges="rightC2_C2 C2_B2 B2_A2 A2_leftA2"/>
+
+    <!-- ==================== 转向 routes（6条） ==================== -->
+
+    <!-- 南→东: 从B0南入,东转出C0东 -->
+    <route id="route_south2east_B0" edges="bottomB0_B0 B0_C0 C0_rightC0"/>
+    <!-- 北→西: 从B2北入,西转出A2西 -->
+    <route id="route_north2west_B2" edges="topB2_B2 B2_A2 A2_leftA2"/>
+    <!-- 西→南: 从A1西入,南转出A0南 -->
+    <route id="route_west2south_A1" edges="leftA1_A1 A1_A0 A0_bottomA0"/>
+    <!-- 东→北: 从C1东入,北转出C2北 -->
+    <route id="route_east2north_C1" edges="rightC1_C1 C1_C2 C2_topC2"/>
+    <!-- 南→西: 从C0南入,西穿至A0西出 -->
+    <route id="route_south2west_C0" edges="bottomC0_C0 C0_B0 B0_A0 A0_leftA0"/>
+    <!-- 北→东: 从A2北入,东穿至C2东出 -->
+    <route id="route_north2east_A2" edges="topA2_A2 A2_B2 B2_C2 C2_rightC2"/>
+
+    <!-- ==================== Medium constant flows ==================== -->
+    <flow id="flow_south2north_A" route="route_south2north_A" begin="0" end="10000" vehsPerHour="100" departSpeed="max" departPos="base" departLane="best"/>
+    <flow id="flow_south2north_B" route="route_south2north_B" begin="0" end="10000" vehsPerHour="100" departSpeed="max" departPos="base" departLane="best"/>
+    <flow id="flow_south2north_C" route="route_south2north_C" begin="0" end="10000" vehsPerHour="100" departSpeed="max" departPos="base" departLane="best"/>
+    <flow id="flow_north2south_A" route="route_north2south_A" begin="0" end="10000" vehsPerHour="100" departSpeed="max" departPos="base" departLane="best"/>
+    <flow id="flow_north2south_B" route="route_north2south_B" begin="0" end="10000" vehsPerHour="100" departSpeed="max" departPos="base" departLane="best"/>
+    <flow id="flow_north2south_C" route="route_north2south_C" begin="0" end="10000" vehsPerHour="100" departSpeed="max" departPos="base" departLane="best"/>
+    <flow id="flow_west2east_0" route="route_west2east_0" begin="0" end="10000" vehsPerHour="100" departSpeed="max" departPos="base" departLane="best"/>
+    <flow id="flow_west2east_1" route="route_west2east_1" begin="0" end="10000" vehsPerHour="100" departSpeed="max" departPos="base" departLane="best"/>
+    <flow id="flow_west2east_2" route="route_west2east_2" begin="0" end="10000" vehsPerHour="100" departSpeed="max" departPos="base" departLane="best"/>
+    <flow id="flow_east2west_0" route="route_east2west_0" begin="0" end="10000" vehsPerHour="100" departSpeed="max" departPos="base" departLane="best"/>
+    <flow id="flow_east2west_1" route="route_east2west_1" begin="0" end="10000" vehsPerHour="100" departSpeed="max" departPos="base" departLane="best"/>
+    <flow id="flow_east2west_2" route="route_east2west_2" begin="0" end="10000" vehsPerHour="100" departSpeed="max" departPos="base" departLane="best"/>
+    <flow id="flow_south2east_B0" route="route_south2east_B0" begin="0" end="10000" vehsPerHour="100" departSpeed="max" departPos="base" departLane="best"/>
+    <flow id="flow_north2west_B2" route="route_north2west_B2" begin="0" end="10000" vehsPerHour="100" departSpeed="max" departPos="base" departLane="best"/>
+    <flow id="flow_west2south_A1" route="route_west2south_A1" begin="0" end="10000" vehsPerHour="100" departSpeed="max" departPos="base" departLane="best"/>
+    <flow id="flow_east2north_C1" route="route_east2north_C1" begin="0" end="10000" vehsPerHour="100" departSpeed="max" departPos="base" departLane="best"/>
+    <flow id="flow_south2west_C0" route="route_south2west_C0" begin="0" end="10000" vehsPerHour="100" departSpeed="max" departPos="base" departLane="best"/>
+    <flow id="flow_north2east_A2" route="route_north2east_A2" begin="0" end="10000" vehsPerHour="100" departSpeed="max" departPos="base" departLane="best"/>
+</routes>

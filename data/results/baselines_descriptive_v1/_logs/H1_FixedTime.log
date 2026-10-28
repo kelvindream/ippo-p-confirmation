@@ -1,0 +1,18 @@
+[2026-10-28 02:57:41] Using device: cuda
+[2026-10-28 02:57:41] GPU name: NVIDIA RTX A6000
+[2026-10-28T02:57:41] Fixed-Time-Program eval seed 1042 (1/5) on nets/grid-3x3/3x3.net.xml starting...
+ Retrying in 1 seconds
+[2026-10-28T02:59:39] Fixed-Time-Program eval seed 1042 done: reward=-0.35802 speed=4.340 queue=6.115 waiting=25.163
+[2026-10-28T02:59:39] Fixed-Time-Program eval seed 1043 (2/5) on nets/grid-3x3/3x3.net.xml starting...
+ Retrying in 1 seconds
+[2026-10-28T03:01:36] Fixed-Time-Program eval seed 1043 done: reward=-0.36160 speed=4.267 queue=6.342 waiting=24.941
+[2026-10-28T03:01:36] Fixed-Time-Program eval seed 1044 (3/5) on nets/grid-3x3/3x3.net.xml starting...
+ Retrying in 1 seconds
+[2026-10-28T03:03:39] Fixed-Time-Program eval seed 1044 done: reward=-0.37750 speed=4.116 queue=6.777 waiting=24.712
+[2026-10-28T03:03:39] Fixed-Time-Program eval seed 1045 (4/5) on nets/grid-3x3/3x3.net.xml starting...
+ Retrying in 1 seconds
+[2026-10-28T03:05:34] Fixed-Time-Program eval seed 1045 done: reward=-0.36388 speed=4.233 queue=6.395 waiting=24.865
+[2026-10-28T03:05:34] Fixed-Time-Program eval seed 1046 (5/5) on nets/grid-3x3/3x3.net.xml starting...
+ Retrying in 1 seconds
+[2026-10-28T03:07:30] Fixed-Time-Program eval seed 1046 done: reward=-0.35389 speed=4.300 queue=6.246 waiting=25.060
+Protocol task completed: Fixed-Time-Program, seed=47

@@ -1,0 +1,393 @@
+{
+  "status": "completed",
+  "started_at": "2026-10-28T02:57:41",
+  "method": "Fixed-Time-Program",
+  "train_seed": 47,
+  "sumo_seed": 47,
+  "train_episodes": 1,
+  "evaluation_seeds": [
+    1042,
+    1043,
+    1044,
+    1045,
+    1046
+  ],
+  "environment": {
+    "net_file": "nets/grid-3x3/3x3.net.xml",
+    "route_file": "nets/grid-3x3/3x3-medium.rou.xml",
+    "skip_range": 0,
+    "simulation_time": 10000,
+    "yellow_time": 2,
+    "delta_rs_update_time": 10,
+    "use_gui": false,
+    "multi_agent": true,
+    "tls_min_links": 4,
+    "sumo_seed": 47
+  },
+  "source_hashes": {
+    "paper_protocol.py": "a97e3ee1e17b3d66aeb7ab20a870a7a02b9969a91db0734f2faca1ccba2321d6",
+    "environment/env.py": "720684f6151a057111989e9c6c9d2270ff341ea61eb078376720beb5edf6ff88",
+    "environment/traffic_signal.py": "bfc659d53aec7c68d1a9eb278bb9fcbe24981bc217cd4ed97f6313529c1474a5",
+    "environment/metrics.py": "903b77d80cdf0a8b7aa8bbdc47c3de7992c16eafc0986987a53e519f40130770",
+    "test_algorithms.py": "44a25a4963dd18e095c4f8671b893871ef71c4ec626984f8804e6ba06bfd081b",
+    "agents/gc_mappo.py": "90a3f5e043d5d72640267c17092b3c56e1b00183a71803374cc04d14fa0c76ba",
+    "agents/dpg_mappo.py": "e50aa6ee3591dca3e5e33e0c667831922f092777df8826f0dfe2df454cd1a42b",
+    "agents/mappo.py": "4f66e641a09176a1a95ee28b828519a421b7b9e52d985f1dd5f5fedbd4c3b97e",
+    "agents/ippo.py": "7ec76955e7263a3fdaa39779cef8627451f88a2e5cac6ab000431421a73664a3",
+    "agents/gated_graph_residual_ippo.py": "e9f63e3c3b91df1e3389c9d72f8d3fe9cbed3e0d5b00f5b85e8e6fb696e23f03",
+    "agents/_colight_core.py": "3ca2454959f8f6074db656edaa3d970245c77a69a7fdd5592f46bda22c5b289d",
+    "agents/_presslight_core.py": "239d07dab1d4df69d5404e4bbf6fd5d6af2fdd175ed2f89f410113bf84d295bb",
+    "agents/colight.py": "64a63d9ccdd0fedf340174ad4f15d91df5ad8acf8aab6cde13e31ef2694d9144",
+    "agents/presslight.py": "c40fc685e2b78e5df05cd43e52e1c1c1b692781e13de79995ed839c501e3d921",
+    "agents/fixed_time.py": "e1822d3234a7ed377e67b0666ca28e94d3c17f215c4d1896195bbc5957543e3c",
+    "agents/max_pressure.py": "9b80843f7bb6612dc3bdb1894badc06bc7b9bf50be64c41a011a474b48f9cfd7",
+    "agents/baselines_descriptive.py": "1b7967a50de480695133dea48001308867a65f4bc371da603ab3ba68d949709f",
+    "agents/double_dqn.py": "171e178fe52b87d5b75c42de83e9f7c78e5967b7a91c4cadf6e24e919badfb47",
+    "agents/dueling_double_dqn.py": "68479235b2dcb7fe5ba5e5c1b9526e6234610a7d88127dd867c1407832601737",
+    "agents/gae_actor_critic.py": "6b5f4e7379bb0735179e4accae74c70c4e43302f2063c484a430b5c02fcdfdcf",
+    "agents/reinforce.py": "0a0ca48071a3eefe4b5b1886e61f7805777f00e56b9a4430896f4c18eeb4cdd1",
+    "nets/2x2-grid/2x2.net.xml": "86f34bde8e849afa57b52a35ee111db15d60c58264e71d1bcc1f912d5226c035",
+    "nets/2x2-grid/2x2-medium.rou.xml": "949855a57336dde8c8b6355d29ee30c33771f73b85aeb2fc961e48930d2490fe",
+    "nets/grid-3x3/3x3.net.xml": "07c5d91e523ae01d736937c9eec5aa358d186495c879e862d2a6b715070aa155",
+    "nets/grid-3x3/3x3-medium.rou.xml": "cd110ebca15e89c24cfcf7bb1471e055323bd9b183946d7bb59d4a0f7ea5cc83"
+  },
+  "variant_config": null,
+  "ippo_initialization_checkpoint": null,
+  "evaluation_mode": "fresh environment, checkpoint reload, deterministic actions, learning disabled",
+  "gc_mappo_actor": null,
+  "metric_standard": {
+    "speed": "vehicle-weighted mean speed over unique controlled lanes",
+    "queue": "mean halting length over unique controlled lanes, halting_number * 7.5 m",
+    "waiting": "mean waiting time over unique vehicles on controlled lanes",
+    "travel_time": "mean completed-vehicle arrival time minus departure time",
+    "delay": "mean completed-vehicle travel time minus route free-flow travel time",
+    "throughput": "cumulative arrived vehicles per evaluation episode",
+    "throughput_rate": "throughput divided by simulation hours",
+    "completion_rate": "completed departed vehicles divided by departed vehicles",
+    "incomplete_vehicles": "departed vehicles not completed by episode end",
+    "teleport_count": "unique vehicles observed in SUMO teleport events",
+    "sampling_interval_seconds": 10,
+    "deduplicate_lanes": true,
+    "deduplicate_vehicles": true
+  },
+  "method_metadata": "descriptive non-learning anchor; replays the net static program order (no adaptive control); no training",
+  "training_objective": "no training return; descriptive non-RL anchor",
+  "reward_standard": {
+    "evaluation_reward_field": "evaluation_reward",
+    "training_return_is_algorithm_specific": true,
+    "global_reward_weight": "0.30",
+    "clearance_reward_coef": "0.0",
+    "calibrated_centers_scales": {
+      "speed": [
+        "6.0",
+        "1.0"
+      ],
+      "queue": [
+        "8.0",
+        "3.0"
+      ],
+      "waiting": [
+        "12.0",
+        "4.0"
+      ]
+    }
+  },
+  "execution_options": {
+    "gc_mappo_pressure_confidence_mask": false,
+    "gc_mappo_pressure_confidence_threshold": 4.0,
+    "gc_mappo_action_prior_scale": "2.25",
+    "gc_mappo_hold_prior_bonus": "0.0",
+    "gc_mappo_eval_policy_temperature": "0.30",
+    "gc_mappo_eval_deterministic": true,
+    "gc_mappo_eval_policy_seed_offset": "0",
+    "gc_mappo_soft_q_execution": true,
+    "gc_mappo_soft_q_policy_support_only": false,
+    "gc_mappo_dense_critic_exclude_decision_states": false,
+    "global_reward_weight": "0.30",
+    "clearance_reward_coef": "0.0",
+    "reward_calibration": {
+      "speed_center": "6.0",
+      "speed_scale": "1.0",
+      "queue_center": "8.0",
+      "queue_scale": "3.0",
+      "waiting_center": "12.0",
+      "waiting_scale": "4.0"
+    }
+  },
+  "finished_at": "2026-10-28T03:07:30",
+  "checkpoint_path": null,
+  "training_metrics": null,
+  "evaluation_metrics": {
+    "evaluation_reward": [
+      -0.35801609797440276,
+      -0.36160325816122446,
+      -0.3775044650739144,
+      -0.363876036974846,
+      -0.3538870200154637
+    ],
+    "rewards": [
+      -0.35801609797440276,
+      -0.36160325816122446,
+      -0.3775044650739144,
+      -0.363876036974846,
+      -0.3538870200154637
+    ],
+    "speeds": [
+      4.339980555042172,
+      4.267211064407142,
+      4.1159162614046965,
+      4.232865439429388,
+      4.299940554329843
+    ],
+    "queue_lengths": [
+      6.115,
+      6.3419791666666665,
+      6.777395833333334,
+      6.395,
+      6.246458333333334
+    ],
+    "waiting_times": [
+      25.162763916600717,
+      24.941203038282133,
+      24.711817108982007,
+      24.865131589456745,
+      25.06045519157499
+    ],
+    "travel_times": [
+      216.0144779771615,
+      221.47320154880782,
+      230.72469387755103,
+      222.77356181150552,
+      218.73039215686273
+    ],
+    "demand_service_times": [
+      219.08173461231016,
+      224.3529176658673,
+      233.44264588329335,
+      225.7505995203837,
+      221.7406075139888
+    ],
+    "delays": [
+      138.59029243403384,
+      144.05141550771538,
+      153.3117936850833,
+      145.37886477038407,
+      141.33300747705505
+    ],
+    "throughput": [
+      4836,
+      4798,
+      4867,
+      4848,
+      4813
+    ],
+    "throughput_rates": [
+      1740.96,
+      1727.28,
+      1752.1200000000001,
+      1745.28,
+      1732.68
+    ],
+    "completion_rates": [
+      0.9800159872102319,
+      0.9806155075939249,
+      0.9792166266986411,
+      0.9796163069544365,
+      0.9784172661870504
+    ],
+    "planned_completion_rates": [
+      0.9800159872102319,
+      0.9806155075939249,
+      0.9792166266986411,
+      0.9796163069544365,
+      0.9784172661870504
+    ],
+    "normal_completed_vehicles": [
+      4904,
+      4907,
+      4900,
+      4902,
+      4896
+    ],
+    "planned_vehicles": [
+      5004,
+      5004,
+      5004,
+      5004,
+      5004
+    ],
+    "demand_conservation_ok": [
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "incomplete_vehicles": [
+      100,
+      97,
+      104,
+      102,
+      108
+    ],
+    "teleport_counts": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "decision_slots": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "executed_hold_rates": [
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "executed_switch_rates": [
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "yellow_advances_per_step": [
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "yellow_advances_per_decision": [
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "reward_components": [
+      {
+        "avg_speed": 4.6162426321179115,
+        "avg_queue_length": 6.115,
+        "avg_waiting_time": 23.668158395536064,
+        "action_reward": -0.022276666666666667,
+        "linear_score": -0.2778033386345612,
+        "delta_score": -0.21560818699398218,
+        "balanced_state_score": -0.6357357678568787,
+        "aligned_progress_bonus": 0.12328333879570866,
+        "aligned_speed_bonus": 0.0926310966792073,
+        "overload_penalty": -0.0952061110102782,
+        "barrier_penalty": 0.0,
+        "anti_counterexample_penalty": -0.21471840089619404,
+        "regression_penalty": 0.49893586887155855,
+        "speed_gate": 0.3091667351714058,
+        "queue_gate": 0.6758565023822968,
+        "waiting_gate": 0.22933297607395475,
+        "congestion_gate": 0.4258033276496252,
+        "joint_gate": 0.14763985642012695,
+        "weakest_gate": 0.1686848089228821,
+        "speed_alignment_gate": 0.23547035671667846,
+        "reward": -0.33819746599765005
+      },
+      {
+        "avg_speed": 4.353704869115622,
+        "avg_queue_length": 6.3419791666666665,
+        "avg_waiting_time": 24.433912997596142,
+        "action_reward": -0.02116111111111111,
+        "linear_score": -0.30129963940475046,
+        "delta_score": -0.2083997428556475,
+        "balanced_state_score": -0.6344592090548796,
+        "aligned_progress_bonus": 0.11521073518023657,
+        "aligned_speed_bonus": 0.08829436091266134,
+        "overload_penalty": -0.10514292898670657,
+        "barrier_penalty": -0.0010091395289839543,
+        "anti_counterexample_penalty": -0.20257559244986487,
+        "regression_penalty": 0.48376271982313956,
+        "speed_gate": 0.2661944810127731,
+        "queue_gate": 0.6441577399363826,
+        "waiting_gate": 0.2662049874618219,
+        "congestion_gate": 0.43250419855062866,
+        "joint_gate": 0.16028083939607862,
+        "weakest_gate": 0.1767800501757707,
+        "speed_alignment_gate": 0.21575063264592934,
+        "reward": -0.3420666092954997
+      },
+      {
+        "avg_speed": 4.164610032539252,
+        "avg_queue_length": 6.777395833333333,
+        "avg_waiting_time": 24.099233698049552,
+        "action_reward": -0.02101888888888889,
+        "linear_score": -0.33887873479564246,
+        "delta_score": -0.23621764573807333,
+        "balanced_state_score": -0.6621695906459654,
+        "aligned_progress_bonus": 0.12088905543351756,
+        "aligned_speed_bonus": 0.0851884699010484,
+        "overload_penalty": -0.1008314330014985,
+        "barrier_penalty": 0.0,
+        "anti_counterexample_penalty": -0.21190441265906504,
+        "regression_penalty": 0.5122401371115567,
+        "speed_gate": 0.26862697608304087,
+        "queue_gate": 0.6149930177148231,
+        "waiting_gate": 0.22899677430566812,
+        "congestion_gate": 0.39883512140569627,
+        "joint_gate": 0.14108884172924754,
+        "weakest_gate": 0.1611098693718558,
+        "speed_alignment_gate": 0.20997630310100018,
+        "reward": -0.3656344945387123
+      },
+      {
+        "avg_speed": 4.406643982805518,
+        "avg_queue_length": 6.395,
+        "avg_waiting_time": 23.479004158567935,
+        "action_reward": -0.021836666666666667,
+        "linear_score": -0.30148553321713845,
+        "delta_score": -0.20650246059824037,
+        "balanced_state_score": -0.6454303789499087,
+        "aligned_progress_bonus": 0.12971931679998214,
+        "aligned_speed_bonus": 0.09331805954052245,
+        "overload_penalty": -0.0857657069834594,
+        "barrier_penalty": 0.0,
+        "anti_counterexample_penalty": -0.21706602858533933,
+        "regression_penalty": 0.4963867438132032,
+        "speed_gate": 0.3043723624257299,
+        "queue_gate": 0.6500870263712584,
+        "waiting_gate": 0.21778248714152035,
+        "congestion_gate": 0.4079964844026051,
+        "joint_gate": 0.14389833765346605,
+        "weakest_gate": 0.1624166569846199,
+        "speed_alignment_gate": 0.2301114041791299,
+        "reward": -0.34285801321972775
+      },
+      {
+        "avg_speed": 4.373963242628448,
+        "avg_queue_length": 6.246458333333333,
+        "avg_waiting_time": 24.665218186957233,
+        "action_reward": -0.022041111111111112,
+        "linear_score": -0.2756182959219569,
+        "delta_score": -0.22569345438715557,
+        "balanced_state_score": -0.6125605772358655,
+        "aligned_progress_bonus": 0.11212307623507796,
+        "aligned_speed_bonus": 0.0956525342120894,
+        "overload_penalty": -0.10903142474133844,
+        "barrier_penalty": -0.0010500970569037385,
+        "anti_counterexample_penalty": -0.2039892979190219,
+        "regression_penalty": 0.48992342007840517,
+        "speed_gate": 0.2871490992121836,
+        "queue_gate": 0.6597392077852853,
+        "waiting_gate": 0.2679044573809491,
+        "congestion_gate": 0.44031174755885694,
+        "joint_gate": 0.16888546293342516,
+        "weakest_gate": 0.18594773506314918,
+        "speed_alignment_gate": 0.23088707640431574,
+        "reward": -0.3331422142297055
+      }
+    ]
+  }
+}

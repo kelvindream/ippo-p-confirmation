@@ -1,0 +1,270 @@
+{
+  "matrix": "formal_four_grid_v1",
+  "metric": "demand_service_time (U, lower is better)",
+  "aggregation": "protocol 8.2: seed-mean over eval seeds, log-ratio, equal-weight scenarios, mean over 5 training seeds",
+  "bootstrap_resamples": 20000,
+  "bootstrap_seed": 20261024,
+  "inference": "exact two-sided paired sign-flip test over 5 training seeds; Holm correction over 5 contrasts",
+  "contrasts": {
+    "IPPO-P_vs_IPPO": {
+      "mean_log_ratio": 0.02243586050066354,
+      "improvement_pct": 2.21860483206181,
+      "ci95_pct": [
+        1.1749512626200054,
+        3.2522719882872586
+      ],
+      "seed_log_ratios": [
+        0.005770315663636168,
+        0.037684638554273016,
+        0.016461576763205164,
+        0.015546605047095157,
+        0.036716166475108204
+      ],
+      "seed_wins": 5,
+      "p_value": 0.0625,
+      "p_method": "exact two-sided paired sign-flip test",
+      "label": "prior effect within IPPO",
+      "p_holm": 0.3125
+    },
+    "GC-MAPPO-ind-P_vs_GC-MAPPO-ind-noP": {
+      "mean_log_ratio": 0.0027206936260455216,
+      "improvement_pct": 0.2716995893368157,
+      "ci95_pct": [
+        -0.21493796150429123,
+        0.8520679358338112
+      ],
+      "seed_log_ratios": [
+        -0.0022081326145101366,
+        -0.004052812619118288,
+        0.00363120545548295,
+        0.002445585722755121,
+        0.01378762218561796
+      ],
+      "seed_wins": 3,
+      "p_value": 0.5625,
+      "p_method": "exact two-sided paired sign-flip test",
+      "label": "prior effect within GC",
+      "p_holm": 0.5625
+    },
+    "GC-MAPPO-ind-noP_vs_IPPO": {
+      "mean_log_ratio": 0.01769247212352663,
+      "improvement_pct": 1.7536879297150532,
+      "ci95_pct": [
+        0.8456206567401092,
+        2.6534390175884437
+      ],
+      "seed_log_ratios": [
+        0.008826671149191466,
+        0.031852400525131164,
+        0.010890419767561525,
+        0.006958526791341174,
+        0.029934342384407824
+      ],
+      "seed_wins": 5,
+      "p_value": 0.0625,
+      "p_method": "exact two-sided paired sign-flip test",
+      "label": "GC(no prior) vs IPPO",
+      "p_holm": 0.3125
+    },
+    "GC-MAPPO-ind-P_vs_IPPO": {
+      "mean_log_ratio": 0.020413165749572127,
+      "improvement_pct": 2.0206227561485823,
+      "ci95_pct": [
+        0.9270150216002637,
+        3.257444621416261
+      ],
+      "seed_log_ratios": [
+        0.006618538534681297,
+        0.027799587906012797,
+        0.014521625223044463,
+        0.009404112514096272,
+        0.04372196457002581
+      ],
+      "seed_wins": 5,
+      "p_value": 0.0625,
+      "p_method": "exact two-sided paired sign-flip test",
+      "label": "GC(prior) vs IPPO",
+      "p_holm": 0.3125
+    },
+    "INTERACTION_vs_None": {
+      "mean_log_ratio": -0.01971516687461802,
+      "improvement_pct": -1.9910794271049248,
+      "ci95_pct": [
+        -3.1716447588832963,
+        -1.1003833376418193
+      ],
+      "seed_log_ratios": [
+        -0.007978448278146305,
+        -0.0417374511733913,
+        -0.012830371307722214,
+        -0.013101019324340036,
+        -0.022928544289490246
+      ],
+      "seed_wins": 0,
+      "p_value": 0.0625,
+      "p_method": "exact two-sided paired sign-flip test",
+      "label": "(GC prior effect) - (IPPO prior effect)",
+      "p_holm": 0.3125
+    }
+  },
+  "mean_U_by_cell": {
+    "IPPO|H1": {
+      "42": 135.73545163868906,
+      "43": 135.2139088729017,
+      "44": 135.36262989608312,
+      "45": 135.97314148681053,
+      "46": 133.60531574740207
+    },
+    "IPPO|H2": {
+      "42": 115.763309352518,
+      "43": 116.25752398081536,
+      "44": 116.05065947242205,
+      "45": 115.82679856115108,
+      "46": 115.82679856115108
+    },
+    "IPPO|H3": {
+      "42": 119.70736211034193,
+      "43": 131.97436450842352,
+      "44": 122.9892086331237,
+      "45": 122.55836930458653,
+      "46": 133.93199040770418
+    },
+    "IPPO-P|H1": {
+      "42": 134.60435651478818,
+      "43": 134.5276978417266,
+      "44": 134.26262989608313,
+      "45": 134.27877697841728,
+      "46": 134.4582334132694
+    },
+    "IPPO-P|H2": {
+      "42": 115.49052757793766,
+      "43": 115.26423860911272,
+      "44": 115.55353717026381,
+      "45": 115.64331534772182,
+      "46": 115.71966426858512
+    },
+    "IPPO-P|H3": {
+      "42": 118.9218225419966,
+      "43": 119.4887529976321,
+      "44": 118.52978417269205,
+      "45": 118.63745803360334,
+      "46": 119.31242206238032
+    },
+    "GC-MAPPO-ind-noP|H1": {
+      "42": 134.41135091926458,
+      "43": 136.1496003197442,
+      "44": 134.73784972022383,
+      "45": 136.35295763389288,
+      "46": 136.10575539568345
+    },
+    "GC-MAPPO-ind-noP|H2": {
+      "42": 115.87239208633093,
+      "43": 115.72835731414868,
+      "44": 115.1068345323741,
+      "45": 115.69760191846521,
+      "46": 115.52763788968825
+    },
+    "GC-MAPPO-ind-noP|H3": {
+      "42": 117.61671462832756,
+      "43": 119.66741007197258,
+      "44": 120.5684652278479,
+      "45": 119.82573141489824,
+      "46": 120.49076738612128
+    },
+    "GC-MAPPO-ind-P|H1": {
+      "42": 133.92430055955236,
+      "43": 134.64228617106318,
+      "44": 135.13093525179858,
+      "45": 134.37242206235015,
+      "46": 133.13677058353318
+    },
+    "GC-MAPPO-ind-P|H2": {
+      "42": 115.91696642685852,
+      "43": 115.2765287769784,
+      "44": 115.21537769784172,
+      "45": 115.73803956834533,
+      "46": 115.39511390887291
+    },
+    "GC-MAPPO-ind-P|H3": {
+      "42": 118.78333333336352,
+      "43": 122.96741007197261,
+      "44": 118.80321342928679,
+      "45": 120.66086330938268,
+      "46": 118.3224220623803
+    }
+  },
+  "sanity": {
+    "IPPO|H1": {
+      "mean_completion": 0.9875699440447642,
+      "mean_planned_completion": 0.9875699440447642,
+      "total_teleport": 0.0,
+      "conservation_all_ok": true
+    },
+    "IPPO|H2": {
+      "mean_completion": 0.9890827338129495,
+      "mean_planned_completion": 0.9890827338129495,
+      "total_teleport": 0.0,
+      "conservation_all_ok": true
+    },
+    "IPPO|H3": {
+      "mean_completion": 0.9882110311750599,
+      "mean_planned_completion": 0.9882110311750599,
+      "total_teleport": 0.0,
+      "conservation_all_ok": true
+    },
+    "IPPO-P|H1": {
+      "mean_completion": 0.9877537969624302,
+      "mean_planned_completion": 0.9877537969624302,
+      "total_teleport": 0.0,
+      "conservation_all_ok": true
+    },
+    "IPPO-P|H2": {
+      "mean_completion": 0.989310551558753,
+      "mean_planned_completion": 0.989310551558753,
+      "total_teleport": 0.0,
+      "conservation_all_ok": true
+    },
+    "IPPO-P|H3": {
+      "mean_completion": 0.9886906474820144,
+      "mean_planned_completion": 0.9886906474820144,
+      "total_teleport": 0.0,
+      "conservation_all_ok": true
+    },
+    "GC-MAPPO-ind-noP|H1": {
+      "mean_completion": 0.9877458033573141,
+      "mean_planned_completion": 0.9877458033573141,
+      "total_teleport": 0.0,
+      "conservation_all_ok": true
+    },
+    "GC-MAPPO-ind-noP|H2": {
+      "mean_completion": 0.9890947242206234,
+      "mean_planned_completion": 0.9890947242206234,
+      "total_teleport": 0.0,
+      "conservation_all_ok": true
+    },
+    "GC-MAPPO-ind-noP|H3": {
+      "mean_completion": 0.9887242206235012,
+      "mean_planned_completion": 0.9887242206235012,
+      "total_teleport": 0.0,
+      "conservation_all_ok": true
+    },
+    "GC-MAPPO-ind-P|H1": {
+      "mean_completion": 0.9881694644284572,
+      "mean_planned_completion": 0.9881694644284572,
+      "total_teleport": 0.0,
+      "conservation_all_ok": true
+    },
+    "GC-MAPPO-ind-P|H2": {
+      "mean_completion": 0.9891666666666665,
+      "mean_planned_completion": 0.9891666666666665,
+      "total_teleport": 0.0,
+      "conservation_all_ok": true
+    },
+    "GC-MAPPO-ind-P|H3": {
+      "mean_completion": 0.9886474820143885,
+      "mean_planned_completion": 0.9886474820143885,
+      "total_teleport": 0.0,
+      "conservation_all_ok": true
+    }
+  }
+}

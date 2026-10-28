@@ -1,0 +1,43 @@
+{
+  "name": "ippo_prior_probe_700_decision_tree",
+  "locked_at": "2026-10-27T10:35:00+08:00",
+  "locked_before_results": true,
+  "probe": {
+    "scenario": "H1PROBE700: 3x3 grid, 18 flows x 350 veh/h = 6300 veh/h (700 veh/h per intersection)",
+    "methods": ["IPPO", "IPPO-P"],
+    "seeds": [72, 73],
+    "train_episodes": 50,
+    "eval_seeds": [1042, 1043, 1044, 1045, 1046],
+    "result_root": "results/ippo_prior_probe_700",
+    "role": "mechanism probe only; never merged into confirmatory tests; n=2 per method cannot confirm any direction"
+  },
+  "decision_rule_primary": "per-seed paired sign of mean U (demand_service_time over 5 eval seeds): IPPO-P better in both seeds = positive; worse in both = negative; split = indeterminate",
+  "decision_rule_secondary_guard": "completion rates and teleports must show no method-specific failure; if either method shows completion collapse or teleport, interpret as protocol anomaly before any mechanism claim",
+  "branches": {
+    "positive": {
+      "condition": "IPPO-P U better in 2/2 seeds (paired training-curve direction must not contradict)",
+      "conclusion_writing": "prior benefit has a pressure floor: when load is insufficient the bias cost dominates; near saturation the stabilization benefit dominates; v2 negative result is reported as a mid-point on the pressure gradient; paper mainline (IPPO-P, confirmed 2x2 results) unchanged",
+      "further_experiments": "none; proceed to writing"
+    },
+    "negative": {
+      "condition": "IPPO-P U worse in 2/2 seeds",
+      "conclusion_writing": "on 3x3 topology the prior bias cost dominates and does not recover with load; claim scope restricted to compact 2x2-like networks; v2 and probe both reported as boundary/negative evidence in limitations",
+      "further_experiments": "none; proceed to writing"
+    },
+    "indeterminate": {
+      "condition": "seed directions split (1/2)",
+      "conclusion_writing": "probe is inconclusive; v2 remains a single-point negative result; no mechanism claim about pressure floor is made",
+      "further_experiments": "none; no additional probes; proceed to writing with scope-restricted claims"
+    }
+  },
+  "anti_goals": [
+    "no post-hoc reinterpretation after seeing results",
+    "no additional seeds/scenarios added to rescue any branch",
+    "probe results never described as confirmatory"
+  ],
+  "context": {
+    "confirmed_main_result": "IPPO-P vs IPPO on H1/H2/H3 (2x2-style grids), n=10 fresh seeds: +1.712%, 10/10, exact p=0.001953 (frozen protocol ippo_prior_confirmation_v1)",
+    "v2_boundary_result": "3x3 @ 5400 veh/h (600/intersection): IPPO-P -0.997%, 0/5 seeds, global service-quality degradation with completion unchanged",
+    "open_question": "whether v2 negative effect is a pressure-floor phenomenon or a 3x3-topology phenomenon"
+  }
+}

@@ -1,0 +1,14 @@
+usage: paper_protocol.py [-h] --method
+                         {DPG-MAPPO,GC-MAPPO,GC-MAPPO-ind-noP,GC-MAPPO-ind-P,MAPPO,IPPO,IPPO-P,IPPO+,IPPO-Cap,BR-IPPO,GR-GMAPPO-L,CoLight,PressLight,Max-Pressure,Fixed-Time,Double
+                         DQN,Dueling Double DQN,GAE Actor-Critic,REINFORCE}
+                         --train-seed TRAIN_SEED
+                         [--ippo-init-checkpoint IPPO_INIT_CHECKPOINT]
+                         [--sumo-seed SUMO_SEED]
+                         [--train-episodes TRAIN_EPISODES]
+                         [--eval-seeds EVAL_SEEDS [EVAL_SEEDS ...]]
+                         --output-dir OUTPUT_DIR [--net-file NET_FILE]
+                         [--route-file ROUTE_FILE]
+                         [--tls-min-links TLS_MIN_LINKS] [--resume]
+paper_protocol.py: error: argument --method: invalid choice: '' (choose from 'DPG-MAPPO', 'GC-MAPPO', 'GC-MAPPO-ind-noP', 'GC-MAPPO-ind-P', 'MAPPO', 'IPPO', 'IPPO-P', 'IPPO+', 'IPPO-Cap', 'BR-IPPO', 'GR-GMAPPO-L', 'CoLight', 'PressLight', 'Max-Pressure', 'Fixed-Time', 'Double DQN', 'Dueling Double DQN', 'GAE Actor-Critic', 'REINFORCE')
+[2026-10-27 08:46:01] Using device: cuda
+[2026-10-27 08:46:01] GPU name: NVIDIA RTX A6000

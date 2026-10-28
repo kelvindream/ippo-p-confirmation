@@ -1,0 +1,74 @@
+{
+  "protocol_name": "ippo_prior_scaleup_v2",
+  "basis": "frozen protocol of ippo_prior_confirmation_v1 copied, not re-registered",
+  "scenario": "H1HIGH: 3x3 grid, 18 flows x 300 veh/h = 5400 veh/h (600/intersection)",
+  "contrast": "IPPO-P vs IPPO",
+  "metric": "demand_service_time",
+  "seeds": [
+    67,
+    68,
+    69,
+    70,
+    71
+  ],
+  "per_seed": {
+    "67": {
+      "IPPO": 141.62039701572078,
+      "IPPO-P": 142.32168931521448,
+      "log_ratio": -0.004939695517143977,
+      "ippo_completion_rate_min": 0.9854116706634692,
+      "ippop_completion_rate_min": 0.9856115107913669
+    },
+    "68": {
+      "IPPO": 140.50602184918733,
+      "IPPO-P": 142.74047428723688,
+      "log_ratio": -0.015777768280806414,
+      "ippo_completion_rate_min": 0.9858113509192646,
+      "ippop_completion_rate_min": 0.9852784439115374
+    },
+    "69": {
+      "IPPO": 140.09555022648547,
+      "IPPO-P": 141.29733546496135,
+      "log_ratio": -0.008541740794206186,
+      "ippo_completion_rate_min": 0.9858779642952304,
+      "ippop_completion_rate_min": 0.9852784439115374
+    },
+    "70": {
+      "IPPO": 141.52893685051959,
+      "IPPO-P": 142.24656274980015,
+      "log_ratio": -0.005057712382196783,
+      "ippo_completion_rate_min": 0.9848787636557421,
+      "ippop_completion_rate_min": 0.9857447375432987
+    },
+    "71": {
+      "IPPO": 140.3593924860112,
+      "IPPO-P": 142.52266187050358,
+      "log_ratio": -0.015294795285055476,
+      "ippo_completion_rate_min": 0.9857437878888815,
+      "ippop_completion_rate_min": 0.9858113509192646
+    }
+  },
+  "primary": {
+    "mean_log_ratio": -0.009922342451881765,
+    "improvement_pct": -0.9971732110289233,
+    "bootstrap_ci95_pct": [
+      -1.4237778848746885,
+      -0.5723629048505874
+    ],
+    "seed_wins": 0,
+    "n_seeds": 5,
+    "exact_two_sided_sign_flip_p": 0.0625,
+    "alpha": 0.05,
+    "confirmed": false
+  },
+  "descriptive": {
+    "ippo_u_mean_across_seeds": 140.82205968558486,
+    "ippo_u_seed_sd": 0.7033446283209548,
+    "ippo_p_u_mean_across_seeds": 142.2257447375433,
+    "ippo_p_u_seed_sd": 0.5533282981666677,
+    "ippo_completion_rate_overall_min": 0.9848787636557421,
+    "ippo_p_completion_rate_overall_min": 0.9852784439115374
+  },
+  "bootstrap_resamples": 20000,
+  "bootstrap_seed": 20261026
+}

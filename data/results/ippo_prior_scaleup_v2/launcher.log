@@ -1,0 +1,25 @@
+=== Scale-up v2: 3x3-saturated 5400 veh/h (600/intersection), 10 tasks, parallel=4 ===
+=== Seeds 67-71 (57-61, 62-66 consumed by earlier branches) ===
+=== Started: 2026-10-26T19:39:47+08:00 ===
+[START] H1SAT_IPPO_seed67
+[START] H1SAT_IPPO_seed68
+[START] H1SAT_IPPO_seed69
+[START] H1SAT_IPPO_seed70
+[DONE] H1SAT_IPPO_seed70
+[START] H1SAT_IPPO_seed71
+[DONE] H1SAT_IPPO_seed68
+[START] H1SAT_IPPO-P_seed67
+[DONE] H1SAT_IPPO_seed67
+[START] H1SAT_IPPO-P_seed68
+[DONE] H1SAT_IPPO_seed69
+[START] H1SAT_IPPO-P_seed69
+[DONE] H1SAT_IPPO_seed71
+[START] H1SAT_IPPO-P_seed70
+[DONE] H1SAT_IPPO-P_seed69
+[START] H1SAT_IPPO-P_seed71
+[DONE] H1SAT_IPPO-P_seed67
+[DONE] H1SAT_IPPO-P_seed68
+[DONE] H1SAT_IPPO-P_seed70
+[DONE] H1SAT_IPPO-P_seed71
+=== Finished: 2026-10-27T06:34:00+08:00 ===
+Scale-up v2 status: {'completed': 10}

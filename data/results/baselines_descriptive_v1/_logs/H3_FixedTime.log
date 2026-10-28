@@ -1,0 +1,18 @@
+[2026-10-28 03:07:33] Using device: cuda
+[2026-10-28 03:07:33] GPU name: NVIDIA RTX A6000
+[2026-10-28T03:07:33] Fixed-Time-Program eval seed 1042 (1/5) on nets/2x2-grid/2x2_oversaturated.net.xml starting...
+ Retrying in 1 seconds
+[2026-10-28T03:09:41] Fixed-Time-Program eval seed 1042 done: reward=-0.54533 speed=1.990 queue=35.689 waiting=33.027
+[2026-10-28T03:09:41] Fixed-Time-Program eval seed 1043 (2/5) on nets/2x2-grid/2x2_oversaturated.net.xml starting...
+ Retrying in 1 seconds
+[2026-10-28T03:11:48] Fixed-Time-Program eval seed 1043 done: reward=-0.54385 speed=1.985 queue=35.634 waiting=33.388
+[2026-10-28T03:11:48] Fixed-Time-Program eval seed 1044 (3/5) on nets/2x2-grid/2x2_oversaturated.net.xml starting...
+ Retrying in 1 seconds
+[2026-10-28T03:13:54] Fixed-Time-Program eval seed 1044 done: reward=-0.59210 speed=2.014 queue=35.199 waiting=33.813
+[2026-10-28T03:13:54] Fixed-Time-Program eval seed 1045 (4/5) on nets/2x2-grid/2x2_oversaturated.net.xml starting...
+ Retrying in 1 seconds
+[2026-10-28T03:15:58] Fixed-Time-Program eval seed 1045 done: reward=-0.56343 speed=2.056 queue=33.734 waiting=33.936
+[2026-10-28T03:15:58] Fixed-Time-Program eval seed 1046 (5/5) on nets/2x2-grid/2x2_oversaturated.net.xml starting...
+ Retrying in 1 seconds
+[2026-10-28T03:18:05] Fixed-Time-Program eval seed 1046 done: reward=-0.54236 speed=1.995 queue=35.662 waiting=33.167
+Protocol task completed: Fixed-Time-Program, seed=47

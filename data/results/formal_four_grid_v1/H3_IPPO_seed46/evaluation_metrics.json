@@ -1,0 +1,273 @@
+{
+  "evaluation_reward": [
+    -0.15998202082423926,
+    -0.20309717539549957,
+    -0.19065179021503856,
+    -0.1606317120512029,
+    -0.19931496910707297
+  ],
+  "rewards": [
+    -0.15998202082423926,
+    -0.20309717539549957,
+    -0.19065179021503856,
+    -0.1606317120512029,
+    -0.19931496910707297
+  ],
+  "speeds": [
+    5.397515308328977,
+    5.168306859999219,
+    5.149819892612776,
+    5.415560309653585,
+    5.207189437290848
+  ],
+  "queue_lengths": [
+    9.8746875,
+    10.59609375,
+    10.69734375,
+    9.808828125,
+    10.4775
+  ],
+  "waiting_times": [
+    25.06640619372077,
+    25.813201592262427,
+    26.093976981343886,
+    24.995265643488043,
+    25.799370286749124
+  ],
+  "travel_times": [
+    126.69793689320389,
+    131.08753186839868,
+    131.25850340136054,
+    125.60184510803593,
+    130.2336652902599
+  ],
+  "demand_service_times": [
+    131.60899280578556,
+    136.1521582734117,
+    136.12326139091775,
+    130.54628297365133,
+    135.22925659475462
+  ],
+  "delays": [
+    68.30186057930443,
+    72.6552297474526,
+    72.84790254680027,
+    67.19422513205042,
+    71.80818877214638
+  ],
+  "throughput": [
+    8026,
+    7922,
+    7977,
+    8073,
+    7934
+  ],
+  "throughput_rates": [
+    2889.36,
+    2851.92,
+    2871.7200000000003,
+    2906.28,
+    2856.2400000000002
+  ],
+  "completion_rates": [
+    0.988009592326139,
+    0.9876498800959232,
+    0.9870503597122302,
+    0.9877697841726619,
+    0.9872901678657074
+  ],
+  "planned_completion_rates": [
+    0.988009592326139,
+    0.9876498800959232,
+    0.9870503597122302,
+    0.9877697841726619,
+    0.9872901678657074
+  ],
+  "normal_completed_vehicles": [
+    8240,
+    8237,
+    8232,
+    8238,
+    8234
+  ],
+  "planned_vehicles": [
+    8340,
+    8340,
+    8340,
+    8340,
+    8340
+  ],
+  "demand_conservation_ok": [
+    true,
+    true,
+    true,
+    true,
+    true
+  ],
+  "incomplete_vehicles": [
+    100,
+    103,
+    108,
+    102,
+    106
+  ],
+  "teleport_counts": [
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "decision_slots": [
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "executed_hold_rates": [
+    null,
+    null,
+    null,
+    null,
+    null
+  ],
+  "executed_switch_rates": [
+    null,
+    null,
+    null,
+    null,
+    null
+  ],
+  "yellow_advances_per_step": [
+    null,
+    null,
+    null,
+    null,
+    null
+  ],
+  "yellow_advances_per_decision": [
+    null,
+    null,
+    null,
+    null,
+    null
+  ],
+  "reward_components": [
+    {
+      "avg_speed": 6.515800394351803,
+      "avg_queue_length": 9.8746875,
+      "avg_waiting_time": 16.64494893276994,
+      "action_reward": -0.01764,
+      "linear_score": 0.10326959661527707,
+      "delta_score": -0.22333196407472702,
+      "balanced_state_score": -0.11926435161215612,
+      "aligned_progress_bonus": 0.14767753168776732,
+      "aligned_speed_bonus": 0.20072765592956085,
+      "overload_penalty": -0.06770766305163482,
+      "barrier_penalty": -0.012430184952967572,
+      "anti_counterexample_penalty": -0.14017598733311462,
+      "regression_penalty": 0.48163898065021754,
+      "speed_gate": 0.4910340682506359,
+      "queue_gate": 0.531502064615937,
+      "waiting_gate": 0.6346389872968481,
+      "congestion_gate": 0.5892587413172473,
+      "joint_gate": 0.42149124749710526,
+      "weakest_gate": 0.4492888334369494,
+      "speed_alignment_gate": 0.45902391746784343,
+      "reward": -0.07398808688229312
+    },
+    {
+      "avg_speed": 6.2473048414243655,
+      "avg_queue_length": 10.59609375,
+      "avg_waiting_time": 17.091668601118275,
+      "action_reward": -0.017470000000000003,
+      "linear_score": 0.041662032134464864,
+      "delta_score": -0.2108570934899269,
+      "balanced_state_score": -0.18520229475162386,
+      "aligned_progress_bonus": 0.15595782113742993,
+      "aligned_speed_bonus": 0.1827826422916004,
+      "overload_penalty": -0.06887249132708512,
+      "barrier_penalty": -0.011239672626985948,
+      "anti_counterexample_penalty": -0.14159299564711358,
+      "regression_penalty": 0.48198896411451714,
+      "speed_gate": 0.45020881086625164,
+      "queue_gate": 0.5079368005726338,
+      "waiting_gate": 0.6111033871595203,
+      "congestion_gate": 0.5657100890612903,
+      "joint_gate": 0.3897856095905103,
+      "weakest_gate": 0.41845141781377665,
+      "speed_alignment_gate": 0.4230408014274491,
+      "reward": -0.10655459772843207
+    },
+    {
+      "avg_speed": 6.238268282818687,
+      "avg_queue_length": 10.69734375,
+      "avg_waiting_time": 17.42977651631137,
+      "action_reward": -0.0175,
+      "linear_score": 0.07439433286717848,
+      "delta_score": -0.21139784447988189,
+      "balanced_state_score": -0.12882777551400784,
+      "aligned_progress_bonus": 0.15023368964249215,
+      "aligned_speed_bonus": 0.20378075220250105,
+      "overload_penalty": -0.06883519802044782,
+      "barrier_penalty": -0.010914001635085513,
+      "anti_counterexample_penalty": -0.14606018794782158,
+      "regression_penalty": 0.4811981962261164,
+      "speed_gate": 0.49049728018454375,
+      "queue_gate": 0.5149195759109718,
+      "waiting_gate": 0.6052944501546308,
+      "congestion_gate": 0.5655295054874209,
+      "joint_gate": 0.414659449041117,
+      "weakest_gate": 0.44560159204993816,
+      "speed_alignment_gate": 0.4561870718056417,
+      "reward": -0.08113971559202073
+    },
+    {
+      "avg_speed": 6.536938243472367,
+      "avg_queue_length": 9.808828125,
+      "avg_waiting_time": 16.859527198155448,
+      "action_reward": -0.017650000000000002,
+      "linear_score": 0.09635532619786112,
+      "delta_score": -0.2246840830066711,
+      "balanced_state_score": -0.11032079958898235,
+      "aligned_progress_bonus": 0.14404988102718017,
+      "aligned_speed_bonus": 0.20304933919169918,
+      "overload_penalty": -0.06628853271197062,
+      "barrier_penalty": -0.011708367163641015,
+      "anti_counterexample_penalty": -0.1417442401089154,
+      "regression_penalty": 0.4853931752354972,
+      "speed_gate": 0.4979779764744508,
+      "queue_gate": 0.5354681889152635,
+      "waiting_gate": 0.6145108650508423,
+      "congestion_gate": 0.5797320875511878,
+      "joint_gate": 0.4237630314354854,
+      "weakest_gate": 0.45746026241297727,
+      "speed_alignment_gate": 0.4639488489501184,
+      "reward": -0.07367934829128055
+    },
+    {
+      "avg_speed": 6.286596154246829,
+      "avg_queue_length": 10.4775,
+      "avg_waiting_time": 17.056287165281194,
+      "action_reward": -0.01753,
+      "linear_score": 0.04816071955080466,
+      "delta_score": -0.21961939337570896,
+      "balanced_state_score": -0.17872620118948918,
+      "aligned_progress_bonus": 0.15509126616940902,
+      "aligned_speed_bonus": 0.18432073789122064,
+      "overload_penalty": -0.06891713194948505,
+      "barrier_penalty": -0.011193099828587145,
+      "anti_counterexample_penalty": -0.14206983095807618,
+      "regression_penalty": 0.48607778133099644,
+      "speed_gate": 0.4556771454999979,
+      "queue_gate": 0.5126328127932986,
+      "waiting_gate": 0.6108798329191044,
+      "congestion_gate": 0.5676511440637498,
+      "joint_gate": 0.39234393191886946,
+      "weakest_gate": 0.4220913638386328,
+      "speed_alignment_gate": 0.4268984391660399,
+      "reward": -0.10489266940838997
+    }
+  ]
+}

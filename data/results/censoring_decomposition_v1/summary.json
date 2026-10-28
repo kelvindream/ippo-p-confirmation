@@ -1,0 +1,268 @@
+{
+ "task": "H1_IPPO_seed47",
+ "protocol_name": "ippo_prior_confirmation_v1",
+ "purpose": "exact censoring decomposition of U = demand_service_time for the Limitations statement (replaces the unarchived 0.6-0.7% bound)",
+ "generated_at": "2026-10-28T16:59:25",
+ "metric_definition": {
+  "u": "mean over planned vehicles of max(0, service_end - scheduled_departure)",
+  "planned": "route-file vehicles with depart <= demand_end",
+  "service_end_completed": "SUMO arrival time, capped at demand_end",
+  "service_end_censored": "demand_end (= simulation_time = 10000 s)",
+  "censored_states": "any planned vehicle not in normal_arrival at episode end"
+ },
+ "determinism": {
+  "verdict": "reproduced",
+  "tolerance": 1e-06,
+  "max_abs_diff_rerun_vs_stored": 0.0,
+  "per_episode_abs_diff": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "stored_demand_service_times": [
+   136.04856115107913,
+   136.30935251798562,
+   136.4324540367706,
+   133.6121103117506,
+   137.29436450839327
+  ],
+  "rerun_demand_service_times": [
+   136.04856115107913,
+   136.30935251798562,
+   136.4324540367706,
+   133.6121103117506,
+   137.29436450839327
+  ]
+ },
+ "vehicle_share_from_stored_metrics": {
+  "per_episode": [
+   {
+    "eval_seed": 1042,
+    "incomplete_vehicles": 61,
+    "planned_vehicles": 5004,
+    "vehicle_share": 0.012190247801758593
+   },
+   {
+    "eval_seed": 1043,
+    "incomplete_vehicles": 63,
+    "planned_vehicles": 5004,
+    "vehicle_share": 0.012589928057553957
+   },
+   {
+    "eval_seed": 1044,
+    "incomplete_vehicles": 63,
+    "planned_vehicles": 5004,
+    "vehicle_share": 0.012589928057553957
+   },
+   {
+    "eval_seed": 1045,
+    "incomplete_vehicles": 59,
+    "planned_vehicles": 5004,
+    "vehicle_share": 0.01179056754596323
+   },
+   {
+    "eval_seed": 1046,
+    "incomplete_vehicles": 58,
+    "planned_vehicles": 5004,
+    "vehicle_share": 0.011590727418065548
+   }
+  ],
+  "pooled": {
+   "incomplete_vehicles": 304,
+   "planned_vehicles": 25020,
+   "vehicle_share": 0.012150279776179057
+  }
+ },
+ "tripinfo_cross_check": [
+  {
+   "tripinfo_path": "tripinfo_env01_evalseed1042.tripinfo.xml",
+   "tripinfo_completed": 4943,
+   "tripinfo_unfinished": 61,
+   "tracker_completed": 4943,
+   "completed_id_sets_match": true,
+   "max_abs_arrival_diff_tripinfo_vs_tracker": 10.0,
+   "completed_but_not_normal_arrival": 0,
+   "u_from_tripinfo": 130.99960031974422,
+   "eval_seed": 1042
+  },
+  {
+   "tripinfo_path": "tripinfo_env03_evalseed1043.tripinfo.xml",
+   "tripinfo_completed": 4941,
+   "tripinfo_unfinished": 63,
+   "tracker_completed": 4941,
+   "completed_id_sets_match": true,
+   "max_abs_arrival_diff_tripinfo_vs_tracker": 10.0,
+   "completed_but_not_normal_arrival": 0,
+   "u_from_tripinfo": 131.28097521982414,
+   "eval_seed": 1043
+  },
+  {
+   "tripinfo_path": "tripinfo_env05_evalseed1044.tripinfo.xml",
+   "tripinfo_completed": 4941,
+   "tripinfo_unfinished": 63,
+   "tracker_completed": 4941,
+   "completed_id_sets_match": true,
+   "max_abs_arrival_diff_tripinfo_vs_tracker": 10.0,
+   "completed_but_not_normal_arrival": 0,
+   "u_from_tripinfo": 131.42925659472422,
+   "eval_seed": 1044
+  },
+  {
+   "tripinfo_path": "tripinfo_env07_evalseed1045.tripinfo.xml",
+   "tripinfo_completed": 4945,
+   "tripinfo_unfinished": 59,
+   "tracker_completed": 4945,
+   "completed_id_sets_match": true,
+   "max_abs_arrival_diff_tripinfo_vs_tracker": 10.0,
+   "completed_but_not_normal_arrival": 0,
+   "u_from_tripinfo": 128.66566746602717,
+   "eval_seed": 1045
+  },
+  {
+   "tripinfo_path": "tripinfo_env09_evalseed1046.tripinfo.xml",
+   "tripinfo_completed": 4946,
+   "tripinfo_unfinished": 58,
+   "tracker_completed": 4946,
+   "completed_id_sets_match": true,
+   "max_abs_arrival_diff_tripinfo_vs_tracker": 10.0,
+   "completed_but_not_normal_arrival": 0,
+   "u_from_tripinfo": 132.26998401278976,
+   "eval_seed": 1046
+  }
+ ],
+ "decomposition": {
+  "per_episode": [
+   {
+    "planned_vehicles": 5004,
+    "completed_vehicles": 4943,
+    "censored_vehicles": 61,
+    "censored_state_counts": {
+     "in_network": 61
+    },
+    "vehicle_share": 0.012190247801758593,
+    "u": 136.04856115107913,
+    "total_service_mass": 680787.0,
+    "completed_mass": 676271.0,
+    "censored_mass": 4516.0,
+    "censored_share": 0.006633499170812604,
+    "completed_only_u": 136.81387821161238,
+    "mean_censored_service_time": 74.0327868852459,
+    "demand_end": 10000.0,
+    "episode_index": 0,
+    "eval_seed": 1042,
+    "u_stored": 136.04856115107913,
+    "u_rerun": 136.04856115107913
+   },
+   {
+    "planned_vehicles": 5004,
+    "completed_vehicles": 4941,
+    "censored_vehicles": 63,
+    "censored_state_counts": {
+     "in_network": 63
+    },
+    "vehicle_share": 0.012589928057553957,
+    "u": 136.30935251798562,
+    "total_service_mass": 682092.0,
+    "completed_mass": 677124.0,
+    "censored_mass": 4968.0,
+    "censored_share": 0.007283474956457487,
+    "completed_only_u": 137.04189435336977,
+    "mean_censored_service_time": 78.85714285714286,
+    "demand_end": 10000.0,
+    "episode_index": 1,
+    "eval_seed": 1043,
+    "u_stored": 136.30935251798562,
+    "u_rerun": 136.30935251798562
+   },
+   {
+    "planned_vehicles": 5004,
+    "completed_vehicles": 4941,
+    "censored_vehicles": 63,
+    "censored_state_counts": {
+     "in_network": 63
+    },
+    "vehicle_share": 0.012589928057553957,
+    "u": 136.4324540367706,
+    "total_service_mass": 682708.0,
+    "completed_mass": 677848.0,
+    "censored_mass": 4860.0,
+    "censored_share": 0.00711870960937912,
+    "completed_only_u": 137.18842339607366,
+    "mean_censored_service_time": 77.14285714285714,
+    "demand_end": 10000.0,
+    "episode_index": 2,
+    "eval_seed": 1044,
+    "u_stored": 136.4324540367706,
+    "u_rerun": 136.4324540367706
+   },
+   {
+    "planned_vehicles": 5004,
+    "completed_vehicles": 4945,
+    "censored_vehicles": 59,
+    "censored_state_counts": {
+     "in_network": 59
+    },
+    "vehicle_share": 0.01179056754596323,
+    "u": 133.6121103117506,
+    "total_service_mass": 668595.0,
+    "completed_mass": 664243.0,
+    "censored_mass": 4352.0,
+    "censored_share": 0.006509172219355514,
+    "completed_only_u": 134.32618806875632,
+    "mean_censored_service_time": 73.76271186440678,
+    "demand_end": 10000.0,
+    "episode_index": 3,
+    "eval_seed": 1045,
+    "u_stored": 133.6121103117506,
+    "u_rerun": 133.6121103117506
+   },
+   {
+    "planned_vehicles": 5004,
+    "completed_vehicles": 4946,
+    "censored_vehicles": 58,
+    "censored_state_counts": {
+     "in_network": 58
+    },
+    "vehicle_share": 0.011590727418065548,
+    "u": 137.29436450839327,
+    "total_service_mass": 687021.0,
+    "completed_mass": 682877.0,
+    "censored_mass": 4144.0,
+    "censored_share": 0.006031838910309874,
+    "completed_only_u": 138.06651839870602,
+    "mean_censored_service_time": 71.44827586206897,
+    "demand_end": 10000.0,
+    "episode_index": 4,
+    "eval_seed": 1046,
+    "u_stored": 137.29436450839327,
+    "u_rerun": 137.29436450839327
+   }
+  ],
+  "pooled": {
+   "planned_vehicles": 25020,
+   "completed_vehicles": 24716,
+   "censored_vehicles": 304,
+   "total_service_mass": 3401203.0,
+   "censored_mass": 22840.0,
+   "completed_mass": 3378363.0,
+   "u": 135.93936850519583,
+   "censored_share": 0.006715271037923935,
+   "vehicle_share": 0.012150279776179057,
+   "completed_only_u": 136.6872875869882
+  },
+  "censored_share_range": [
+   0.006031838910309874,
+   0.007283474956457487
+  ],
+  "vehicle_share_range": [
+   0.011590727418065548,
+   0.012589928057553957
+  ]
+ },
+ "notes": [
+  "censored = planned vehicle not in normal_arrival at episode end; censored state totals over 5 episodes: {'in_network': 304}",
+  "tripinfo arrival times are exact; the metrics pipeline records arrivals at simulationStep boundaries (decision step delta_rs_update_time = 10 s), so U(tripinfo) is systematically below the pipeline U by the step-quantization bias; the decomposition uses the pipeline definition and matches the published U bit-exactly."
+ ]
+}

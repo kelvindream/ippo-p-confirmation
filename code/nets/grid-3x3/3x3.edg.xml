@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<edges>
+    <!-- ==================== 内部连接（路口间，24条） ==================== -->
+
+    <!-- 纵向 N-S 连接（12条） -->
+    <edge from="A0" id="A0_A1" to="A1" numLanes="2"/>
+    <edge from="A1" id="A1_A0" to="A0" numLanes="2"/>
+    <edge from="A1" id="A1_A2" to="A2" numLanes="2"/>
+    <edge from="A2" id="A2_A1" to="A1" numLanes="2"/>
+    <edge from="B0" id="B0_B1" to="B1" numLanes="2"/>
+    <edge from="B1" id="B1_B0" to="B0" numLanes="2"/>
+    <edge from="B1" id="B1_B2" to="B2" numLanes="2"/>
+    <edge from="B2" id="B2_B1" to="B1" numLanes="2"/>
+    <edge from="C0" id="C0_C1" to="C1" numLanes="2"/>
+    <edge from="C1" id="C1_C0" to="C0" numLanes="2"/>
+    <edge from="C1" id="C1_C2" to="C2" numLanes="2"/>
+    <edge from="C2" id="C2_C1" to="C1" numLanes="2"/>
+
+    <!-- 横向 E-W 连接（12条） -->
+    <edge from="A0" id="A0_B0" to="B0" numLanes="2"/>
+    <edge from="B0" id="B0_A0" to="A0" numLanes="2"/>
+    <edge from="B0" id="B0_C0" to="C0" numLanes="2"/>
+    <edge from="C0" id="C0_B0" to="B0" numLanes="2"/>
+    <edge from="A1" id="A1_B1" to="B1" numLanes="2"/>
+    <edge from="B1" id="B1_A1" to="A1" numLanes="2"/>
+    <edge from="B1" id="B1_C1" to="C1" numLanes="2"/>
+    <edge from="C1" id="C1_B1" to="B1" numLanes="2"/>
+    <edge from="A2" id="A2_B2" to="B2" numLanes="2"/>
+    <edge from="B2" id="B2_A2" to="A2" numLanes="2"/>
+    <edge from="B2" id="B2_C2" to="C2" numLanes="2"/>
+    <edge from="C2" id="C2_B2" to="B2" numLanes="2"/>
+
+    <!-- ==================== 边界连接（24条） ==================== -->
+
+    <!-- 南边界 (y=0 → Row 0) -->
+    <edge from="bottomA0" id="bottomA0_A0" to="A0" numLanes="2"/>
+    <edge from="A0" id="A0_bottomA0" to="bottomA0" numLanes="2"/>
+    <edge from="bottomB0" id="bottomB0_B0" to="B0" numLanes="2"/>
+    <edge from="B0" id="B0_bottomB0" to="bottomB0" numLanes="2"/>
+    <edge from="bottomC0" id="bottomC0_C0" to="C0" numLanes="2"/>
+    <edge from="C0" id="C0_bottomC0" to="bottomC0" numLanes="2"/>
+
+    <!-- 北边界 (y=1200 → Row 2) -->
+    <edge from="topA2" id="topA2_A2" to="A2" numLanes="2"/>
+    <edge from="A2" id="A2_topA2" to="topA2" numLanes="2"/>
+    <edge from="topB2" id="topB2_B2" to="B2" numLanes="2"/>
+    <edge from="B2" id="B2_topB2" to="topB2" numLanes="2"/>
+    <edge from="topC2" id="topC2_C2" to="C2" numLanes="2"/>
+    <edge from="C2" id="C2_topC2" to="topC2" numLanes="2"/>
+
+    <!-- 西边界 (x=0 → Column A) -->
+    <edge from="leftA0" id="leftA0_A0" to="A0" numLanes="2"/>
+    <edge from="A0" id="A0_leftA0" to="leftA0" numLanes="2"/>
+    <edge from="leftA1" id="leftA1_A1" to="A1" numLanes="2"/>
+    <edge from="A1" id="A1_leftA1" to="leftA1" numLanes="2"/>
+    <edge from="leftA2" id="leftA2_A2" to="A2" numLanes="2"/>
+    <edge from="A2" id="A2_leftA2" to="leftA2" numLanes="2"/>
+
+    <!-- 东边界 (x=1200 → Column C) -->
+    <edge from="rightC0" id="rightC0_C0" to="C0" numLanes="2"/>
+    <edge from="C0" id="C0_rightC0" to="rightC0" numLanes="2"/>
+    <edge from="rightC1" id="rightC1_C1" to="C1" numLanes="2"/>
+    <edge from="C1" id="C1_rightC1" to="rightC1" numLanes="2"/>
+    <edge from="rightC2" id="rightC2_C2" to="C2" numLanes="2"/>
+    <edge from="C2" id="C2_rightC2" to="rightC2" numLanes="2"/>
+</edges>

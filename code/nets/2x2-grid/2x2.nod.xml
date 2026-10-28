@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodes>
+    <!-- 受控路口（type="traffic_light"，4 相位 2 车道，与单路口一致） -->
+    <node id="A0" x="300.0" y="300.0" type="traffic_light"/>
+    <node id="A1" x="300.0" y="600.0" type="traffic_light"/>
+    <node id="B0" x="600.0" y="300.0" type="traffic_light"/>
+    <node id="B1" x="600.0" y="600.0" type="traffic_light"/>
+
+    <!-- 边界节点（type="priority"） -->
+    <node id="bottomA0" x="300.0" y="0.0" type="priority"/>
+    <node id="bottomB0" x="600.0" y="0.0" type="priority"/>
+    <node id="topA1" x="300.0" y="900.0" type="priority"/>
+    <node id="topB1" x="600.0" y="900.0" type="priority"/>
+    <node id="leftA0" x="0.0" y="300.0" type="priority"/>
+    <node id="leftA1" x="0.0" y="600.0" type="priority"/>
+    <node id="rightB0" x="900.0" y="300.0" type="priority"/>
+    <node id="rightB1" x="900.0" y="600.0" type="priority"/>
+</nodes>

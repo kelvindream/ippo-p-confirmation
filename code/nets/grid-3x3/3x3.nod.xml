@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodes>
+    <!-- 受控路口（type="traffic_light"，4 相位 2 车道，与单路口一致） -->
+    <!-- Row 0 (y=300) -->
+    <node id="A0" x="300.0" y="300.0" type="traffic_light"/>
+    <node id="B0" x="600.0" y="300.0" type="traffic_light"/>
+    <node id="C0" x="900.0" y="300.0" type="traffic_light"/>
+    <!-- Row 1 (y=600) -->
+    <node id="A1" x="300.0" y="600.0" type="traffic_light"/>
+    <node id="B1" x="600.0" y="600.0" type="traffic_light"/>
+    <node id="C1" x="900.0" y="600.0" type="traffic_light"/>
+    <!-- Row 2 (y=900) -->
+    <node id="A2" x="300.0" y="900.0" type="traffic_light"/>
+    <node id="B2" x="600.0" y="900.0" type="traffic_light"/>
+    <node id="C2" x="900.0" y="900.0" type="traffic_light"/>
+
+    <!-- 边界节点（type="priority"） -->
+    <!-- 南边界 (y=0) -->
+    <node id="bottomA0" x="300.0" y="0.0" type="priority"/>
+    <node id="bottomB0" x="600.0" y="0.0" type="priority"/>
+    <node id="bottomC0" x="900.0" y="0.0" type="priority"/>
+    <!-- 北边界 (y=1200) -->
+    <node id="topA2" x="300.0" y="1200.0" type="priority"/>
+    <node id="topB2" x="600.0" y="1200.0" type="priority"/>
+    <node id="topC2" x="900.0" y="1200.0" type="priority"/>
+    <!-- 西边界 (x=0) -->
+    <node id="leftA0" x="0.0" y="300.0" type="priority"/>
+    <node id="leftA1" x="0.0" y="600.0" type="priority"/>
+    <node id="leftA2" x="0.0" y="900.0" type="priority"/>
+    <!-- 东边界 (x=1200) -->
+    <node id="rightC0" x="1200.0" y="300.0" type="priority"/>
+    <node id="rightC1" x="1200.0" y="600.0" type="priority"/>
+    <node id="rightC2" x="1200.0" y="900.0" type="priority"/>
+</nodes>

@@ -1,0 +1,70 @@
+{
+  "protocol_name": "ippo_prior_confirmation_v1",
+  "frozen_before_new_data": true,
+  "frozen_at": "2026-10-24T22:46:37+08:00",
+  "pilot_data": {
+    "root": "results/formal_four_grid_v1",
+    "training_seeds": [42, 43, 44, 45, 46],
+    "role": "pilot_only_not_primary_confirmation"
+  },
+  "confirmation_data": {
+    "root": "results/ippo_prior_confirmation_v1",
+    "methods": ["IPPO", "IPPO-P"],
+    "training_seeds": [47, 48, 49, 50, 51, 52, 53, 54, 55, 56],
+    "evaluation_seeds": [1042, 1043, 1044, 1045, 1046],
+    "training_episodes": 50,
+    "scenarios": {
+      "H1": {
+        "net_file": "nets/grid-3x3/3x3.net.xml",
+        "route_file": "nets/grid-3x3/3x3-medium.rou.xml"
+      },
+      "H2": {
+        "net_file": "nets/2x2-grid/2x2_oversaturated.net.xml",
+        "route_file": "nets/2x2-grid/2x2-formal-h2.rou.xml"
+      },
+      "H3": {
+        "net_file": "nets/2x2-grid/2x2_oversaturated.net.xml",
+        "route_file": "nets/2x2-grid/2x2-formal-h3.rou.xml"
+      }
+    }
+  },
+  "primary_estimand": {
+    "contrast": "IPPO-P vs IPPO",
+    "metric": "demand_service_time",
+    "direction": "lower_is_better",
+    "per_training_seed": "average U over five fixed evaluation seeds, then equal-weight mean of log(U_IPPO/U_IPPO-P) over H1,H2,H3",
+    "effect_transform": "100 * (1 - exp(-mean_seed_log_ratio))"
+  },
+  "primary_test": {
+    "population": "ten new independent training seeds 47-56 only",
+    "method": "exact two-sided paired sign-flip test",
+    "alpha": 0.05,
+    "multiplicity": "none_one_pre_registered_primary_contrast",
+    "decision_rule": "positive effect and exact two-sided p < 0.05"
+  },
+  "uncertainty": {
+    "method": "paired percentile bootstrap over training seeds",
+    "resamples": 20000,
+    "seed": 20261024,
+    "role": "descriptive_interval_not_the_primary_hypothesis_test"
+  },
+  "secondary_analyses": [
+    "per-scenario H1/H2/H3 effects on new seeds",
+    "descriptive pooled 15-seed effect using pilot plus confirmation seeds",
+    "completion rates, teleport counts, and demand conservation checks"
+  ],
+  "exclusions": "No completed seed may be excluded based on performance. Exclude only protocol-invalid or corrupted tasks, report reason, and rerun the same seed before unblinding aggregate results.",
+  "stopping_rule": "Run all 60 planned tasks; no interim efficacy stopping.",
+  "method_lock": {
+    "IPPO": {
+      "prior_mode": "none",
+      "action_prior_scale": 0.0,
+      "policy_temperature": 1.0
+    },
+    "IPPO-P": {
+      "prior_mode": "pressure_zscore_hold",
+      "action_prior_scale": 2.25,
+      "policy_temperature": 1.0
+    }
+  }
+}

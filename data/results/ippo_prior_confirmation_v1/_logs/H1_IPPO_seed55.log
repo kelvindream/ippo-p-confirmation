@@ -1,0 +1,124 @@
+[2026-10-25 02:22:30] Using device: cuda
+[2026-10-25 02:22:30] GPU name: NVIDIA RTX A6000
+ Retrying in 1 seconds
+ Retrying in 1 seconds
+[2026-10-25 02:25:10] IPPO - Episode 1/50 done. Avg Reward: -0.5362, Speed: 2.55, Queue: 12.89, Waiting: 82.28
+ Retrying in 1 seconds
+[2026-10-25 02:27:39] IPPO - Episode 2/50 done. Avg Reward: -0.4995, Speed: 2.81, Queue: 11.47, Waiting: 70.14
+ Retrying in 1 seconds
+[2026-10-25 02:29:56] IPPO - Episode 3/50 done. Avg Reward: -0.4746, Speed: 2.99, Queue: 10.45, Waiting: 63.78
+ Retrying in 1 seconds
+[2026-10-25 02:32:13] IPPO - Episode 4/50 done. Avg Reward: -0.4090, Speed: 3.39, Queue: 8.83, Waiting: 57.28
+ Retrying in 1 seconds
+[2026-10-25 02:34:30] IPPO - Episode 5/50 done. Avg Reward: -0.3944, Speed: 3.50, Queue: 8.49, Waiting: 53.38
+ Retrying in 1 seconds
+[2026-10-25 02:36:40] IPPO - Episode 6/50 done. Avg Reward: -0.3405, Speed: 3.84, Queue: 7.40, Waiting: 47.30
+ Retrying in 1 seconds
+[2026-10-25 02:38:48] IPPO - Episode 7/50 done. Avg Reward: -0.2969, Speed: 4.13, Queue: 6.61, Waiting: 40.64
+ Retrying in 1 seconds
+[2026-10-25 02:40:51] IPPO - Episode 8/50 done. Avg Reward: -0.2421, Speed: 4.48, Queue: 5.81, Waiting: 35.70
+ Retrying in 1 seconds
+[2026-10-25 02:42:55] IPPO - Episode 9/50 done. Avg Reward: -0.1890, Speed: 4.69, Queue: 5.40, Waiting: 35.37
+ Retrying in 1 seconds
+[2026-10-25 02:44:56] IPPO - Episode 10/50 done. Avg Reward: -0.1278, Speed: 5.10, Queue: 4.66, Waiting: 29.03
+ Retrying in 1 seconds
+[2026-10-25 02:46:54] IPPO - Episode 11/50 done. Avg Reward: -0.0658, Speed: 5.44, Queue: 4.15, Waiting: 27.48
+ Retrying in 1 seconds
+[2026-10-25 02:48:50] IPPO - Episode 12/50 done. Avg Reward: -0.0524, Speed: 5.56, Queue: 3.97, Waiting: 26.18
+ Retrying in 1 seconds
+[2026-10-25 02:50:48] IPPO - Episode 13/50 done. Avg Reward: 0.0005, Speed: 5.89, Queue: 3.57, Waiting: 23.89
+ Retrying in 1 seconds
+[2026-10-25 02:52:45] IPPO - Episode 14/50 done. Avg Reward: 0.0230, Speed: 5.96, Queue: 3.47, Waiting: 24.45
+ Retrying in 1 seconds
+[2026-10-25 02:54:41] IPPO - Episode 15/50 done. Avg Reward: 0.0324, Speed: 6.05, Queue: 3.35, Waiting: 21.70
+ Retrying in 1 seconds
+[2026-10-25 02:56:37] IPPO - Episode 16/50 done. Avg Reward: 0.0711, Speed: 6.28, Queue: 3.11, Waiting: 18.43
+ Retrying in 1 seconds
+[2026-10-25 02:58:32] IPPO - Episode 17/50 done. Avg Reward: 0.0599, Speed: 6.20, Queue: 3.21, Waiting: 18.59
+ Retrying in 1 seconds
+[2026-10-25 03:00:27] IPPO - Episode 18/50 done. Avg Reward: 0.0982, Speed: 6.48, Queue: 2.90, Waiting: 18.94
+ Retrying in 1 seconds
+[2026-10-25 03:02:22] IPPO - Episode 19/50 done. Avg Reward: 0.0788, Speed: 6.31, Queue: 3.09, Waiting: 20.18
+ Retrying in 1 seconds
+[2026-10-25 03:04:18] IPPO - Episode 20/50 done. Avg Reward: 0.1046, Speed: 6.41, Queue: 2.99, Waiting: 17.66
+ Retrying in 1 seconds
+[2026-10-25 03:06:14] IPPO - Episode 21/50 done. Avg Reward: 0.1123, Speed: 6.48, Queue: 2.93, Waiting: 17.93
+ Retrying in 1 seconds
+[2026-10-25 03:08:07] IPPO - Episode 22/50 done. Avg Reward: 0.1359, Speed: 6.69, Queue: 2.69, Waiting: 15.94
+ Retrying in 1 seconds
+[2026-10-25 03:10:01] IPPO - Episode 23/50 done. Avg Reward: 0.1255, Speed: 6.59, Queue: 2.80, Waiting: 16.62
+ Retrying in 1 seconds
+[2026-10-25 03:11:53] IPPO - Episode 24/50 done. Avg Reward: 0.1675, Speed: 6.85, Queue: 2.56, Waiting: 14.59
+ Retrying in 1 seconds
+[2026-10-25 03:13:46] IPPO - Episode 25/50 done. Avg Reward: 0.1326, Speed: 6.66, Queue: 2.74, Waiting: 17.48
+ Retrying in 1 seconds
+[2026-10-25 03:15:38] IPPO - Episode 26/50 done. Avg Reward: 0.1565, Speed: 6.81, Queue: 2.60, Waiting: 15.17
+ Retrying in 1 seconds
+[2026-10-25 03:17:32] IPPO - Episode 27/50 done. Avg Reward: 0.1259, Speed: 6.65, Queue: 2.76, Waiting: 20.12
+ Retrying in 1 seconds
+[2026-10-25 03:19:25] IPPO - Episode 28/50 done. Avg Reward: 0.1591, Speed: 6.79, Queue: 2.62, Waiting: 14.76
+ Retrying in 1 seconds
+[2026-10-25 03:21:20] IPPO - Episode 29/50 done. Avg Reward: 0.1666, Speed: 6.80, Queue: 2.61, Waiting: 14.13
+ Retrying in 1 seconds
+[2026-10-25 03:23:12] IPPO - Episode 30/50 done. Avg Reward: 0.1538, Speed: 6.73, Queue: 2.66, Waiting: 15.74
+ Retrying in 1 seconds
+[2026-10-25 03:25:05] IPPO - Episode 31/50 done. Avg Reward: 0.1687, Speed: 6.77, Queue: 2.64, Waiting: 14.40
+ Retrying in 1 seconds
+[2026-10-25 03:26:58] IPPO - Episode 32/50 done. Avg Reward: 0.1764, Speed: 6.90, Queue: 2.53, Waiting: 13.22
+ Retrying in 1 seconds
+[2026-10-25 03:28:52] IPPO - Episode 33/50 done. Avg Reward: 0.1653, Speed: 6.84, Queue: 2.56, Waiting: 15.86
+ Retrying in 1 seconds
+[2026-10-25 03:30:46] IPPO - Episode 34/50 done. Avg Reward: 0.1804, Speed: 6.91, Queue: 2.51, Waiting: 14.16
+ Retrying in 1 seconds
+[2026-10-25 03:32:40] IPPO - Episode 35/50 done. Avg Reward: 0.1965, Speed: 6.98, Queue: 2.44, Waiting: 13.39
+ Retrying in 1 seconds
+[2026-10-25 03:34:35] IPPO - Episode 36/50 done. Avg Reward: 0.1874, Speed: 6.94, Queue: 2.49, Waiting: 14.55
+ Retrying in 1 seconds
+[2026-10-25 03:36:28] IPPO - Episode 37/50 done. Avg Reward: 0.1902, Speed: 6.88, Queue: 2.52, Waiting: 13.00
+ Retrying in 1 seconds
+[2026-10-25 03:38:23] IPPO - Episode 38/50 done. Avg Reward: 0.1991, Speed: 6.93, Queue: 2.49, Waiting: 12.77
+ Retrying in 1 seconds
+[2026-10-25 03:40:16] IPPO - Episode 39/50 done. Avg Reward: 0.1858, Speed: 6.84, Queue: 2.59, Waiting: 15.52
+ Retrying in 1 seconds
+[2026-10-25 03:42:10] IPPO - Episode 40/50 done. Avg Reward: 0.1832, Speed: 6.79, Queue: 2.64, Waiting: 15.32
+ Retrying in 1 seconds
+[2026-10-25 03:44:03] IPPO - Episode 41/50 done. Avg Reward: 0.2015, Speed: 6.92, Queue: 2.51, Waiting: 14.07
+ Retrying in 1 seconds
+[2026-10-25 03:45:56] IPPO - Episode 42/50 done. Avg Reward: 0.2169, Speed: 7.06, Queue: 2.37, Waiting: 11.36
+ Retrying in 1 seconds
+[2026-10-25 03:47:49] IPPO - Episode 43/50 done. Avg Reward: 0.2148, Speed: 7.08, Queue: 2.37, Waiting: 11.16
+ Retrying in 1 seconds
+[2026-10-25 03:49:42] IPPO - Episode 44/50 done. Avg Reward: 0.1965, Speed: 6.99, Queue: 2.44, Waiting: 14.17
+ Retrying in 1 seconds
+[2026-10-25 03:51:35] IPPO - Episode 45/50 done. Avg Reward: 0.2092, Speed: 7.04, Queue: 2.41, Waiting: 18.74
+ Retrying in 1 seconds
+[2026-10-25 03:53:28] IPPO - Episode 46/50 done. Avg Reward: 0.2068, Speed: 7.01, Queue: 2.44, Waiting: 14.74
+ Retrying in 1 seconds
+[2026-10-25 03:55:21] IPPO - Episode 47/50 done. Avg Reward: 0.2044, Speed: 7.01, Queue: 2.43, Waiting: 12.62
+ Retrying in 1 seconds
+[2026-10-25 03:57:15] IPPO - Episode 48/50 done. Avg Reward: 0.2334, Speed: 7.16, Queue: 2.31, Waiting: 11.09
+ Retrying in 1 seconds
+[2026-10-25 03:59:10] IPPO - Episode 49/50 done. Avg Reward: 0.2208, Speed: 7.08, Queue: 2.37, Waiting: 11.40
+ Retrying in 1 seconds
+[2026-10-25 04:01:02] IPPO - Episode 50/50 done. Avg Reward: 0.2110, Speed: 7.02, Queue: 2.40, Waiting: 12.05
+ Retrying in 1 seconds
+[2026-10-25T04:01:03] IPPO eval seed 1042 (1/5) on nets/grid-3x3/3x3.net.xml starting...
+ Retrying in 1 seconds
+[2026-10-25T04:02:53] IPPO eval seed 1042 done: reward=0.27280 speed=7.767 queue=1.895 waiting=6.004
+ Retrying in 1 seconds
+[2026-10-25T04:02:54] IPPO eval seed 1043 (2/5) on nets/grid-3x3/3x3.net.xml starting...
+ Retrying in 1 seconds
+[2026-10-25T04:04:42] IPPO eval seed 1043 done: reward=0.26070 speed=7.727 queue=1.957 waiting=6.318
+ Retrying in 1 seconds
+[2026-10-25T04:04:43] IPPO eval seed 1044 (3/5) on nets/grid-3x3/3x3.net.xml starting...
+ Retrying in 1 seconds
+[2026-10-25T04:06:30] IPPO eval seed 1044 done: reward=0.28839 speed=7.819 queue=1.863 waiting=6.263
+ Retrying in 1 seconds
+[2026-10-25T04:06:31] IPPO eval seed 1045 (4/5) on nets/grid-3x3/3x3.net.xml starting...
+ Retrying in 1 seconds
+[2026-10-25T04:08:19] IPPO eval seed 1045 done: reward=0.29154 speed=7.817 queue=1.871 waiting=6.288
+ Retrying in 1 seconds
+[2026-10-25T04:08:21] IPPO eval seed 1046 (5/5) on nets/grid-3x3/3x3.net.xml starting...
+ Retrying in 1 seconds
+[2026-10-25T04:10:08] IPPO eval seed 1046 done: reward=0.27750 speed=7.784 queue=1.889 waiting=6.035
+Protocol task completed: IPPO, seed=55

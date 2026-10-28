@@ -1,0 +1,130 @@
+=== Formal four-grid: 60 tasks, parallel=4 ===
+=== Started: 2026-10-23T21:14:13+08:00 ===
+[ARCHIVE] H1_IPPO_seed42 -> results/formal_four_grid_v1/_stale/H1_IPPO_seed42_20261023_211413
+[START] H1_IPPO_seed42 net=nets/grid-3x3/3x3.net.xml route=nets/grid-3x3/3x3-medium.rou.xml
+[ARCHIVE] H1_IPPO_seed43 -> results/formal_four_grid_v1/_stale/H1_IPPO_seed43_20261023_211413
+[ARCHIVE] H1_IPPO_seed44 -> results/formal_four_grid_v1/_stale/H1_IPPO_seed44_20261023_211413
+[START] H1_IPPO_seed43 net=nets/grid-3x3/3x3.net.xml route=nets/grid-3x3/3x3-medium.rou.xml
+[START] H1_IPPO_seed44 net=nets/grid-3x3/3x3.net.xml route=nets/grid-3x3/3x3-medium.rou.xml
+[ARCHIVE] H1_IPPO_seed45 -> results/formal_four_grid_v1/_stale/H1_IPPO_seed45_20261023_211413
+[START] H1_IPPO_seed45 net=nets/grid-3x3/3x3.net.xml route=nets/grid-3x3/3x3-medium.rou.xml
+[DONE] H1_IPPO_seed44
+[START] H1_IPPO_seed46 net=nets/grid-3x3/3x3.net.xml route=nets/grid-3x3/3x3-medium.rou.xml
+[DONE] H1_IPPO_seed42
+[START] H1_IPPO-P_seed42 net=nets/grid-3x3/3x3.net.xml route=nets/grid-3x3/3x3-medium.rou.xml
+[DONE] H1_IPPO_seed43
+[START] H1_IPPO-P_seed43 net=nets/grid-3x3/3x3.net.xml route=nets/grid-3x3/3x3-medium.rou.xml
+[DONE] H1_IPPO_seed45
+[START] H1_IPPO-P_seed44 net=nets/grid-3x3/3x3.net.xml route=nets/grid-3x3/3x3-medium.rou.xml
+[DONE] H1_IPPO_seed46
+[START] H1_IPPO-P_seed45 net=nets/grid-3x3/3x3.net.xml route=nets/grid-3x3/3x3-medium.rou.xml
+[DONE] H1_IPPO-P_seed44
+[START] H1_IPPO-P_seed46 net=nets/grid-3x3/3x3.net.xml route=nets/grid-3x3/3x3-medium.rou.xml
+[DONE] H1_IPPO-P_seed42
+[START] H1_GC-MAPPO-ind-noP_seed42 net=nets/grid-3x3/3x3.net.xml route=nets/grid-3x3/3x3-medium.rou.xml
+[DONE] H1_IPPO-P_seed43
+[START] H1_GC-MAPPO-ind-noP_seed43 net=nets/grid-3x3/3x3.net.xml route=nets/grid-3x3/3x3-medium.rou.xml
+[DONE] H1_IPPO-P_seed45
+[START] H1_GC-MAPPO-ind-noP_seed44 net=nets/grid-3x3/3x3.net.xml route=nets/grid-3x3/3x3-medium.rou.xml
+[DONE] H1_GC-MAPPO-ind-noP_seed43
+[START] H1_GC-MAPPO-ind-noP_seed45 net=nets/grid-3x3/3x3.net.xml route=nets/grid-3x3/3x3-medium.rou.xml
+[DONE] H1_GC-MAPPO-ind-noP_seed42
+[START] H1_GC-MAPPO-ind-noP_seed46 net=nets/grid-3x3/3x3.net.xml route=nets/grid-3x3/3x3-medium.rou.xml
+[DONE] H1_IPPO-P_seed46
+[START] H1_GC-MAPPO-ind-P_seed42 net=nets/grid-3x3/3x3.net.xml route=nets/grid-3x3/3x3-medium.rou.xml
+[DONE] H1_GC-MAPPO-ind-noP_seed44
+[START] H1_GC-MAPPO-ind-P_seed43 net=nets/grid-3x3/3x3.net.xml route=nets/grid-3x3/3x3-medium.rou.xml
+[DONE] H1_GC-MAPPO-ind-noP_seed45
+[START] H1_GC-MAPPO-ind-P_seed44 net=nets/grid-3x3/3x3.net.xml route=nets/grid-3x3/3x3-medium.rou.xml
+[DONE] H1_GC-MAPPO-ind-noP_seed46
+[START] H1_GC-MAPPO-ind-P_seed45 net=nets/grid-3x3/3x3.net.xml route=nets/grid-3x3/3x3-medium.rou.xml
+[DONE] H1_GC-MAPPO-ind-P_seed42
+[START] H1_GC-MAPPO-ind-P_seed46 net=nets/grid-3x3/3x3.net.xml route=nets/grid-3x3/3x3-medium.rou.xml
+[DONE] H1_GC-MAPPO-ind-P_seed43
+[START] H2_IPPO_seed42 net=nets/2x2-grid/2x2_oversaturated.net.xml route=nets/2x2-grid/2x2-formal-h2.rou.xml
+[DONE] H1_GC-MAPPO-ind-P_seed44
+[START] H2_IPPO_seed43 net=nets/2x2-grid/2x2_oversaturated.net.xml route=nets/2x2-grid/2x2-formal-h2.rou.xml
+[DONE] H1_GC-MAPPO-ind-P_seed46
+[START] H2_IPPO_seed44 net=nets/2x2-grid/2x2_oversaturated.net.xml route=nets/2x2-grid/2x2-formal-h2.rou.xml
+[DONE] H1_GC-MAPPO-ind-P_seed45
+[START] H2_IPPO_seed45 net=nets/2x2-grid/2x2_oversaturated.net.xml route=nets/2x2-grid/2x2-formal-h2.rou.xml
+[DONE] H2_IPPO_seed42
+[START] H2_IPPO_seed46 net=nets/2x2-grid/2x2_oversaturated.net.xml route=nets/2x2-grid/2x2-formal-h2.rou.xml
+[DONE] H2_IPPO_seed43
+[START] H2_IPPO-P_seed42 net=nets/2x2-grid/2x2_oversaturated.net.xml route=nets/2x2-grid/2x2-formal-h2.rou.xml
+[DONE] H2_IPPO_seed45
+[START] H2_IPPO-P_seed43 net=nets/2x2-grid/2x2_oversaturated.net.xml route=nets/2x2-grid/2x2-formal-h2.rou.xml
+[DONE] H2_IPPO_seed44
+[START] H2_IPPO-P_seed44 net=nets/2x2-grid/2x2_oversaturated.net.xml route=nets/2x2-grid/2x2-formal-h2.rou.xml
+[DONE] H2_IPPO_seed46
+[START] H2_IPPO-P_seed45 net=nets/2x2-grid/2x2_oversaturated.net.xml route=nets/2x2-grid/2x2-formal-h2.rou.xml
+[DONE] H2_IPPO-P_seed42
+[START] H2_IPPO-P_seed46 net=nets/2x2-grid/2x2_oversaturated.net.xml route=nets/2x2-grid/2x2-formal-h2.rou.xml
+[DONE] H2_IPPO-P_seed43
+[START] H2_GC-MAPPO-ind-noP_seed42 net=nets/2x2-grid/2x2_oversaturated.net.xml route=nets/2x2-grid/2x2-formal-h2.rou.xml
+[DONE] H2_IPPO-P_seed44
+[START] H2_GC-MAPPO-ind-noP_seed43 net=nets/2x2-grid/2x2_oversaturated.net.xml route=nets/2x2-grid/2x2-formal-h2.rou.xml
+[DONE] H2_IPPO-P_seed45
+[START] H2_GC-MAPPO-ind-noP_seed44 net=nets/2x2-grid/2x2_oversaturated.net.xml route=nets/2x2-grid/2x2-formal-h2.rou.xml
+[DONE] H2_IPPO-P_seed46
+[START] H2_GC-MAPPO-ind-noP_seed45 net=nets/2x2-grid/2x2_oversaturated.net.xml route=nets/2x2-grid/2x2-formal-h2.rou.xml
+[DONE] H2_GC-MAPPO-ind-noP_seed43
+[START] H2_GC-MAPPO-ind-noP_seed46 net=nets/2x2-grid/2x2_oversaturated.net.xml route=nets/2x2-grid/2x2-formal-h2.rou.xml
+[DONE] H2_GC-MAPPO-ind-noP_seed42
+[START] H2_GC-MAPPO-ind-P_seed42 net=nets/2x2-grid/2x2_oversaturated.net.xml route=nets/2x2-grid/2x2-formal-h2.rou.xml
+[DONE] H2_GC-MAPPO-ind-noP_seed44
+[START] H2_GC-MAPPO-ind-P_seed43 net=nets/2x2-grid/2x2_oversaturated.net.xml route=nets/2x2-grid/2x2-formal-h2.rou.xml
+[DONE] H2_GC-MAPPO-ind-noP_seed45
+[START] H2_GC-MAPPO-ind-P_seed44 net=nets/2x2-grid/2x2_oversaturated.net.xml route=nets/2x2-grid/2x2-formal-h2.rou.xml
+[DONE] H2_GC-MAPPO-ind-P_seed42
+[START] H2_GC-MAPPO-ind-P_seed45 net=nets/2x2-grid/2x2_oversaturated.net.xml route=nets/2x2-grid/2x2-formal-h2.rou.xml
+[DONE] H2_GC-MAPPO-ind-noP_seed46
+[START] H2_GC-MAPPO-ind-P_seed46 net=nets/2x2-grid/2x2_oversaturated.net.xml route=nets/2x2-grid/2x2-formal-h2.rou.xml
+[DONE] H2_GC-MAPPO-ind-P_seed43
+[START] H3_IPPO_seed42 net=nets/2x2-grid/2x2_oversaturated.net.xml route=nets/2x2-grid/2x2-formal-h3.rou.xml
+[DONE] H2_GC-MAPPO-ind-P_seed45
+[START] H3_IPPO_seed43 net=nets/2x2-grid/2x2_oversaturated.net.xml route=nets/2x2-grid/2x2-formal-h3.rou.xml
+[DONE] H2_GC-MAPPO-ind-P_seed44
+[START] H3_IPPO_seed44 net=nets/2x2-grid/2x2_oversaturated.net.xml route=nets/2x2-grid/2x2-formal-h3.rou.xml
+[DONE] H2_GC-MAPPO-ind-P_seed46
+[START] H3_IPPO_seed45 net=nets/2x2-grid/2x2_oversaturated.net.xml route=nets/2x2-grid/2x2-formal-h3.rou.xml
+[DONE] H3_IPPO_seed42
+[START] H3_IPPO_seed46 net=nets/2x2-grid/2x2_oversaturated.net.xml route=nets/2x2-grid/2x2-formal-h3.rou.xml
+[DONE] H3_IPPO_seed43
+[START] H3_IPPO-P_seed42 net=nets/2x2-grid/2x2_oversaturated.net.xml route=nets/2x2-grid/2x2-formal-h3.rou.xml
+[DONE] H3_IPPO_seed44
+[START] H3_IPPO-P_seed43 net=nets/2x2-grid/2x2_oversaturated.net.xml route=nets/2x2-grid/2x2-formal-h3.rou.xml
+[DONE] H3_IPPO_seed45
+[START] H3_IPPO-P_seed44 net=nets/2x2-grid/2x2_oversaturated.net.xml route=nets/2x2-grid/2x2-formal-h3.rou.xml
+[DONE] H3_IPPO-P_seed42
+[START] H3_IPPO-P_seed45 net=nets/2x2-grid/2x2_oversaturated.net.xml route=nets/2x2-grid/2x2-formal-h3.rou.xml
+[DONE] H3_IPPO-P_seed43
+[START] H3_IPPO-P_seed46 net=nets/2x2-grid/2x2_oversaturated.net.xml route=nets/2x2-grid/2x2-formal-h3.rou.xml
+[DONE] H3_IPPO-P_seed44
+[START] H3_GC-MAPPO-ind-noP_seed42 net=nets/2x2-grid/2x2_oversaturated.net.xml route=nets/2x2-grid/2x2-formal-h3.rou.xml
+[DONE] H3_IPPO_seed46
+[START] H3_GC-MAPPO-ind-noP_seed43 net=nets/2x2-grid/2x2_oversaturated.net.xml route=nets/2x2-grid/2x2-formal-h3.rou.xml
+[DONE] H3_IPPO-P_seed45
+[START] H3_GC-MAPPO-ind-noP_seed44 net=nets/2x2-grid/2x2_oversaturated.net.xml route=nets/2x2-grid/2x2-formal-h3.rou.xml
+[DONE] H3_IPPO-P_seed46
+[START] H3_GC-MAPPO-ind-noP_seed45 net=nets/2x2-grid/2x2_oversaturated.net.xml route=nets/2x2-grid/2x2-formal-h3.rou.xml
+[DONE] H3_GC-MAPPO-ind-noP_seed42
+[START] H3_GC-MAPPO-ind-noP_seed46 net=nets/2x2-grid/2x2_oversaturated.net.xml route=nets/2x2-grid/2x2-formal-h3.rou.xml
+[DONE] H3_GC-MAPPO-ind-noP_seed43
+[START] H3_GC-MAPPO-ind-P_seed42 net=nets/2x2-grid/2x2_oversaturated.net.xml route=nets/2x2-grid/2x2-formal-h3.rou.xml
+[DONE] H3_GC-MAPPO-ind-noP_seed45
+[START] H3_GC-MAPPO-ind-P_seed43 net=nets/2x2-grid/2x2_oversaturated.net.xml route=nets/2x2-grid/2x2-formal-h3.rou.xml
+[DONE] H3_GC-MAPPO-ind-noP_seed44
+[START] H3_GC-MAPPO-ind-P_seed44 net=nets/2x2-grid/2x2_oversaturated.net.xml route=nets/2x2-grid/2x2-formal-h3.rou.xml
+[DONE] H3_GC-MAPPO-ind-P_seed42
+[START] H3_GC-MAPPO-ind-P_seed45 net=nets/2x2-grid/2x2_oversaturated.net.xml route=nets/2x2-grid/2x2-formal-h3.rou.xml
+[DONE] H3_GC-MAPPO-ind-noP_seed46
+[START] H3_GC-MAPPO-ind-P_seed46 net=nets/2x2-grid/2x2_oversaturated.net.xml route=nets/2x2-grid/2x2-formal-h3.rou.xml
+[DONE] H3_GC-MAPPO-ind-P_seed43
+[DONE] H3_GC-MAPPO-ind-P_seed44
+[DONE] H3_GC-MAPPO-ind-P_seed45
+[DONE] H3_GC-MAPPO-ind-P_seed46
+=== Finished: 2026-10-24T22:00:22+08:00 ===
+Formal four-grid status
+completed=60 running=0 not_started=0 invalid=0 unknown=0
+Audit problems: none
