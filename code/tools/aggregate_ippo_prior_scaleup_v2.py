@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-"""Scale-up analysis (3x3-high, 2700 veh/h): same frozen estimator as confirmation v1.
+"""Scale-up analysis (3x3, 5400 veh/h): same frozen estimator as confirmation v1.
 
-Single scenario H1HIGH; primary statistic is the per-seed log-ratio, tested with
+Single scenario H1SAT; primary statistic is the per-seed log-ratio, tested with
 the exact two-sided paired sign-flip test. Protocol copied, not re-registered.
 """
 
@@ -74,7 +74,7 @@ def main():
     output = {
         'protocol_name': 'ippo_prior_scaleup_v2',
         'basis': 'frozen protocol of ippo_prior_confirmation_v1 copied, not re-registered',
-        'scenario': 'H1HIGH: 3x3 grid, 18 flows x 300 veh/h = 5400 veh/h (600/intersection)',
+        'scenario': 'H1SAT: 3x3 grid, 18 flows x 300 veh/h = 5400 veh/h (600/intersection)',
         'contrast': 'IPPO-P vs IPPO',
         'metric': 'demand_service_time',
         'seeds': list(SEEDS),
@@ -122,7 +122,7 @@ def main():
     print(f'Saved: {path}')
     pr = output['primary']
     print(
-        f"H1HIGH IPPO-P vs IPPO: {pr['improvement_pct']:+.4f}% "
+        f"H1SAT IPPO-P vs IPPO: {pr['improvement_pct']:+.4f}% "
         f"CI=[{pr['bootstrap_ci95_pct'][0]:+.4f},{pr['bootstrap_ci95_pct'][1]:+.4f}] "
         f"wins={pr['seed_wins']}/{pr['n_seeds']} "
         f"exact_p={pr['exact_two_sided_sign_flip_p']:.6f} "

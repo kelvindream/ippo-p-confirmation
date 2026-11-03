@@ -33,11 +33,12 @@ Mapping of episode order to evaluation seeds (three layers of evidence):
      (source edited after the run, no VCS history available), so layer 1 is
      corroboration only; layer 2 is the decisive artifact-level check.
 
-Outputs (only these two files are written):
-  results/eval_realization_sensitivity/summary.json
-  results/eval_realization_sensitivity/per_eval_seed.md
+Outputs (only these two files are written under the detected results root):
+  eval_realization_sensitivity/summary.json
+  eval_realization_sensitivity/per_eval_seed.md
 """
 
+import argparse
 import hashlib
 import json
 import math
@@ -47,9 +48,11 @@ from pathlib import Path
 
 import numpy as np
 
-ROOT = Path('/home/zrt/ai/GC-MAPPO')
-CONF_ROOT = ROOT / 'results/ippo_prior_confirmation_v1'
-OUT_DIR = ROOT / 'results/eval_realization_sensitivity'
+ROOT = None
+RESULTS_ROOT = None
+CONF_ROOT = None
+OUT_DIR = None
+PROTOCOL_SOURCE = None
 METHODS = ('IPPO', 'IPPO-P')
 SCENARIOS = ('H1', 'H2', 'H3')
 TRAIN_SEEDS = tuple(range(47, 57))
@@ -59,6 +62,33 @@ STORED_MEAN_LOG_RATIO = 0.01726748632279938  # confirmation_summary.json primary
 
 def sha256_of(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def resolve_layout(root_arg=None, output_arg=None):
+    candidates = []
+    if root_arg:
+        candidates.append(Path(root_arg).expanduser().resolve())
+    candidates.extend([
+        Path.cwd().resolve(),
+        Path(__file__).resolve().parents[1],
+        Path(__file__).resolve().parents[2],
+    ])
+    for root in dict.fromkeys(candidates):
+        for results_root in (root / 'results', root / 'data' / 'results'):
+            confirmation_root = results_root / 'ippo_prior_confirmation_v1'
+            if (confirmation_root / 'protocol_frozen.json').exists():
+                protocol_source = root / 'paper_protocol.py'
+                if not protocol_source.exists():
+                    protocol_source = root / 'code' / 'paper_protocol.py'
+                output_dir = (
+                    Path(output_arg).expanduser().resolve()
+                    if output_arg else results_root / 'eval_realization_sensitivity'
+                )
+                return root, results_root, confirmation_root, output_dir, protocol_source
+    raise FileNotFoundError(
+        'Could not locate ippo_prior_confirmation_v1 under results/ or data/results/. '
+        'Pass --root with the source-repository or deposit-package root.'
+    )
 
 
 def load_task(scenario, method, seed):
@@ -121,6 +151,16 @@ def sign_test_p(w, n=10):
 
 
 def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--root', help='Source-repository or deposit-package root')
+    parser.add_argument('--output-dir', help='Optional output directory override')
+    args = parser.parse_args()
+
+    global ROOT, RESULTS_ROOT, CONF_ROOT, OUT_DIR, PROTOCOL_SOURCE
+    ROOT, RESULTS_ROOT, CONF_ROOT, OUT_DIR, PROTOCOL_SOURCE = resolve_layout(
+        args.root, args.output_dir
+    )
+
     protocol = json.loads((CONF_ROOT / 'protocol_frozen.json').read_text())
     stored = json.loads((CONF_ROOT / 'confirmation_summary.json').read_text())
     if not protocol.get('frozen_before_new_data'):
@@ -292,7 +332,7 @@ def main():
             'n_tasks_log_verified': n_log_ok,
             'caveat': (
                 "sha256(paper_protocol.py) at analysis time "
-                f"({sha256_of(ROOT / 'paper_protocol.py')}) differs from the hash recorded "
+                f"({sha256_of(PROTOCOL_SOURCE)}) differs from the hash recorded "
                 "in the frozen protocol_state.json source_hashes "
                 "(f3fd62e7f5c1670e180619c920bbb61820de7faeab4d644d25e1f2b5bbc89c8a); "
                 "the source was edited after the frozen run and no VCS history is available, "

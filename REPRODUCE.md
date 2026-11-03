@@ -1,6 +1,6 @@
 # REPRODUCE.md — what can be reproduced from this package, and how
 
-Verified 2026-10-28 by executing each layer in a throwaway copy of this package
+Verified 2026-11-02 by executing each layer in a throwaway copy of this package
 (`/tmp`), comparing every regenerated artifact against the archived originals.
 Nothing in the package was modified by the verification; results below are the
 observed outcomes, including the negative ones.
@@ -10,15 +10,17 @@ observed outcomes, including the negative ones.
 Needs: Python 3.9+ with numpy. No SUMO, no GPU, no checkpoints.
 
 ```bash
-ln -s data/results results          # one-time path shim (scripts were written
-                                    # against the source-repository layout)
-python code/tools/analyze_eval_realization_sensitivity.py
+python code/tools/analyze_eval_realization_sensitivity.py --root .
 ```
+
+The script auto-detects either the source layout (`results/`) or this deposit
+layout (`data/results/`) and writes only inside the selected root unless
+`--output-dir` is supplied.
 
 Observed: exits 0; console table identical to the archived run (per-evaluation-
 seed sign counts 10/10, 10/10, 10/10, 10/10, 9/10; Jensen gap 3.361e-05);
 regenerated `summary.json` equals the archived file after removing its single
-`generated_utc` field; `per_eval_seed.md` differs only in the timestamp line.
+`generated_at` field; `per_eval_seed.md` differs only in the timestamp line.
 
 ## Layer 2 — figures (content verified; byte identity environment-dependent)
 
@@ -46,9 +48,9 @@ tectonic manuscript/latex/main.tex  # run from the package root; main.tex refere
                                     # figures under manuscript/figures/
 ```
 
-Observed (re-verified 2026-10-28 after the provenance-disclosure update):
-build.py emits main.tex (89,890 bytes; 21 references; figures 1-3 wired);
-tectonic produces a 15-page PDF whose extracted text is **identical to the
+Observed (re-verified 2026-11-02 after the final rigor-audit revisions):
+build.py emits main.tex (95,839 bytes; 21 references; figures 1-3 wired);
+tectonic produces a 16-page PDF whose extracted text is **identical to the
 archived `manuscript/latex/main.pdf`**.
 
 ## Layer 4 — bit-level evaluation re-runs (needs source repository)
@@ -57,8 +59,10 @@ Requires the 288 checkpoint binaries, which this package ships as hashes only
 (`checkpoint_hashes.sha256`). With the source repository (checkpoints retained)
 the evaluation path was previously verified bit-exact twice (see
 `data/results/audit_recheck_v1/`); any copy whose checkpoints match the hash
-file behaves identically, as the evaluation is deterministic (argmax control,
-SUMO `--seed` as sole stochastic source).
+file behaves identically under the recorded evaluation configuration. Evaluation
+uses deterministic argmax control, explicit Python/NumPy/PyTorch reseeding, and
+the recorded SUMO `--seed`; no stronger claim about a sole stochastic source is
+needed for the bit-exact result.
 
 ## Layer 5 — retraining from scratch (attemptable; bit-exactness not claimed)
 

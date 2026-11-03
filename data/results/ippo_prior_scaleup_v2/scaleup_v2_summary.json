@@ -1,7 +1,7 @@
 {
   "protocol_name": "ippo_prior_scaleup_v2",
   "basis": "frozen protocol of ippo_prior_confirmation_v1 copied, not re-registered",
-  "scenario": "H1HIGH: 3x3 grid, 18 flows x 300 veh/h = 5400 veh/h (600/intersection)",
+  "scenario": "H1SAT: 3x3 grid, 18 flows x 300 veh/h = 5400 veh/h (600/intersection)",
   "contrast": "IPPO-P vs IPPO",
   "metric": "demand_service_time",
   "seeds": [

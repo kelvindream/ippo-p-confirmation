@@ -56,7 +56,7 @@ ippo-p-confirmation/
 ## Integrity verification
 
 ```bash
-sha256sum -c MANIFEST.sha256          # from this folder; all 759 files
+sha256sum -c MANIFEST.sha256          # from this folder; verify all listed files
 sha256sum -c checkpoint_hashes.sha256 # from the source repository root
 ```
 
