@@ -101,7 +101,7 @@ deposit payload.
 Manifest refresh after any content change:
 
 ```bash
-find . -type f ! -name 'MANIFEST.sha256' | sort | sed 's|^\./||' \
+find . -type f ! -path './.git/*' ! -name 'MANIFEST.sha256' | LC_ALL=C sort \
   | xargs sha256sum > MANIFEST.sha256 && sha256sum -c MANIFEST.sha256 --quiet
 ```
 
