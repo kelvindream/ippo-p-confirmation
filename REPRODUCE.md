@@ -49,7 +49,7 @@ tectonic manuscript/latex/main.tex  # run from the package root; main.tex refere
 ```
 
 Observed (re-verified 2026-11-02 after the final rigor-audit revisions):
-build.py emits main.tex (95,839 bytes; 21 references; figures 1-3 wired);
+build.py emits main.tex (96,022 bytes; 21 references; figures 1-3 wired);
 tectonic produces a 16-page PDF whose extracted text is **identical to the
 archived `manuscript/latex/main.pdf`**.
 

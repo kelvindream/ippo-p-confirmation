@@ -78,11 +78,13 @@ sha256sum -c checkpoint_hashes.sha256 # from the source repository root
   `manuscript/figures/make_figure1.py` and `make_figures.py`.
 - Environment: Python + PyTorch + SUMO (see `code/requirements.txt`).
 
-## Placeholder
+## Archival DOI
 
-The archival DOI/repository identifier (`[FILL]` in the manuscript's Data
-Availability statement) is to be inserted upon deposit; this package is the
-deposit payload.
+The package is publicly archived on GitHub
+(<https://github.com/kelvindream/ippo-p-confirmation>) and on Zenodo under the
+concept DOI <https://doi.org/10.5281/zenodo.23920343> (version-specific DOI for
+snapshot v1.0.1: 10.5281/zenodo.23920344); this DOI is cited in the
+manuscript's Data Availability statement.
 
 ## Publication workflow (GitHub + Zenodo DOI)
 
