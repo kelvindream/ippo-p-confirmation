@@ -104,3 +104,8 @@ Manifest refresh after any content change:
 find . -type f ! -name 'MANIFEST.sha256' | sort | sed 's|^\./||' \
   | xargs sha256sum > MANIFEST.sha256 && sha256sum -c MANIFEST.sha256 --quiet
 ```
+
+## License
+
+Released under the Creative Commons Attribution 4.0 International license
+(CC-BY-4.0); see `LICENSE`.
