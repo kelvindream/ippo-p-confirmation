@@ -1,0 +1,46 @@
+{
+  "name": "ippo_p_supplementary_s1_matched_arm",
+  "locked_at": "2026-11-04T11:46:01+08:00",
+  "locked_before_results": true,
+  "registration": "internal, author-controlled, hash-locked; not externally registered",
+  "role": "post-confirmation supplementary analysis; never merged into the frozen confirmatory test ippo_prior_confirmation_v1",
+  "question": "Does the IPPO-P benefit come from the pressure logit prior itself, or merely from the additional halting-count pressure information channel?",
+  "method_new": {
+    "name": "IPPO-State",
+    "definition": "IPPO with the clipped within-intersection z-scored per-phase pressure vector (identical computation to the IPPO-P prior, floor 1.0, clip [-3,3]) concatenated to the actor observation, with prior_mode='none' (no logit prior). Actor otherwise identical to IPPO.",
+    "rationale": "isolates the state channel of the IPPO-P treatment package"
+  },
+  "design": {
+    "scenarios": ["H1", "H2", "H3"],
+    "seeds": [47, 48, 49, 50, 51, 52, 53, 54, 55, 56],
+    "eval_seeds": [1042, 1043, 1044, 1045, 1046],
+    "train_episodes": 50,
+    "primary_metric": "U (demand_service_time over 5 eval seeds, lower is better)",
+    "pairing": "paired against the already-archived IPPO results from ippo_prior_confirmation_v1 on the same seeds (identical protocol)",
+    "n_tasks": 30
+  },
+  "decision_rule_primary": "per-seed paired sign of mean U (IPPO-State minus IPPO): positive seed count reported; exact two-sided paired sign test on 10 seeds",
+  "branches": {
+    "state_channel_advantage": {
+      "condition": "IPPO-State better in >= 8/10 seeds (sign test p < 0.05 direction favouring IPPO-State)",
+      "conclusion_writing": "report that the benefit is attributable to the additional halting-count state rather than the logit-prior integration; weaken the main claim: the evaluated treatment is the full package and the state channel dominates; IPPO-P retains no advantage over the simpler state formulation",
+      "further_experiments": "none; report and stop"
+    },
+    "prior_advantage": {
+      "condition": "IPPO-P better in >= 8/10 seeds",
+      "conclusion_writing": "report that the logit-prior integration outperforms supplying the same pressure vector as state, strengthening the training-consistency claim; state that the comparison is within the same harness and is a post-confirmation analysis",
+      "further_experiments": "none; report and stop"
+    },
+    "indeterminate": {
+      "condition": "neither direction reaches 8/10",
+      "conclusion_writing": "report as indeterminate at n=10; the logit-prior versus state-channel distinction remains structurally different but not empirically separated; main-claim wording unchanged from the current structural-only statement",
+      "further_experiments": "none; no additional seeds; report and stop"
+    }
+  },
+  "anti_goals": [
+    "no post-hoc reinterpretation after seeing results",
+    "no additional seeds or scenarios added to rescue any branch",
+    "results never merged into or re-labelled as the confirmatory test",
+    "no selective reporting: the branch outcome is reported regardless of direction"
+  ]
+}

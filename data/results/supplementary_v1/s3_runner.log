@@ -1,0 +1,17 @@
+=== S3 prior scale probe: 6 tasks, parallel=6 ===
+=== Locked: results/supplementary_v1/s3_scale_probe_lock.json ===
+=== Started: 2026-11-06T10:04:49+08:00 ===
+[START] H1_IPPO-P_s1.0_seed67 scale=1.0
+[START] H1_IPPO-P_s1.0_seed68 scale=1.0
+[START] H1_IPPO-P_s1.5_seed67 scale=1.5
+[START] H1_IPPO-P_s1.5_seed68 scale=1.5
+[START] H1_IPPO-P_s3.0_seed67 scale=3.0
+[START] H1_IPPO-P_s3.0_seed68 scale=3.0
+[DONE] H1_IPPO-P_s3.0_seed68
+[DONE] H1_IPPO-P_s3.0_seed67
+[DONE] H1_IPPO-P_s1.0_seed67
+[DONE] H1_IPPO-P_s1.5_seed67
+[DONE] H1_IPPO-P_s1.5_seed68
+[DONE] H1_IPPO-P_s1.0_seed68
+=== Finished: 2026-11-06T12:15:53+08:00 ===
+=== Completed tasks: 6/6 ===

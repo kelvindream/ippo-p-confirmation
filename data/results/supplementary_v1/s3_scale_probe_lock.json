@@ -1,0 +1,39 @@
+{
+  "name": "ippo_p_supplementary_s3_prior_scale_probe",
+  "locked_at": "2026-11-04T11:46:01+08:00",
+  "locked_before_results": true,
+  "registration": "internal, author-controlled, hash-locked; not externally registered",
+  "role": "post-confirmation supplementary sensitivity probe; never merged into the frozen confirmatory test",
+  "question": "Is the frozen prior scale 2.25 a knife-edge choice, or is the effect direction stable across nearby scales?",
+  "design": {
+    "scenario": "H1 only",
+    "scales": [1.0, 1.5, 3.0],
+    "scale_selection_rationale": "locked before any run; 2.25 sits between 1.5 and 3.0, 1.0 doubles as the no-prior-adjacent anchor; symmetric around the frozen value",
+    "seeds": [67, 68],
+    "eval_seeds": [1042, 1043, 1044, 1045, 1046],
+    "train_episodes": 50,
+    "method": "IPPO-P with action_prior_scale varied; everything else identical to the confirmatory protocol",
+    "n_tasks": 6
+  },
+  "decision_rule_primary": "descriptive: report per-scale mean U and direction versus archived H1 IPPO mean; n=2 per scale cannot confirm any direction",
+  "branches": {
+    "all_directions_stable": {
+      "condition": "all three scales show direction consistent with the confirmatory H1 effect",
+      "conclusion_writing": "report the frozen scale is not a knife-edge within the probed range, with the n=2 caveat"
+    },
+    "direction_unstable": {
+      "condition": "any scale reverses direction",
+      "conclusion_writing": "report honestly that effect direction at H1 is scale-sensitive in the probed range; add to limitations; do not hide the reversed scale"
+    },
+    "mixed_or_weak": {
+      "condition": "anything else",
+      "conclusion_writing": "report the observed pattern as descriptive"
+    }
+  },
+  "anti_goals": [
+    "no additional scales added after seeing results",
+    "no re-labelling of a reversed scale as an anomaly without evidence",
+    "results never merged into the confirmatory test",
+    "no selective reporting"
+  ]
+}

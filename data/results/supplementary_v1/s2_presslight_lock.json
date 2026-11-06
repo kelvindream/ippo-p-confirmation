@@ -1,0 +1,43 @@
+{
+  "name": "ippo_p_supplementary_s2_presslight_baseline",
+  "locked_at": "2026-11-04T11:46:01+08:00",
+  "locked_before_results": true,
+  "registration": "internal, author-controlled, hash-locked; not externally registered",
+  "role": "post-confirmation supplementary analysis; never merged into the frozen confirmatory test ippo_prior_confirmation_v1",
+  "question": "How does IPPO-P compare against a published pressure-informed RL baseline implemented under the same environment, evaluation, and metric protocol?",
+  "baseline": {
+    "name": "PressLight (core-mechanism reproduction)",
+    "implementation": "agents/presslight.py: Double-DQN with phase-pressure state, pressure reward; lightweight reproduction of the core PressLight mechanism inside this repo's harness",
+    "reporting_boundary": "the paper must describe it as a core-mechanism reproduction under the same protocol, not the official PressLight/MPLight implementation; comparison figures are labelled same-harness reproductions, same as the constrained max-pressure descriptive variant"
+  },
+  "design": {
+    "scenarios": ["H1", "H2", "H3"],
+    "seeds": [57, 58, 59, 60, 61, 62, 63, 64, 65, 66],
+    "eval_seeds": [1042, 1043, 1044, 1045, 1046],
+    "train_episodes": 50,
+    "primary_metric": "U (demand_service_time over 5 eval seeds, lower is better)",
+    "comparison": "descriptive only: PressLight is an unpaired independent method; compare its per-scenario mean U with the archived IPPO and IPPO-P means; no confirmatory test claimed",
+    "n_tasks": 30
+  },
+  "decision_rule_primary": "descriptive reporting of per-scenario mean U and per-seed values; no hypothesis test decides publication wording",
+  "branches": {
+    "presslight_comparable_or_better": {
+      "condition": "PressLight mean U within or better than IPPO-P in any scenario",
+      "conclusion_writing": "report honestly; contextualize IPPO-P effect sizes against a published pressure-informed baseline; keep all claims descriptive"
+    },
+    "presslight_worse": {
+      "condition": "PressLight mean U worse than both IPPO and IPPO-P in all scenarios",
+      "conclusion_writing": "report honestly; note that the reproduction underperforms the on-policy agents in this harness, with the reproduction-scope caveat"
+    },
+    "mixed": {
+      "condition": "any other pattern",
+      "conclusion_writing": "report the per-scenario pattern as observed"
+    }
+  },
+  "anti_goals": [
+    "no post-hoc tuning of the PressLight reproduction beyond its locked hyperparameters",
+    "no claim that results represent the official PressLight implementation",
+    "results never merged into the confirmatory test",
+    "no selective reporting"
+  ]
+}

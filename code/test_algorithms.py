@@ -1624,6 +1624,26 @@ def _neighbor_augmented_observations(env, states):
     return np.concatenate([observations, neighbor_mean], axis=1)
 
 
+def _pressure_state_observations(env, states):
+    """Append the clipped within-intersection z-scored pressure vector as state.
+
+    Uses the identical pressure computation as the IPPO-P logit prior
+    (population SD, SD floor 1.0, clip [-3, 3]) but supplies it through the
+    observation channel instead of the policy logits.
+    """
+    observations = np.asarray(states, dtype=np.float32)
+    pressure = np.asarray([
+        signal.pressure_state() for signal in env.traffic_signals
+    ], dtype=np.float32)
+    pressure_center = pressure.mean(axis=1, keepdims=True)
+    pressure_scale = pressure.std(axis=1, keepdims=True)
+    pressure_zscore = np.clip(
+        (pressure - pressure_center) / np.maximum(pressure_scale, 1.0),
+        -3.0, 3.0,
+    ).astype(np.float32)
+    return np.concatenate([observations, pressure_zscore], axis=1)
+
+
 def _pressure_hold_action_priors(env, hold_prior_bonus=0.0):
     raw_pressure = np.asarray([
         signal.pressure_state() for signal in env.traffic_signals
@@ -1666,6 +1686,10 @@ def run_ippo_prior(num_episodes=10, checkpoint_path=None, resume_state=None,
         os.environ.get('GC_MAPPO_HOLD_PRIOR_BONUS', '0.0')
         if hold_prior_bonus is None else hold_prior_bonus
     )
+    # S3 scale probe only: task-wide override of the frozen prior scale.
+    scale_override = os.environ.get('GC_MAPPO_IPPO_PRIOR_SCALE')
+    if scale_override:
+        action_prior_scale = float(scale_override)
     agent = IPPO(
         num_agents=num_agents, obs_dim=obs_dim, action_dim=action_dim,
         action_prior_scale=action_prior_scale,
@@ -1719,6 +1743,20 @@ def run_ippo_plus(num_episodes=10, checkpoint_path=None, resume_state=None, on_e
     return _run_on_policy_multi_agent(
         env, agent, num_episodes, 'IPPO+', checkpoint_path, resume_state, on_episode_complete,
         observation_transform=_neighbor_augmented_observations,
+    )
+
+
+def run_ippo_state(num_episodes=10, checkpoint_path=None, resume_state=None, on_episode_complete=None):
+    """Matched arm: IPPO with the pressure vector as actor state and no logit prior."""
+    env, num_agents, raw_obs_dim, action_dim = _multi_agent_spec()
+    pressure_dim = len(env.traffic_signals[0].pressure_state())
+    agent = IPPO(
+        num_agents=num_agents, obs_dim=raw_obs_dim + pressure_dim, action_dim=action_dim,
+        action_prior_scale=0.0, prior_mode='none', policy_temperature=1.0,
+    )
+    return _run_on_policy_multi_agent(
+        env, agent, num_episodes, 'IPPO-State', checkpoint_path, resume_state, on_episode_complete,
+        observation_transform=_pressure_state_observations,
     )
 
 

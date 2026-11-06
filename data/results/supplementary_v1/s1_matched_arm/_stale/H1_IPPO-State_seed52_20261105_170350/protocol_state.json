@@ -1,0 +1,117 @@
+{
+  "status": "running",
+  "started_at": "2026-11-04T11:53:27",
+  "method": "IPPO-State",
+  "train_seed": 52,
+  "sumo_seed": 52,
+  "train_episodes": 50,
+  "evaluation_seeds": [
+    1042,
+    1043,
+    1044,
+    1045,
+    1046
+  ],
+  "environment": {
+    "net_file": "nets/grid-3x3/3x3.net.xml",
+    "route_file": "nets/grid-3x3/3x3-medium.rou.xml",
+    "skip_range": 0,
+    "simulation_time": 10000,
+    "yellow_time": 2,
+    "delta_rs_update_time": 10,
+    "use_gui": false,
+    "multi_agent": true,
+    "tls_min_links": 4,
+    "sumo_seed": 52
+  },
+  "source_hashes": {
+    "paper_protocol.py": "53afd46b371753dfdd9acd8763262971e9c2b4389e4a3df540a9702926a2422f",
+    "environment/env.py": "720684f6151a057111989e9c6c9d2270ff341ea61eb078376720beb5edf6ff88",
+    "environment/traffic_signal.py": "bfc659d53aec7c68d1a9eb278bb9fcbe24981bc217cd4ed97f6313529c1474a5",
+    "environment/metrics.py": "903b77d80cdf0a8b7aa8bbdc47c3de7992c16eafc0986987a53e519f40130770",
+    "test_algorithms.py": "108c1922d92e8423805a8e1df64610d24ba2ed309bb09305e25ee2767d1da9bc",
+    "agents/gc_mappo.py": "90a3f5e043d5d72640267c17092b3c56e1b00183a71803374cc04d14fa0c76ba",
+    "agents/dpg_mappo.py": "e50aa6ee3591dca3e5e33e0c667831922f092777df8826f0dfe2df454cd1a42b",
+    "agents/mappo.py": "4f66e641a09176a1a95ee28b828519a421b7b9e52d985f1dd5f5fedbd4c3b97e",
+    "agents/ippo.py": "7ec76955e7263a3fdaa39779cef8627451f88a2e5cac6ab000431421a73664a3",
+    "agents/gated_graph_residual_ippo.py": "e9f63e3c3b91df1e3389c9d72f8d3fe9cbed3e0d5b00f5b85e8e6fb696e23f03",
+    "agents/_colight_core.py": "3ca2454959f8f6074db656edaa3d970245c77a69a7fdd5592f46bda22c5b289d",
+    "agents/_presslight_core.py": "239d07dab1d4df69d5404e4bbf6fd5d6af2fdd175ed2f89f410113bf84d295bb",
+    "agents/colight.py": "64a63d9ccdd0fedf340174ad4f15d91df5ad8acf8aab6cde13e31ef2694d9144",
+    "agents/presslight.py": "c40fc685e2b78e5df05cd43e52e1c1c1b692781e13de79995ed839c501e3d921",
+    "agents/fixed_time.py": "e1822d3234a7ed377e67b0666ca28e94d3c17f215c4d1896195bbc5957543e3c",
+    "agents/max_pressure.py": "9b80843f7bb6612dc3bdb1894badc06bc7b9bf50be64c41a011a474b48f9cfd7",
+    "agents/baselines_descriptive.py": "1b7967a50de480695133dea48001308867a65f4bc371da603ab3ba68d949709f",
+    "agents/double_dqn.py": "171e178fe52b87d5b75c42de83e9f7c78e5967b7a91c4cadf6e24e919badfb47",
+    "agents/dueling_double_dqn.py": "68479235b2dcb7fe5ba5e5c1b9526e6234610a7d88127dd867c1407832601737",
+    "agents/gae_actor_critic.py": "6b5f4e7379bb0735179e4accae74c70c4e43302f2063c484a430b5c02fcdfdcf",
+    "agents/reinforce.py": "0a0ca48071a3eefe4b5b1886e61f7805777f00e56b9a4430896f4c18eeb4cdd1",
+    "nets/2x2-grid/2x2.net.xml": "86f34bde8e849afa57b52a35ee111db15d60c58264e71d1bcc1f912d5226c035",
+    "nets/2x2-grid/2x2-medium.rou.xml": "949855a57336dde8c8b6355d29ee30c33771f73b85aeb2fc961e48930d2490fe",
+    "nets/grid-3x3/3x3.net.xml": "07c5d91e523ae01d736937c9eec5aa358d186495c879e862d2a6b715070aa155",
+    "nets/grid-3x3/3x3-medium.rou.xml": "cd110ebca15e89c24cfcf7bb1471e055323bd9b183946d7bb59d4a0f7ea5cc83"
+  },
+  "variant_config": null,
+  "ippo_initialization_checkpoint": null,
+  "evaluation_mode": "fresh environment, checkpoint reload, deterministic actions, learning disabled",
+  "gc_mappo_actor": null,
+  "metric_standard": {
+    "speed": "vehicle-weighted mean speed over unique controlled lanes",
+    "queue": "mean halting length over unique controlled lanes, halting_number * 7.5 m",
+    "waiting": "mean waiting time over unique vehicles on controlled lanes",
+    "travel_time": "mean completed-vehicle arrival time minus departure time",
+    "delay": "mean completed-vehicle travel time minus route free-flow travel time",
+    "throughput": "cumulative arrived vehicles per evaluation episode",
+    "throughput_rate": "throughput divided by simulation hours",
+    "completion_rate": "completed departed vehicles divided by departed vehicles",
+    "incomplete_vehicles": "departed vehicles not completed by episode end",
+    "teleport_count": "unique vehicles observed in SUMO teleport events",
+    "sampling_interval_seconds": 10,
+    "deduplicate_lanes": true,
+    "deduplicate_vehicles": true
+  },
+  "method_metadata": null,
+  "training_objective": "algorithm-specific training objective",
+  "reward_standard": {
+    "evaluation_reward_field": "evaluation_reward",
+    "training_return_is_algorithm_specific": true,
+    "global_reward_weight": "0.30",
+    "clearance_reward_coef": "0.0",
+    "calibrated_centers_scales": {
+      "speed": [
+        "6.0",
+        "1.0"
+      ],
+      "queue": [
+        "8.0",
+        "3.0"
+      ],
+      "waiting": [
+        "12.0",
+        "4.0"
+      ]
+    }
+  },
+  "execution_options": {
+    "gc_mappo_pressure_confidence_mask": false,
+    "gc_mappo_pressure_confidence_threshold": 4.0,
+    "gc_mappo_action_prior_scale": "2.25",
+    "gc_mappo_hold_prior_bonus": "0.0",
+    "gc_mappo_eval_policy_temperature": "0.30",
+    "gc_mappo_eval_deterministic": true,
+    "gc_mappo_eval_policy_seed_offset": "0",
+    "gc_mappo_soft_q_execution": true,
+    "gc_mappo_soft_q_policy_support_only": false,
+    "gc_mappo_dense_critic_exclude_decision_states": false,
+    "global_reward_weight": "0.30",
+    "clearance_reward_coef": "0.0",
+    "reward_calibration": {
+      "speed_center": "6.0",
+      "speed_scale": "1.0",
+      "queue_center": "8.0",
+      "queue_scale": "3.0",
+      "waiting_center": "12.0",
+      "waiting_scale": "4.0"
+    }
+  }
+}

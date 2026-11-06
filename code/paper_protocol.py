@@ -49,7 +49,7 @@ FORMAL_VARIANTS = {
 
 METHODS = (
     'DPG-MAPPO', 'GC-MAPPO', 'GC-MAPPO-ind-noP', 'GC-MAPPO-ind-P',
-    'MAPPO', 'IPPO', 'IPPO-P', 'IPPO+', 'IPPO-Cap', 'BR-IPPO',
+    'MAPPO', 'IPPO', 'IPPO-P', 'IPPO+', 'IPPO-State', 'IPPO-Cap', 'BR-IPPO',
     'GR-GMAPPO-L', 'CoLight', 'PressLight', 'Max-Pressure', 'Fixed-Time',
     'Fixed-Time-Program', 'Max-Pressure-Descriptive',
     'Double DQN', 'Dueling Double DQN', 'GAE Actor-Critic', 'REINFORCE',
@@ -151,6 +151,21 @@ def _build_gc_mappo(num_agents, raw_obs_dim, action_dim, adjacency, distance,
     )
 
 
+def _formal_variant(method):
+    """Formal variant with locked-in-task overrides.
+
+    S3 scale probe only: GC_MAPPO_IPPO_PRIOR_SCALE overrides the frozen
+    IPPO-P prior scale for the whole task (training, evaluation, and the
+    recorded variant_config stay consistent within the task).
+    """
+    variant = dict(FORMAL_VARIANTS[method])
+    if method == 'IPPO-P':
+        override = os.environ.get('GC_MAPPO_IPPO_PRIOR_SCALE')
+        if override:
+            variant['action_prior_scale'] = float(override)
+    return variant
+
+
 def _build_evaluator(method, sumo_seed, checkpoint_path):
     if method in ('Max-Pressure', 'Fixed-Time') or method in DESCRIPTIVE_METHODS:
         return None
@@ -166,7 +181,7 @@ def _build_evaluator(method, sumo_seed, checkpoint_path):
     elif method == 'GC-MAPPO':
         agent = _build_gc_mappo(num_agents, raw_obs_dim, action_dim, adjacency, distance)
     elif method in ('GC-MAPPO-ind-noP', 'GC-MAPPO-ind-P'):
-        variant = FORMAL_VARIANTS[method]
+        variant = _formal_variant(method)
         agent = _build_gc_mappo(
             num_agents, raw_obs_dim, action_dim, adjacency, distance,
             independent_actor=True,
@@ -176,7 +191,7 @@ def _build_evaluator(method, sumo_seed, checkpoint_path):
     elif method == 'MAPPO':
         agent = training.MAPPO(num_agents, raw_obs_dim, action_dim)
     elif method in ('IPPO', 'IPPO-P'):
-        variant = FORMAL_VARIANTS[method]
+        variant = _formal_variant(method)
         agent = training.IPPO(
             num_agents, raw_obs_dim, action_dim,
             action_prior_scale=variant['action_prior_scale'],
@@ -185,6 +200,11 @@ def _build_evaluator(method, sumo_seed, checkpoint_path):
         )
     elif method == 'IPPO+':
         agent = training.IPPO(num_agents, raw_obs_dim * 2, action_dim)
+    elif method == 'IPPO-State':
+        agent = training.IPPO(
+            num_agents, raw_obs_dim + action_dim, action_dim,
+            action_prior_scale=0.0, prior_mode='none', policy_temperature=1.0,
+        )
     elif method in ('BR-IPPO', 'GR-GMAPPO-L'):
         initialization_checkpoint = os.environ.get('GC_MAPPO_IPPO_INIT_CHECKPOINT')
         if not initialization_checkpoint or not os.path.isfile(initialization_checkpoint):
@@ -351,7 +371,7 @@ def _select_actions(method, agent, env, states, invalid_actions):
     if method == 'GC-MAPPO':
         return _gc_actions(agent, env, states)
     if method in ('GC-MAPPO-ind-noP', 'GC-MAPPO-ind-P'):
-        variant = FORMAL_VARIANTS[method]
+        variant = _formal_variant(method)
         return _gc_actions(
             agent, env, states,
             hold_prior_bonus=variant['hold_prior_bonus'],
@@ -365,8 +385,13 @@ def _select_actions(method, agent, env, states, invalid_actions):
             env, np.asarray(states, dtype=np.float32)
         )
         return agent.select_actions(observations, deterministic=True)[0]
+    if method == 'IPPO-State':
+        observations = training._pressure_state_observations(
+            env, np.asarray(states, dtype=np.float32)
+        )
+        return agent.select_actions(observations, deterministic=True)[0]
     if method == 'IPPO-P':
-        variant = FORMAL_VARIANTS[method]
+        variant = _formal_variant(method)
         return _ippo_prior_actions(
             agent, env, states,
             hold_prior_bonus=variant['hold_prior_bonus'],
@@ -556,6 +581,7 @@ def _runner(method):
         'IPPO': training.run_ippo,
         'IPPO-P': training.run_ippo_prior,
         'IPPO+': training.run_ippo_plus,
+        'IPPO-State': training.run_ippo_state,
         'IPPO-Cap': training.run_ippo_cap,
         'BR-IPPO': training.run_br_ippo,
         'GR-GMAPPO-L': training.run_gr_gmappo_l,
@@ -657,7 +683,7 @@ def main():
         'method': args.method, 'train_seed': args.train_seed, 'sumo_seed': sumo_seed,
         'train_episodes': args.train_episodes, 'evaluation_seeds': args.eval_seeds,
         'environment': dict(training.ENV_PARAMS), 'source_hashes': _source_hashes(),
-        'variant_config': dict(FORMAL_VARIANTS[args.method]) if args.method in FORMAL_VARIANTS else None,
+        'variant_config': _formal_variant(args.method) if args.method in FORMAL_VARIANTS else None,
         'ippo_initialization_checkpoint': (
             os.path.abspath(os.environ['GC_MAPPO_IPPO_INIT_CHECKPOINT'])
             if args.method in ('BR-IPPO', 'GR-GMAPPO-L') else None

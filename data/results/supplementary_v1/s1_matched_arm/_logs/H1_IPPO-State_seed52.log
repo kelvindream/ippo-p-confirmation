@@ -1,0 +1,124 @@
+[2026-11-05 17:03:52] Using device: cuda
+[2026-11-05 17:03:52] GPU name: NVIDIA RTX A6000
+ Retrying in 1 seconds
+ Retrying in 1 seconds
+[2026-11-05 17:06:41] IPPO-State - Episode 1/50 done. Avg Reward: -0.5098, Speed: 2.78, Queue: 11.62, Waiting: 71.98
+ Retrying in 1 seconds
+[2026-11-05 17:09:27] IPPO-State - Episode 2/50 done. Avg Reward: -0.4896, Speed: 2.91, Queue: 10.84, Waiting: 64.95
+ Retrying in 1 seconds
+[2026-11-05 17:12:07] IPPO-State - Episode 3/50 done. Avg Reward: -0.4611, Speed: 3.11, Queue: 9.87, Waiting: 58.40
+ Retrying in 1 seconds
+[2026-11-05 17:14:42] IPPO-State - Episode 4/50 done. Avg Reward: -0.3710, Speed: 3.65, Queue: 7.91, Waiting: 46.30
+ Retrying in 1 seconds
+[2026-11-05 17:17:11] IPPO-State - Episode 5/50 done. Avg Reward: -0.3220, Speed: 3.99, Queue: 6.89, Waiting: 36.29
+ Retrying in 1 seconds
+[2026-11-05 17:19:39] IPPO-State - Episode 6/50 done. Avg Reward: -0.2701, Speed: 4.31, Queue: 6.17, Waiting: 33.13
+ Retrying in 1 seconds
+[2026-11-05 17:22:04] IPPO-State - Episode 7/50 done. Avg Reward: -0.2142, Speed: 4.62, Queue: 5.48, Waiting: 30.30
+ Retrying in 1 seconds
+[2026-11-05 17:24:27] IPPO-State - Episode 8/50 done. Avg Reward: -0.1381, Speed: 5.13, Queue: 4.60, Waiting: 23.49
+ Retrying in 1 seconds
+[2026-11-05 17:26:50] IPPO-State - Episode 9/50 done. Avg Reward: -0.0898, Speed: 5.43, Queue: 4.13, Waiting: 21.01
+ Retrying in 1 seconds
+[2026-11-05 17:29:11] IPPO-State - Episode 10/50 done. Avg Reward: -0.0440, Speed: 5.66, Queue: 3.82, Waiting: 19.48
+ Retrying in 1 seconds
+[2026-11-05 17:31:29] IPPO-State - Episode 11/50 done. Avg Reward: 0.0138, Speed: 5.94, Queue: 3.50, Waiting: 17.47
+ Retrying in 1 seconds
+[2026-11-05 17:33:44] IPPO-State - Episode 12/50 done. Avg Reward: 0.0713, Speed: 6.28, Queue: 3.11, Waiting: 15.14
+ Retrying in 1 seconds
+[2026-11-05 17:35:54] IPPO-State - Episode 13/50 done. Avg Reward: 0.1155, Speed: 6.48, Queue: 2.90, Waiting: 13.45
+ Retrying in 1 seconds
+[2026-11-05 17:38:06] IPPO-State - Episode 14/50 done. Avg Reward: 0.1214, Speed: 6.57, Queue: 2.81, Waiting: 14.64
+ Retrying in 1 seconds
+[2026-11-05 17:40:19] IPPO-State - Episode 15/50 done. Avg Reward: 0.1627, Speed: 6.75, Queue: 2.66, Waiting: 12.58
+ Retrying in 1 seconds
+[2026-11-05 17:42:32] IPPO-State - Episode 16/50 done. Avg Reward: 0.1932, Speed: 6.94, Queue: 2.50, Waiting: 11.20
+ Retrying in 1 seconds
+[2026-11-05 17:44:45] IPPO-State - Episode 17/50 done. Avg Reward: 0.2216, Speed: 7.07, Queue: 2.38, Waiting: 9.93
+ Retrying in 1 seconds
+[2026-11-05 17:47:01] IPPO-State - Episode 18/50 done. Avg Reward: 0.2184, Speed: 7.01, Queue: 2.41, Waiting: 9.87
+ Retrying in 1 seconds
+[2026-11-05 17:49:15] IPPO-State - Episode 19/50 done. Avg Reward: 0.2383, Speed: 7.19, Queue: 2.27, Waiting: 9.07
+ Retrying in 1 seconds
+[2026-11-05 17:51:28] IPPO-State - Episode 20/50 done. Avg Reward: 0.2390, Speed: 7.13, Queue: 2.31, Waiting: 9.10
+ Retrying in 1 seconds
+[2026-11-05 17:53:40] IPPO-State - Episode 21/50 done. Avg Reward: 0.2600, Speed: 7.29, Queue: 2.20, Waiting: 8.45
+ Retrying in 1 seconds
+[2026-11-05 17:55:51] IPPO-State - Episode 22/50 done. Avg Reward: 0.2581, Speed: 7.22, Queue: 2.22, Waiting: 8.30
+ Retrying in 1 seconds
+[2026-11-05 17:58:02] IPPO-State - Episode 23/50 done. Avg Reward: 0.2619, Speed: 7.24, Queue: 2.22, Waiting: 8.33
+ Retrying in 1 seconds
+[2026-11-05 18:00:13] IPPO-State - Episode 24/50 done. Avg Reward: 0.2786, Speed: 7.30, Queue: 2.16, Waiting: 7.70
+ Retrying in 1 seconds
+[2026-11-05 18:02:22] IPPO-State - Episode 25/50 done. Avg Reward: 0.2711, Speed: 7.30, Queue: 2.17, Waiting: 7.89
+ Retrying in 1 seconds
+[2026-11-05 18:04:32] IPPO-State - Episode 26/50 done. Avg Reward: 0.2819, Speed: 7.36, Queue: 2.14, Waiting: 7.69
+ Retrying in 1 seconds
+[2026-11-05 18:06:41] IPPO-State - Episode 27/50 done. Avg Reward: 0.2842, Speed: 7.37, Queue: 2.14, Waiting: 7.55
+ Retrying in 1 seconds
+[2026-11-05 18:08:49] IPPO-State - Episode 28/50 done. Avg Reward: 0.2866, Speed: 7.38, Queue: 2.12, Waiting: 7.42
+ Retrying in 1 seconds
+[2026-11-05 18:10:58] IPPO-State - Episode 29/50 done. Avg Reward: 0.2946, Speed: 7.45, Queue: 2.08, Waiting: 7.24
+ Retrying in 1 seconds
+[2026-11-05 18:13:08] IPPO-State - Episode 30/50 done. Avg Reward: 0.2844, Speed: 7.51, Queue: 2.04, Waiting: 6.86
+ Retrying in 1 seconds
+[2026-11-05 18:15:18] IPPO-State - Episode 31/50 done. Avg Reward: 0.2962, Speed: 7.40, Queue: 2.10, Waiting: 7.29
+ Retrying in 1 seconds
+[2026-11-05 18:17:28] IPPO-State - Episode 32/50 done. Avg Reward: 0.2940, Speed: 7.51, Queue: 2.02, Waiting: 6.97
+ Retrying in 1 seconds
+[2026-11-05 18:19:36] IPPO-State - Episode 33/50 done. Avg Reward: 0.3082, Speed: 7.55, Queue: 1.99, Waiting: 6.76
+ Retrying in 1 seconds
+[2026-11-05 18:21:47] IPPO-State - Episode 34/50 done. Avg Reward: 0.2916, Speed: 7.52, Queue: 2.03, Waiting: 6.96
+ Retrying in 1 seconds
+[2026-11-05 18:23:57] IPPO-State - Episode 35/50 done. Avg Reward: 0.2800, Speed: 7.34, Queue: 2.16, Waiting: 7.56
+ Retrying in 1 seconds
+[2026-11-05 18:26:06] IPPO-State - Episode 36/50 done. Avg Reward: 0.2831, Speed: 7.32, Queue: 2.17, Waiting: 7.36
+ Retrying in 1 seconds
+[2026-11-05 18:28:15] IPPO-State - Episode 37/50 done. Avg Reward: 0.2945, Speed: 7.39, Queue: 2.12, Waiting: 7.38
+ Retrying in 1 seconds
+[2026-11-05 18:30:24] IPPO-State - Episode 38/50 done. Avg Reward: 0.2937, Speed: 7.49, Queue: 2.04, Waiting: 6.85
+ Retrying in 1 seconds
+[2026-11-05 18:32:32] IPPO-State - Episode 39/50 done. Avg Reward: 0.3001, Speed: 7.55, Queue: 2.01, Waiting: 6.86
+ Retrying in 1 seconds
+[2026-11-05 18:34:42] IPPO-State - Episode 40/50 done. Avg Reward: 0.2843, Speed: 7.38, Queue: 2.13, Waiting: 7.35
+ Retrying in 1 seconds
+[2026-11-05 18:36:50] IPPO-State - Episode 41/50 done. Avg Reward: 0.3023, Speed: 7.50, Queue: 2.04, Waiting: 6.86
+ Retrying in 1 seconds
+[2026-11-05 18:38:59] IPPO-State - Episode 42/50 done. Avg Reward: 0.3014, Speed: 7.48, Queue: 2.06, Waiting: 7.00
+ Retrying in 1 seconds
+[2026-11-05 18:41:09] IPPO-State - Episode 43/50 done. Avg Reward: 0.3009, Speed: 7.48, Queue: 2.06, Waiting: 7.19
+ Retrying in 1 seconds
+[2026-11-05 18:43:18] IPPO-State - Episode 44/50 done. Avg Reward: 0.2881, Speed: 7.33, Queue: 2.14, Waiting: 7.27
+ Retrying in 1 seconds
+[2026-11-05 18:45:27] IPPO-State - Episode 45/50 done. Avg Reward: 0.3005, Speed: 7.48, Queue: 2.03, Waiting: 6.74
+ Retrying in 1 seconds
+[2026-11-05 18:47:36] IPPO-State - Episode 46/50 done. Avg Reward: 0.2999, Speed: 7.45, Queue: 2.06, Waiting: 6.85
+ Retrying in 1 seconds
+[2026-11-05 18:49:44] IPPO-State - Episode 47/50 done. Avg Reward: 0.3053, Speed: 7.49, Queue: 2.05, Waiting: 7.02
+ Retrying in 1 seconds
+[2026-11-05 18:51:53] IPPO-State - Episode 48/50 done. Avg Reward: 0.2840, Speed: 7.42, Queue: 2.11, Waiting: 7.23
+ Retrying in 1 seconds
+[2026-11-05 18:54:03] IPPO-State - Episode 49/50 done. Avg Reward: 0.2965, Speed: 7.50, Queue: 2.03, Waiting: 6.80
+ Retrying in 1 seconds
+[2026-11-05 18:56:14] IPPO-State - Episode 50/50 done. Avg Reward: 0.3060, Speed: 7.51, Queue: 2.01, Waiting: 6.97
+ Retrying in 1 seconds
+[2026-11-05T18:56:15] IPPO-State eval seed 1042 (1/5) on nets/grid-3x3/3x3.net.xml starting...
+ Retrying in 1 seconds
+[2026-11-05T18:58:20] IPPO-State eval seed 1042 done: reward=0.29612 speed=7.813 queue=1.856 waiting=6.148
+ Retrying in 1 seconds
+[2026-11-05T18:58:21] IPPO-State eval seed 1043 (2/5) on nets/grid-3x3/3x3.net.xml starting...
+ Retrying in 1 seconds
+[2026-11-05T19:00:26] IPPO-State eval seed 1043 done: reward=0.28644 speed=7.753 queue=1.911 waiting=5.791
+ Retrying in 1 seconds
+[2026-11-05T19:00:27] IPPO-State eval seed 1044 (3/5) on nets/grid-3x3/3x3.net.xml starting...
+ Retrying in 1 seconds
+[2026-11-05T19:02:32] IPPO-State eval seed 1044 done: reward=0.28607 speed=7.716 queue=1.908 waiting=6.178
+ Retrying in 1 seconds
+[2026-11-05T19:02:33] IPPO-State eval seed 1045 (4/5) on nets/grid-3x3/3x3.net.xml starting...
+ Retrying in 1 seconds
+[2026-11-05T19:04:37] IPPO-State eval seed 1045 done: reward=0.28219 speed=7.801 queue=1.863 waiting=6.065
+ Retrying in 1 seconds
+[2026-11-05T19:04:39] IPPO-State eval seed 1046 (5/5) on nets/grid-3x3/3x3.net.xml starting...
+ Retrying in 1 seconds
+[2026-11-05T19:06:44] IPPO-State eval seed 1046 done: reward=0.30651 speed=7.715 queue=1.896 waiting=6.299
+Protocol task completed: IPPO-State, seed=52

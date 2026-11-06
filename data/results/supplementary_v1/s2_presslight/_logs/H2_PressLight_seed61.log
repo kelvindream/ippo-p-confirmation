@@ -1,0 +1,124 @@
+[2026-11-06 12:11:51] Using device: cuda
+[2026-11-06 12:11:51] GPU name: NVIDIA RTX A6000
+ Retrying in 1 seconds
+ Retrying in 1 seconds
+[2026-11-06 12:14:18] PressLight - Episode 1/50 done. Avg Reward: -0.6114, Speed: 1.67, Queue: 41.68, Waiting: 78.14
+ Retrying in 1 seconds
+[2026-11-06 12:16:30] PressLight - Episode 2/50 done. Avg Reward: -0.5941, Speed: 1.73, Queue: 38.57, Waiting: 73.17
+ Retrying in 1 seconds
+[2026-11-06 12:18:36] PressLight - Episode 3/50 done. Avg Reward: -0.5882, Speed: 2.07, Queue: 32.50, Waiting: 69.84
+ Retrying in 1 seconds
+[2026-11-06 12:20:39] PressLight - Episode 4/50 done. Avg Reward: -0.5671, Speed: 2.20, Queue: 29.52, Waiting: 59.54
+ Retrying in 1 seconds
+[2026-11-06 12:22:38] PressLight - Episode 5/50 done. Avg Reward: -0.5640, Speed: 2.37, Queue: 26.65, Waiting: 62.12
+ Retrying in 1 seconds
+[2026-11-06 12:24:27] PressLight - Episode 6/50 done. Avg Reward: -0.5270, Speed: 2.99, Queue: 20.92, Waiting: 45.35
+ Retrying in 1 seconds
+[2026-11-06 12:26:18] PressLight - Episode 7/50 done. Avg Reward: -0.5396, Speed: 2.72, Queue: 23.48, Waiting: 48.11
+ Retrying in 1 seconds
+[2026-11-06 12:28:09] PressLight - Episode 8/50 done. Avg Reward: -0.5213, Speed: 2.85, Queue: 21.76, Waiting: 43.72
+ Retrying in 1 seconds
+[2026-11-06 12:29:57] PressLight - Episode 9/50 done. Avg Reward: -0.5129, Speed: 3.09, Queue: 19.95, Waiting: 46.66
+ Retrying in 1 seconds
+[2026-11-06 12:31:49] PressLight - Episode 10/50 done. Avg Reward: -0.5086, Speed: 2.67, Queue: 23.09, Waiting: 68.17
+ Retrying in 1 seconds
+[2026-11-06 12:33:28] PressLight - Episode 11/50 done. Avg Reward: -0.4528, Speed: 3.81, Queue: 14.46, Waiting: 36.13
+ Retrying in 1 seconds
+[2026-11-06 12:35:10] PressLight - Episode 12/50 done. Avg Reward: -0.4685, Speed: 3.63, Queue: 15.83, Waiting: 39.73
+ Retrying in 1 seconds
+[2026-11-06 12:36:49] PressLight - Episode 13/50 done. Avg Reward: -0.4243, Speed: 4.01, Queue: 13.62, Waiting: 33.25
+ Retrying in 1 seconds
+[2026-11-06 12:38:26] PressLight - Episode 14/50 done. Avg Reward: -0.4156, Speed: 4.02, Queue: 13.50, Waiting: 32.70
+ Retrying in 1 seconds
+[2026-11-06 12:40:03] PressLight - Episode 15/50 done. Avg Reward: -0.3826, Speed: 4.25, Queue: 12.42, Waiting: 26.96
+ Retrying in 1 seconds
+[2026-11-06 12:41:39] PressLight - Episode 16/50 done. Avg Reward: -0.3742, Speed: 4.41, Queue: 11.70, Waiting: 29.61
+ Retrying in 1 seconds
+[2026-11-06 12:43:12] PressLight - Episode 17/50 done. Avg Reward: -0.3511, Speed: 4.50, Queue: 11.42, Waiting: 25.68
+ Retrying in 1 seconds
+[2026-11-06 12:44:46] PressLight - Episode 18/50 done. Avg Reward: -0.3299, Speed: 4.66, Queue: 10.66, Waiting: 24.00
+ Retrying in 1 seconds
+[2026-11-06 12:46:19] PressLight - Episode 19/50 done. Avg Reward: -0.3458, Speed: 4.48, Queue: 11.33, Waiting: 28.53
+ Retrying in 1 seconds
+[2026-11-06 12:47:51] PressLight - Episode 20/50 done. Avg Reward: -0.2964, Speed: 4.86, Queue: 9.90, Waiting: 23.28
+ Retrying in 1 seconds
+[2026-11-06 12:49:25] PressLight - Episode 21/50 done. Avg Reward: -0.3470, Speed: 4.50, Queue: 11.34, Waiting: 28.40
+ Retrying in 1 seconds
+[2026-11-06 12:50:55] PressLight - Episode 22/50 done. Avg Reward: -0.3144, Speed: 4.75, Queue: 10.47, Waiting: 24.49
+ Retrying in 1 seconds
+[2026-11-06 12:52:27] PressLight - Episode 23/50 done. Avg Reward: -0.2920, Speed: 4.82, Queue: 10.21, Waiting: 24.23
+ Retrying in 1 seconds
+[2026-11-06 12:53:58] PressLight - Episode 24/50 done. Avg Reward: -0.2796, Speed: 4.92, Queue: 9.80, Waiting: 22.52
+ Retrying in 1 seconds
+[2026-11-06 12:55:30] PressLight - Episode 25/50 done. Avg Reward: -0.2666, Speed: 4.94, Queue: 9.59, Waiting: 20.82
+ Retrying in 1 seconds
+[2026-11-06 12:57:00] PressLight - Episode 26/50 done. Avg Reward: -0.2454, Speed: 5.00, Queue: 9.55, Waiting: 21.03
+ Retrying in 1 seconds
+[2026-11-06 12:58:30] PressLight - Episode 27/50 done. Avg Reward: -0.2314, Speed: 5.13, Queue: 9.06, Waiting: 20.34
+ Retrying in 1 seconds
+[2026-11-06 13:00:00] PressLight - Episode 28/50 done. Avg Reward: -0.2371, Speed: 5.17, Queue: 8.98, Waiting: 21.19
+ Retrying in 1 seconds
+[2026-11-06 13:01:29] PressLight - Episode 29/50 done. Avg Reward: -0.2361, Speed: 5.18, Queue: 8.93, Waiting: 22.59
+ Retrying in 1 seconds
+[2026-11-06 13:02:59] PressLight - Episode 30/50 done. Avg Reward: -0.2386, Speed: 5.16, Queue: 9.02, Waiting: 21.27
+ Retrying in 1 seconds
+[2026-11-06 13:04:29] PressLight - Episode 31/50 done. Avg Reward: -0.2072, Speed: 5.32, Queue: 8.55, Waiting: 21.98
+ Retrying in 1 seconds
+[2026-11-06 13:05:59] PressLight - Episode 32/50 done. Avg Reward: -0.2259, Speed: 5.25, Queue: 8.73, Waiting: 20.94
+ Retrying in 1 seconds
+[2026-11-06 13:07:29] PressLight - Episode 33/50 done. Avg Reward: -0.2561, Speed: 5.09, Queue: 9.20, Waiting: 21.91
+ Retrying in 1 seconds
+[2026-11-06 13:08:59] PressLight - Episode 34/50 done. Avg Reward: -0.1877, Speed: 5.35, Queue: 8.45, Waiting: 20.35
+ Retrying in 1 seconds
+[2026-11-06 13:10:29] PressLight - Episode 35/50 done. Avg Reward: -0.1923, Speed: 5.35, Queue: 8.42, Waiting: 20.41
+ Retrying in 1 seconds
+[2026-11-06 13:12:00] PressLight - Episode 36/50 done. Avg Reward: -0.2094, Speed: 5.27, Queue: 8.67, Waiting: 21.37
+ Retrying in 1 seconds
+[2026-11-06 13:13:29] PressLight - Episode 37/50 done. Avg Reward: -0.1788, Speed: 5.44, Queue: 8.27, Waiting: 21.11
+ Retrying in 1 seconds
+[2026-11-06 13:14:59] PressLight - Episode 38/50 done. Avg Reward: -0.1730, Speed: 5.50, Queue: 8.06, Waiting: 20.00
+ Retrying in 1 seconds
+[2026-11-06 13:16:28] PressLight - Episode 39/50 done. Avg Reward: -0.1602, Speed: 5.58, Queue: 7.76, Waiting: 19.01
+ Retrying in 1 seconds
+[2026-11-06 13:17:54] PressLight - Episode 40/50 done. Avg Reward: -0.1627, Speed: 5.48, Queue: 8.07, Waiting: 19.09
+ Retrying in 1 seconds
+[2026-11-06 13:19:22] PressLight - Episode 41/50 done. Avg Reward: -0.1420, Speed: 5.69, Queue: 7.50, Waiting: 17.88
+ Retrying in 1 seconds
+[2026-11-06 13:20:52] PressLight - Episode 42/50 done. Avg Reward: -0.1976, Speed: 5.35, Queue: 8.44, Waiting: 21.24
+ Retrying in 1 seconds
+[2026-11-06 13:22:21] PressLight - Episode 43/50 done. Avg Reward: -0.1725, Speed: 5.50, Queue: 7.98, Waiting: 18.82
+ Retrying in 1 seconds
+[2026-11-06 13:23:49] PressLight - Episode 44/50 done. Avg Reward: -0.1556, Speed: 5.55, Queue: 7.87, Waiting: 19.16
+ Retrying in 1 seconds
+[2026-11-06 13:25:18] PressLight - Episode 45/50 done. Avg Reward: -0.1066, Speed: 5.80, Queue: 7.23, Waiting: 17.26
+ Retrying in 1 seconds
+[2026-11-06 13:26:47] PressLight - Episode 46/50 done. Avg Reward: -0.1552, Speed: 5.52, Queue: 8.01, Waiting: 19.74
+ Retrying in 1 seconds
+[2026-11-06 13:28:16] PressLight - Episode 47/50 done. Avg Reward: -0.1388, Speed: 5.65, Queue: 7.62, Waiting: 18.88
+ Retrying in 1 seconds
+[2026-11-06 13:29:45] PressLight - Episode 48/50 done. Avg Reward: -0.1690, Speed: 5.55, Queue: 7.87, Waiting: 18.53
+ Retrying in 1 seconds
+[2026-11-06 13:31:13] PressLight - Episode 49/50 done. Avg Reward: -0.1337, Speed: 5.72, Queue: 7.37, Waiting: 17.17
+ Retrying in 1 seconds
+[2026-11-06 13:32:43] PressLight - Episode 50/50 done. Avg Reward: -0.1732, Speed: 5.47, Queue: 8.06, Waiting: 19.21
+ Retrying in 1 seconds
+[2026-11-06T13:32:45] PressLight eval seed 1042 (1/5) on nets/2x2-grid/2x2_oversaturated.net.xml starting...
+ Retrying in 1 seconds
+[2026-11-06T13:34:05] PressLight eval seed 1042 done: reward=-0.00850 speed=6.440 queue=5.901 waiting=13.910
+ Retrying in 1 seconds
+[2026-11-06T13:34:06] PressLight eval seed 1043 (2/5) on nets/2x2-grid/2x2_oversaturated.net.xml starting...
+ Retrying in 1 seconds
+[2026-11-06T13:35:26] PressLight eval seed 1043 done: reward=-0.00816 speed=6.356 queue=6.016 waiting=13.977
+ Retrying in 1 seconds
+[2026-11-06T13:35:28] PressLight eval seed 1044 (3/5) on nets/2x2-grid/2x2_oversaturated.net.xml starting...
+ Retrying in 1 seconds
+[2026-11-06T13:36:49] PressLight eval seed 1044 done: reward=-0.00605 speed=6.455 queue=5.897 waiting=13.772
+ Retrying in 1 seconds
+[2026-11-06T13:36:50] PressLight eval seed 1045 (4/5) on nets/2x2-grid/2x2_oversaturated.net.xml starting...
+ Retrying in 1 seconds
+[2026-11-06T13:38:09] PressLight eval seed 1045 done: reward=-0.00166 speed=6.467 queue=5.843 waiting=13.952
+ Retrying in 1 seconds
+[2026-11-06T13:38:10] PressLight eval seed 1046 (5/5) on nets/2x2-grid/2x2_oversaturated.net.xml starting...
+ Retrying in 1 seconds
+[2026-11-06T13:39:31] PressLight eval seed 1046 done: reward=-0.03387 speed=6.358 queue=6.026 waiting=14.218
+Protocol task completed: PressLight, seed=61

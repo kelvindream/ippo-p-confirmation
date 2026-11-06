@@ -22,6 +22,21 @@ seed sign counts 10/10, 10/10, 10/10, 10/10, 9/10; Jensen gap 3.361e-05);
 regenerated `summary.json` equals the archived file after removing its single
 `generated_at` field; `per_eval_seed.md` differs only in the timestamp line.
 
+The post-confirmation supplementary analyses (paper Section 5.8) re-run the
+same way, package-only:
+
+```bash
+python code/tools/analyze_s1_matched_arm.py
+python code/tools/analyze_s2_s3.py
+```
+
+Both scripts auto-detect this deposit layout (`data/results/`). Observed: they
+exit 0, trigger exactly the pre-locked branches recorded in the lock files
+(`state_channel_advantage`, `presslight_comparable_or_better`,
+`direction_unstable`), and regenerate the three archived analysis JSONs
+byte-identically (floating-point last-digit differences of order 1e-13 are
+platform-dependent and immaterial to every reported figure).
+
 ## Layer 2 — figures (content verified; byte identity environment-dependent)
 
 ```bash
@@ -55,7 +70,7 @@ archived `manuscript/latex/main.pdf`**.
 
 ## Layer 4 — bit-level evaluation re-runs (needs source repository)
 
-Requires the 288 checkpoint binaries, which this package ships as hashes only
+Requires the 420 checkpoint binaries, which this package ships as hashes only
 (`checkpoint_hashes.sha256`). With the source repository (checkpoints retained)
 the evaluation path was previously verified bit-exact twice (see
 `data/results/audit_recheck_v1/`); any copy whose checkpoints match the hash
@@ -73,7 +88,7 @@ All 60 confirmatory tasks are fully specified: seeds, task matrix
 environment is recorded in `environment_snapshot/` (Python 3.9.25, pip freeze
 of the training venv, SUMO v1_25_0, hardware, CUDA-enabled torch 2.8.0+cu126).
 Bit-exact retraining is **not claimed**: the manuscript discloses (Sections
-4.7, 6.6) that git provenance was not captured and the frozen-hash copy of
+4.8, 6.6) that git provenance was not captured and the frozen-hash copy of
 `paper_protocol.py` drifted post-freeze in a functionally verified way
 (bit-exact re-evaluation reproduced the stored evaluation vectors). Two
 practical notes for a fresh run: the runner hard-codes

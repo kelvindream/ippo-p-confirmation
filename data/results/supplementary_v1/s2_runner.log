@@ -1,0 +1,65 @@
+=== S2 PressLight baseline: 30 tasks (seeds 57-66), parallel=8 ===
+=== Locked: results/supplementary_v1/s2_presslight_lock.json ===
+=== Started: 2026-11-06T10:00:11+08:00 ===
+[START] H1_PressLight_seed57 net=nets/grid-3x3/3x3.net.xml route=nets/grid-3x3/3x3-medium.rou.xml
+[START] H1_PressLight_seed58 net=nets/grid-3x3/3x3.net.xml route=nets/grid-3x3/3x3-medium.rou.xml
+[START] H1_PressLight_seed59 net=nets/grid-3x3/3x3.net.xml route=nets/grid-3x3/3x3-medium.rou.xml
+[START] H1_PressLight_seed60 net=nets/grid-3x3/3x3.net.xml route=nets/grid-3x3/3x3-medium.rou.xml
+[START] H1_PressLight_seed61 net=nets/grid-3x3/3x3.net.xml route=nets/grid-3x3/3x3-medium.rou.xml
+[START] H1_PressLight_seed62 net=nets/grid-3x3/3x3.net.xml route=nets/grid-3x3/3x3-medium.rou.xml
+[START] H1_PressLight_seed63 net=nets/grid-3x3/3x3.net.xml route=nets/grid-3x3/3x3-medium.rou.xml
+[START] H1_PressLight_seed64 net=nets/grid-3x3/3x3.net.xml route=nets/grid-3x3/3x3-medium.rou.xml
+[DONE] H1_PressLight_seed60
+[START] H1_PressLight_seed65 net=nets/grid-3x3/3x3.net.xml route=nets/grid-3x3/3x3-medium.rou.xml
+[DONE] H1_PressLight_seed62
+[START] H1_PressLight_seed66 net=nets/grid-3x3/3x3.net.xml route=nets/grid-3x3/3x3-medium.rou.xml
+[DONE] H1_PressLight_seed59
+[START] H2_PressLight_seed57 net=nets/2x2-grid/2x2_oversaturated.net.xml route=nets/2x2-grid/2x2-formal-h2.rou.xml
+[DONE] H1_PressLight_seed63
+[START] H2_PressLight_seed58 net=nets/2x2-grid/2x2_oversaturated.net.xml route=nets/2x2-grid/2x2-formal-h2.rou.xml
+[DONE] H1_PressLight_seed64
+[START] H2_PressLight_seed59 net=nets/2x2-grid/2x2_oversaturated.net.xml route=nets/2x2-grid/2x2-formal-h2.rou.xml
+[DONE] H1_PressLight_seed61
+[START] H2_PressLight_seed60 net=nets/2x2-grid/2x2_oversaturated.net.xml route=nets/2x2-grid/2x2-formal-h2.rou.xml
+[DONE] H1_PressLight_seed57
+[START] H2_PressLight_seed61 net=nets/2x2-grid/2x2_oversaturated.net.xml route=nets/2x2-grid/2x2-formal-h2.rou.xml
+[DONE] H1_PressLight_seed58
+[START] H2_PressLight_seed62 net=nets/2x2-grid/2x2_oversaturated.net.xml route=nets/2x2-grid/2x2-formal-h2.rou.xml
+[DONE] H2_PressLight_seed58
+[START] H2_PressLight_seed63 net=nets/2x2-grid/2x2_oversaturated.net.xml route=nets/2x2-grid/2x2-formal-h2.rou.xml
+[DONE] H2_PressLight_seed59
+[START] H2_PressLight_seed64 net=nets/2x2-grid/2x2_oversaturated.net.xml route=nets/2x2-grid/2x2-formal-h2.rou.xml
+[DONE] H2_PressLight_seed57
+[START] H2_PressLight_seed65 net=nets/2x2-grid/2x2_oversaturated.net.xml route=nets/2x2-grid/2x2-formal-h2.rou.xml
+[DONE] H2_PressLight_seed60
+[START] H2_PressLight_seed66 net=nets/2x2-grid/2x2_oversaturated.net.xml route=nets/2x2-grid/2x2-formal-h2.rou.xml
+[DONE] H2_PressLight_seed61
+[START] H3_PressLight_seed57 net=nets/2x2-grid/2x2_oversaturated.net.xml route=nets/2x2-grid/2x2-formal-h3.rou.xml
+[DONE] H2_PressLight_seed62
+[START] H3_PressLight_seed58 net=nets/2x2-grid/2x2_oversaturated.net.xml route=nets/2x2-grid/2x2-formal-h3.rou.xml
+[DONE] H1_PressLight_seed66
+[START] H3_PressLight_seed59 net=nets/2x2-grid/2x2_oversaturated.net.xml route=nets/2x2-grid/2x2-formal-h3.rou.xml
+[DONE] H1_PressLight_seed65
+[START] H3_PressLight_seed60 net=nets/2x2-grid/2x2_oversaturated.net.xml route=nets/2x2-grid/2x2-formal-h3.rou.xml
+[DONE] H2_PressLight_seed63
+[START] H3_PressLight_seed61 net=nets/2x2-grid/2x2_oversaturated.net.xml route=nets/2x2-grid/2x2-formal-h3.rou.xml
+[DONE] H2_PressLight_seed64
+[START] H3_PressLight_seed62 net=nets/2x2-grid/2x2_oversaturated.net.xml route=nets/2x2-grid/2x2-formal-h3.rou.xml
+[DONE] H2_PressLight_seed65
+[START] H3_PressLight_seed63 net=nets/2x2-grid/2x2_oversaturated.net.xml route=nets/2x2-grid/2x2-formal-h3.rou.xml
+[DONE] H2_PressLight_seed66
+[START] H3_PressLight_seed64 net=nets/2x2-grid/2x2_oversaturated.net.xml route=nets/2x2-grid/2x2-formal-h3.rou.xml
+[DONE] H3_PressLight_seed57
+[START] H3_PressLight_seed65 net=nets/2x2-grid/2x2_oversaturated.net.xml route=nets/2x2-grid/2x2-formal-h3.rou.xml
+[DONE] H3_PressLight_seed58
+[START] H3_PressLight_seed66 net=nets/2x2-grid/2x2_oversaturated.net.xml route=nets/2x2-grid/2x2-formal-h3.rou.xml
+[DONE] H3_PressLight_seed59
+[DONE] H3_PressLight_seed60
+[DONE] H3_PressLight_seed61
+[DONE] H3_PressLight_seed63
+[DONE] H3_PressLight_seed62
+[DONE] H3_PressLight_seed64
+[DONE] H3_PressLight_seed65
+[DONE] H3_PressLight_seed66
+=== Finished: 2026-11-06T17:13:40+08:00 ===
+=== Completed tasks: 30/30 ===

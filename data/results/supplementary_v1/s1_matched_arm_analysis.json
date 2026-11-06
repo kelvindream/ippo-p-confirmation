@@ -1,0 +1,284 @@
+{
+  "lock": "results/supplementary_v1/s1_matched_arm_lock.json",
+  "branch": "state_channel_advantage",
+  "summary": {
+    "H1": {
+      "n": 10,
+      "state_better": 8,
+      "ippo_better": 2,
+      "p_sign_test": 0.109375,
+      "mean_U_IPPO": 135.15225819344522,
+      "mean_U_IPPO_State": 134.554204636291,
+      "pct_change": -0.4425035623882967
+    },
+    "H2": {
+      "n": 10,
+      "state_better": 10,
+      "ippo_better": 0,
+      "p_sign_test": 0.001953125,
+      "mean_U_IPPO": 116.52302458033573,
+      "mean_U_IPPO_State": 115.26734712230216,
+      "pct_change": -1.0776217511997865
+    },
+    "H3": {
+      "n": 10,
+      "state_better": 10,
+      "ippo_better": 0,
+      "p_sign_test": 0.001953125,
+      "mean_U_IPPO": 123.26980575542586,
+      "mean_U_IPPO_State": 118.38442685854336,
+      "pct_change": -3.96315940221027
+    },
+    "ALL": {
+      "n": 30,
+      "state_better": 28,
+      "ippo_better": 2,
+      "p_sign_test": 8.67992639541626e-07,
+      "mean_U_IPPO": 124.98169617640228,
+      "mean_U_IPPO_State": 122.73532620571217,
+      "pct_change": -1.8356431403150242
+    }
+  },
+  "rows": [
+    {
+      "scenario": "H1",
+      "seed": 47,
+      "U_IPPO_State": 134.26047162270183,
+      "U_IPPO": 135.93936850519586,
+      "diff": -1.6788968824940298,
+      "state_better": true
+    },
+    {
+      "scenario": "H1",
+      "seed": 48,
+      "U_IPPO_State": 134.3660271782574,
+      "U_IPPO": 135.9338129496403,
+      "diff": -1.567785771382887,
+      "state_better": true
+    },
+    {
+      "scenario": "H1",
+      "seed": 49,
+      "U_IPPO_State": 135.32545963229418,
+      "U_IPPO": 135.45739408473221,
+      "diff": -0.13193445243803126,
+      "state_better": true
+    },
+    {
+      "scenario": "H1",
+      "seed": 50,
+      "U_IPPO_State": 134.50951239008793,
+      "U_IPPO": 135.36406874500398,
+      "diff": -0.854556354916042,
+      "state_better": true
+    },
+    {
+      "scenario": "H1",
+      "seed": 51,
+      "U_IPPO_State": 133.95127897681854,
+      "U_IPPO": 135.42258193445244,
+      "diff": -1.4713029576338954,
+      "state_better": true
+    },
+    {
+      "scenario": "H1",
+      "seed": 52,
+      "U_IPPO_State": 133.88741007194244,
+      "U_IPPO": 134.25515587529975,
+      "diff": -0.3677458033573089,
+      "state_better": true
+    },
+    {
+      "scenario": "H1",
+      "seed": 53,
+      "U_IPPO_State": 135.33760991207035,
+      "U_IPPO": 135.38928856914467,
+      "diff": -0.05167865707431929,
+      "state_better": true
+    },
+    {
+      "scenario": "H1",
+      "seed": 54,
+      "U_IPPO_State": 133.40159872102316,
+      "U_IPPO": 134.78984812150279,
+      "diff": -1.3882494004796229,
+      "state_better": true
+    },
+    {
+      "scenario": "H1",
+      "seed": 55,
+      "U_IPPO_State": 135.76410871302957,
+      "U_IPPO": 134.33445243804957,
+      "diff": 1.4296562749800046,
+      "state_better": false
+    },
+    {
+      "scenario": "H1",
+      "seed": 56,
+      "U_IPPO_State": 134.73856914468425,
+      "U_IPPO": 134.63661071143085,
+      "diff": 0.10195843325340093,
+      "state_better": false
+    },
+    {
+      "scenario": "H2",
+      "seed": 47,
+      "U_IPPO_State": 115.30524580335732,
+      "U_IPPO": 116.30929256594725,
+      "diff": -1.0040467625899225,
+      "state_better": true
+    },
+    {
+      "scenario": "H2",
+      "seed": 48,
+      "U_IPPO_State": 115.08330335731414,
+      "U_IPPO": 115.94187649880095,
+      "diff": -0.858573141486815,
+      "state_better": true
+    },
+    {
+      "scenario": "H2",
+      "seed": 49,
+      "U_IPPO_State": 115.17898681055155,
+      "U_IPPO": 116.48594124700239,
+      "diff": -1.3069544364508374,
+      "state_better": true
+    },
+    {
+      "scenario": "H2",
+      "seed": 50,
+      "U_IPPO_State": 115.16549760191847,
+      "U_IPPO": 117.31459832134291,
+      "diff": -2.149100719424439,
+      "state_better": true
+    },
+    {
+      "scenario": "H2",
+      "seed": 51,
+      "U_IPPO_State": 115.19466426858511,
+      "U_IPPO": 116.12994604316546,
+      "diff": -0.9352817745803463,
+      "state_better": true
+    },
+    {
+      "scenario": "H2",
+      "seed": 52,
+      "U_IPPO_State": 115.41867505995204,
+      "U_IPPO": 116.10503597122302,
+      "diff": -0.686360911270981,
+      "state_better": true
+    },
+    {
+      "scenario": "H2",
+      "seed": 53,
+      "U_IPPO_State": 115.2910071942446,
+      "U_IPPO": 116.13663069544364,
+      "diff": -0.845623501199043,
+      "state_better": true
+    },
+    {
+      "scenario": "H2",
+      "seed": 54,
+      "U_IPPO_State": 115.42688848920864,
+      "U_IPPO": 118.62002398081536,
+      "diff": -3.193135491606725,
+      "state_better": true
+    },
+    {
+      "scenario": "H2",
+      "seed": 55,
+      "U_IPPO_State": 115.38752997601918,
+      "U_IPPO": 116.40140887290167,
+      "diff": -1.0138788968824883,
+      "state_better": true
+    },
+    {
+      "scenario": "H2",
+      "seed": 56,
+      "U_IPPO_State": 115.2216726618705,
+      "U_IPPO": 115.78549160671464,
+      "diff": -0.5638189448441437,
+      "state_better": true
+    },
+    {
+      "scenario": "H3",
+      "seed": 47,
+      "U_IPPO_State": 117.88059952041385,
+      "U_IPPO": 128.21640287772806,
+      "diff": -10.335803357314205,
+      "state_better": true
+    },
+    {
+      "scenario": "H3",
+      "seed": 48,
+      "U_IPPO_State": 118.51163069547383,
+      "U_IPPO": 122.48659472425079,
+      "diff": -3.9749640287769665,
+      "state_better": true
+    },
+    {
+      "scenario": "H3",
+      "seed": 49,
+      "U_IPPO_State": 118.19776978420286,
+      "U_IPPO": 121.77194244607333,
+      "diff": -3.5741726618704632,
+      "state_better": true
+    },
+    {
+      "scenario": "H3",
+      "seed": 50,
+      "U_IPPO_State": 118.53165467628916,
+      "U_IPPO": 124.2050839328839,
+      "diff": -5.67342925659473,
+      "state_better": true
+    },
+    {
+      "scenario": "H3",
+      "seed": 51,
+      "U_IPPO_State": 118.62556354919086,
+      "U_IPPO": 122.07647482017403,
+      "diff": -3.4509112709831697,
+      "state_better": true
+    },
+    {
+      "scenario": "H3",
+      "seed": 52,
+      "U_IPPO_State": 118.34431654679277,
+      "U_IPPO": 121.70191846525799,
+      "diff": -3.357601918465221,
+      "state_better": true
+    },
+    {
+      "scenario": "H3",
+      "seed": 53,
+      "U_IPPO_State": 119.1470503597424,
+      "U_IPPO": 122.3158752997904,
+      "diff": -3.1688249400480117,
+      "state_better": true
+    },
+    {
+      "scenario": "H3",
+      "seed": 54,
+      "U_IPPO_State": 117.98541966429877,
+      "U_IPPO": 123.42050359715248,
+      "diff": -5.435083932853701,
+      "state_better": true
+    },
+    {
+      "scenario": "H3",
+      "seed": 55,
+      "U_IPPO_State": 118.27623501202058,
+      "U_IPPO": 124.17458033576159,
+      "diff": -5.898345323741012,
+      "state_better": true
+    },
+    {
+      "scenario": "H3",
+      "seed": 56,
+      "U_IPPO_State": 118.34402877700862,
+      "U_IPPO": 122.32868105518605,
+      "diff": -3.9846522781774354,
+      "state_better": true
+    }
+  ]
+}

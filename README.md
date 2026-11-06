@@ -1,4 +1,4 @@
-# ippo-p-confirmation — Training-Consistent Pressure-Prior Integration for Independent Multi-Agent Traffic Signal Control
+# ippo-p-confirmation — Pressure Information Improves Independent Multi-Agent Traffic Signal Control: A Pre-Registered Confirmatory Evaluation and Its Boundaries
 
 This folder is the submission/deposit package for the manuscript. It gathers, in
 categorized form, every code artifact and experimental dataset that the paper's
@@ -12,8 +12,8 @@ ippo-p-confirmation/
 ├── REPRODUCE.md                  verified reproduction guide (layered, with observed results)
 ├── MANIFEST.md                   item-by-item map: Data Availability claim -> path
 ├── MANIFEST.sha256               SHA-256 of every file in this package (self-excluded)
-├── checkpoint_hashes.sha256      SHA-256 of the 288 checkpoint binaries NOT copied
-│                                 (144 tasks x {checkpoint.pt, resume_state.pt}), paths
+├── checkpoint_hashes.sha256      SHA-256 of the 420 checkpoint binaries NOT copied
+│                                 (210 tasks x {checkpoint.pt, resume_state.pt}), paths
 │                                 relative to the source repository root
 ├── environment_snapshot/         Python 3.9.25, pip freeze of the training venv,
 │                                 SUMO v1_25_0, hardware/OS/CUDA record
@@ -38,6 +38,7 @@ ippo-p-confirmation/
 | `results/ippo_prior_scaleup_v1/`, `_v2/`, `results/ippo_prior_probe_700/` | `data/results/…` |
 | `results/baselines_descriptive_v1/` (external anchors) | `data/results/baselines_descriptive_v1/` |
 | `results/audit_recheck_v1/`, `results/eval_realization_sensitivity/`, `results/censoring_decomposition_v1/` | `data/results/…` |
+| `results/supplementary_v1/` (post-confirmation S1/S2/S3: locks, tasks, analyses) | `data/results/supplementary_v1/` |
 | `paper/draft.md`, `paper/references_verified.md` | `manuscript/` |
 | `paper/latex/{build.py,main.tex,main.pdf,_preproc.md}` | `manuscript/latex/` |
 | `paper/figures/` (three figures + generating scripts + QA artifacts) | `manuscript/figures/` |
@@ -45,9 +46,9 @@ ippo-p-confirmation/
 
 ## What is intentionally not copied
 
-- **Checkpoint binaries** (`checkpoint.pt`, `resume_state.pt`, 288 files): replaced by
+- **Checkpoint binaries** (`checkpoint.pt`, `resume_state.pt`, 420 files): replaced by
   `checkpoint_hashes.sha256`, which fixes their content identity as disclosed in
-  manuscript Sections 4.7 and 6.6. The source repository retains them.
+  manuscript Sections 4.8 and 6.6. The source repository retains them.
 - **Development-era result directories** not referenced by the paper (`p1_dev_v1`,
   `p2_formal`, `dpg_screen_v1`, `gc_opt_v1`, early smoke/quarantine outputs).
 - **Internal review materials** (`paper/review_files/`, `paper/review_external_round1.md`).
@@ -67,12 +68,17 @@ sha256sum -c checkpoint_hashes.sha256 # from the source repository root
 - Confirmatory aggregates: `data/results/ippo_prior_confirmation_v1/confirmation_summary.json`.
 - Per-task manifests with source-file hashes: each task directory
   (`*_seed*/manifest.json`); note the disclosed post-freeze drift of
-  `paper_protocol.py` (manuscript Sections 4.7, 6.6).
+  `paper_protocol.py` (manuscript Sections 4.8, 6.6).
 - Post-review analyses: `data/results/eval_realization_sensitivity/` (per-evaluation-
   episode reanalysis, manuscript Section 5.3) and
   `data/results/censoring_decomposition_v1/` (tripinfo-verified censoring
   decomposition, manuscript Section 6.6); forensic pilot recheck in
   `data/results/audit_recheck_v1/`.
+- Post-confirmation supplementary set: `data/results/supplementary_v1/`
+  (lock files with `locked_before_results = true` + `locks.sha256`, per-task
+  results, and the three analysis JSONs; re-runnable package-only via
+  `code/tools/analyze_s1_matched_arm.py` and `analyze_s2_s3.py`, see
+  `REPRODUCE.md` Layer 1).
 - Manuscript rebuild: `python manuscript/latex/build.py` then
   `tectonic manuscript/latex/main.tex`; figures regenerate via
   `manuscript/figures/make_figure1.py` and `make_figures.py`.
